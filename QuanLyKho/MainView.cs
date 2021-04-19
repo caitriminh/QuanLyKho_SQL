@@ -227,51 +227,51 @@ namespace QuanLyKho
             //Settings.Default.Save();
         }
 
-        private void btn_thongtin_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void Btn_thongtin_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             var frm = new FrmThongTin();
             frm.ShowDialog();
         }
 
-        private void btn_Dong_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void Btn_Dong_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             var dgr = XtraMessageBox.Show("Bạn có muốn thoát khỏi chương trình không?", "Xác Nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dgr != DialogResult.Yes) { return; }
             Application.Exit();
         }
 
-        private void btn_NguoiDung_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void Btn_NguoiDung_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             OpenForm(typeof(FrmNguoiDung));
         }
 
-        private void btn_doimatkhau_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void Btn_doimatkhau_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             var frm = new FrmDoiMatKhau();
             frm.ShowDialog();
         }
 
-        private void btn_nhatky_hethong_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void Btn_nhatky_hethong_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             OpenForm(typeof(FrmHT_NhatKyHeThong));
         }
 
-        private void btn_donvitinh_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void Btn_donvitinh_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             OpenForm(typeof(FrmDonViTinh));
         }
 
-        private void btn_nhomhang_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void Btn_nhomhang_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             OpenForm(typeof(FrmNhomHang));
         }
 
-        private void btn_khachhang_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void Btn_khachhang_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             OpenForm(typeof(FrmKhachHang));
         }
 
-        private void btn_khoaungdung_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void Btn_khoaungdung_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             using (FrmHT_DangNhap frm = new FrmHT_DangNhap())
             {
@@ -282,83 +282,83 @@ namespace QuanLyKho
             }
         }
 
-        private void btn_ncc_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void Btn_ncc_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             OpenForm(typeof(FrmNCC));
         }
 
-        private void btn_hanghoa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void Btn_hanghoa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             OpenForm(typeof(FrmHangHoa));
         }
 
-        private void btn_quydoi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void Btn_quydoi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             OpenForm(typeof(FrmDinhMucLinhKien));
         }
 
-        private void btn_nhapkho_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void Btn_nhapkho_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             OpenForm(typeof(FrmNhapkho));
         }
 
-        private void btn_xuatkho_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void Btn_xuatkho_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             OpenForm(typeof(FrmXuatKho));
         }
 
-        private void btn_tonkho_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void Btn_tonkho_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             OpenForm(typeof(FrmTonkho));
         }
 
-        private void btn_baocao_banhang_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void Btn_baocao_banhang_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            OpenForm(typeof(FrmBaocaoBanhang));
+            OpenForm(typeof(FrmBaoCaoBanHang));
         }
 
-        private void btn_nhapxuatkho_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void Btn_nhapxuatkho_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             OpenForm(typeof(FrmNhapXuatKho));
         }
 
-        private void btnPhanQuyen_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void BtnPhanQuyen_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             OpenForm(typeof(FrmPhanQuyen));
         }
 
-        private void btnLoaiChiPhi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void BtnLoaiChiPhi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             OpenForm(typeof(FrmLoaiChiPhi));
         }
 
-        private void btnTongHopChiPhi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void BtnTongHopChiPhi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             OpenForm(typeof(FrmTongHopChiPhi));
         }
 
-        private void btnLoiNhuan_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void BtnLoiNhuan_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             OpenForm(typeof(FrmLoiNhuan));
         }
 
-        private void btnDonViTinh2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void BtnDonViTinh2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             OpenForm(typeof(FrmDonViTinh));
         }
 
-        private void btnLoaiChiPhi2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void BtnLoaiChiPhi2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             OpenForm(typeof(FrmLoaiChiPhi));
         }
 
-        private void btnChuyenSoDu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void BtnChuyenSoDu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             var frm = new FrmKetChuyenSoDu();
             frm.ShowDialog();
         }
 
-        private void btnUpdate_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void BtnUpdate_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             AutoUpdater.Start("http://triminh.xyz/update/update.xml");
         }
@@ -408,30 +408,30 @@ namespace QuanLyKho
             }
         }
 
-        private void btnXuLyAmKho_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void BtnXuLyAmKho_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             OpenForm(typeof(FrmXuLyAmKho));
         }
 
 
-        private void btnPhaiTra_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void BtnPhaiTra_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             OpenForm(typeof(FrmPhaiTra));
         }
 
 
-        private void btnPhaiThu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void BtnPhaiThu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             OpenForm(typeof(FrmPhaiThu));
         }
 
-        private void btnTacGia_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void BtnTacGia_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             FrmHT_GioiThieu frm = new FrmHT_GioiThieu();
             frm.ShowDialog();
         }
 
-        private void ribbonControl1_Merge(object sender, RibbonMergeEventArgs e)
+        private void RibbonControl1_Merge(object sender, RibbonMergeEventArgs e)
         {
             ribbonControl1.SelectedPage = e.MergeOwner.MergedPages["Print Preview"];
             RibbonControl parentRRibbon = sender as RibbonControl;
@@ -439,7 +439,7 @@ namespace QuanLyKho
             parentRRibbon.StatusBar.MergeStatusBar(childRibbon.StatusBar);
         }
 
-        private void ribbonControl1_UnMerge(object sender, RibbonMergeEventArgs e)
+        private void RibbonControl1_UnMerge(object sender, RibbonMergeEventArgs e)
         {
             RibbonControl parentRRibbon = sender as RibbonControl;
             parentRRibbon.StatusBar.UnMergeStatusBar();

@@ -76,14 +76,14 @@ namespace QuanLyKho.DanhMuc
         }
         #endregion
 
-        private void btn_Them_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void Btn_Them_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             Data.Data._int_flag = 1;
-            frm_them_khachhang frm = new frm_them_khachhang();
+            FrmThemKhachHang frm = new FrmThemKhachHang();
             frm.ShowDialog();
         }
 
-        private void btn_Xoa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void Btn_Xoa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             int i = grvView_KhachHang.FocusedRowHandle;
             DialogResult dgr = XtraMessageBox.Show("Bạn có muốn xóa khách hàng " + grvView_KhachHang.GetRowCellValue(i, "tenkh") + " này không?", "Xác Nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -104,18 +104,18 @@ namespace QuanLyKho.DanhMuc
             }
         }
 
-        private void btn_NapLai_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void Btn_NapLai_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             GetKhachHang();
         }
 
-        private void frm_khachhang_Load(object sender, EventArgs e)
+        private void Frm_khachhang_Load(object sender, EventArgs e)
         {
             this.Subscribe<MessageBroker>(OnNext);
             GetKhachHang();
         }
 
-        private void btn_Luu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void Btn_Luu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             lbl_tendangnhap.Focus();
             var dgr = XtraMessageBox.Show("Bạn có muốn lưu lại những thay đổi không?", "Xác Nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -125,7 +125,7 @@ namespace QuanLyKho.DanhMuc
             }
         }
 
-        private void gridView1_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
+        private void GridView1_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
         {
             var i = grvView_KhachHang.FocusedRowHandle;
             if (ReferenceEquals(e.Column, col_xoa))
@@ -149,7 +149,7 @@ namespace QuanLyKho.DanhMuc
             }
         }
 
-        private void btn_excel_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void Btn_excel_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             xtraSaveFileDialog1.Filter = "Excel files |*.xlsx";
             if (grvView_KhachHang.SelectedRowsCount <= 0)

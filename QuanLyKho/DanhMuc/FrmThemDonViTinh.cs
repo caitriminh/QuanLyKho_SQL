@@ -8,9 +8,9 @@ using System.Windows.Forms;
 
 namespace QuanLyKho.DanhMuc
 {
-    public partial class Frm_them_donvitinh : XtraForm
+    public partial class FrmThemDonViTinh : XtraForm
     {
-        public Frm_them_donvitinh()
+        public FrmThemDonViTinh()
         {
             InitializeComponent();
         }

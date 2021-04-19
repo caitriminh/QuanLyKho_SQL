@@ -115,7 +115,7 @@
             this.txtDonGia.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtDonGia.Size = new System.Drawing.Size(351, 20);
             this.txtDonGia.TabIndex = 8;
-            this.txtDonGia.TextChanged += new System.EventHandler(this.txtDonGia_TextChanged);
+            this.txtDonGia.TextChanged += new System.EventHandler(this.TxtDonGia_TextChanged);
             // 
             // labelControl2
             // 
@@ -158,7 +158,7 @@
             this.cbo_tenhanghoa.Properties.SearchMode = DevExpress.XtraEditors.Repository.GridLookUpSearchMode.AutoSuggest;
             this.cbo_tenhanghoa.Size = new System.Drawing.Size(351, 20);
             this.cbo_tenhanghoa.TabIndex = 3;
-            this.cbo_tenhanghoa.Click += new System.EventHandler(this.cbo_tenhanghoa_Click);
+            this.cbo_tenhanghoa.Click += new System.EventHandler(this.Cbo_tenhanghoa_Click);
             // 
             // gridLookUpEdit1View
             // 
@@ -222,7 +222,7 @@
             this.txt_soluong.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txt_soluong.Size = new System.Drawing.Size(351, 20);
             this.txt_soluong.TabIndex = 5;
-            this.txt_soluong.TextChanged += new System.EventHandler(this.txt_soluong_TextChanged);
+            this.txt_soluong.TextChanged += new System.EventHandler(this.Txt_soluong_TextChanged);
             // 
             // labelControl3
             // 
@@ -240,7 +240,7 @@
             this.btn_Thoat.Size = new System.Drawing.Size(65, 23);
             this.btn_Thoat.TabIndex = 2;
             this.btn_Thoat.Text = "Thoát";
-            this.btn_Thoat.Click += new System.EventHandler(this.btn_Thoat_Click);
+            this.btn_Thoat.Click += new System.EventHandler(this.Btn_Thoat_Click);
             // 
             // btn_Luu
             // 
@@ -250,7 +250,7 @@
             this.btn_Luu.Size = new System.Drawing.Size(65, 23);
             this.btn_Luu.TabIndex = 1;
             this.btn_Luu.Text = "&Lưu";
-            this.btn_Luu.Click += new System.EventHandler(this.btn_Luu_Click);
+            this.btn_Luu.Click += new System.EventHandler(this.Btn_Luu_Click);
             // 
             // frm_them_sodudauky
             // 
@@ -265,8 +265,8 @@
             this.Name = "frm_them_sodudauky";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Số Dư Đầu Kỳ";
-            this.Load += new System.EventHandler(this.frm_them_sodudauky_Load);
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frm_them_sodudauky_KeyDown);
+            this.Load += new System.EventHandler(this.Frm_them_sodudauky_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Frm_them_sodudauky_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.GroupControl1)).EndInit();
             this.GroupControl1.ResumeLayout(false);
             this.GroupControl1.PerformLayout();

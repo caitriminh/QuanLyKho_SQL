@@ -138,7 +138,7 @@
             this.cbo_hanghoa2.Properties.PopupView = this.gridLookUpEdit1View;
             this.cbo_hanghoa2.Size = new System.Drawing.Size(279, 20);
             this.cbo_hanghoa2.TabIndex = 6;
-            this.cbo_hanghoa2.EditValueChanged += new System.EventHandler(this.cbo_hanghoa2_EditValueChanged);
+            this.cbo_hanghoa2.EditValueChanged += new System.EventHandler(this.Cbo_hanghoa2_EditValueChanged);
             // 
             // gridLookUpEdit1View
             // 
@@ -259,7 +259,7 @@
             this.btn_luu.Id = 2;
             this.btn_luu.ImageOptions.ImageIndex = 3;
             this.btn_luu.Name = "btn_luu";
-            this.btn_luu.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_luu_ItemClick);
+            this.btn_luu.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_luu_ItemClick);
             // 
             // btn_lammoi
             // 
@@ -267,7 +267,7 @@
             this.btn_lammoi.Id = 3;
             this.btn_lammoi.ImageOptions.ImageIndex = 2;
             this.btn_lammoi.Name = "btn_lammoi";
-            this.btn_lammoi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_lammoi_ItemClick);
+            this.btn_lammoi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_lammoi_ItemClick);
             // 
             // barDockControlTop
             // 
@@ -391,8 +391,8 @@
             this.dgvViewQuyDoi.Name = "dgvViewQuyDoi";
             this.dgvViewQuyDoi.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Top;
             this.dgvViewQuyDoi.OptionsView.ShowGroupPanel = false;
-            this.dgvViewQuyDoi.RowCellClick += new DevExpress.XtraGrid.Views.Grid.RowCellClickEventHandler(this.gridView1_RowCellClick);
-            this.dgvViewQuyDoi.ValidatingEditor += new DevExpress.XtraEditors.Controls.BaseContainerValidateEditorEventHandler(this.gridView1_ValidatingEditor);
+            this.dgvViewQuyDoi.RowCellClick += new DevExpress.XtraGrid.Views.Grid.RowCellClickEventHandler(this.GridView1_RowCellClick);
+            this.dgvViewQuyDoi.ValidatingEditor += new DevExpress.XtraEditors.Controls.BaseContainerValidateEditorEventHandler(this.GridView1_ValidatingEditor);
             // 
             // gridColumn1
             // 
@@ -560,7 +560,7 @@
             this.Name = "frm_them_dinhmuc_linhkien";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Định Mức Linh Kiện";
-            this.Load += new System.EventHandler(this.frm_them_quydoi_Load);
+            this.Load += new System.EventHandler(this.Frm_them_quydoi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.GroupControl1)).EndInit();
             this.GroupControl1.ResumeLayout(false);
             this.GroupControl1.PerformLayout();

@@ -140,7 +140,7 @@
             this.btn_NapLai.Id = 3;
             this.btn_NapLai.ImageOptions.ImageIndex = 2;
             this.btn_NapLai.Name = "btn_NapLai";
-            this.btn_NapLai.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_NapLai_ItemClick);
+            this.btn_NapLai.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_NapLai_ItemClick);
             // 
             // btn_in
             // 
@@ -148,7 +148,7 @@
             this.btn_in.Id = 7;
             this.btn_in.ImageOptions.ImageIndex = 5;
             this.btn_in.Name = "btn_in";
-            this.btn_in.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_in_ItemClick_1);
+            this.btn_in.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_in_ItemClick_1);
             // 
             // btn_excel
             // 
@@ -156,7 +156,7 @@
             this.btn_excel.Id = 5;
             this.btn_excel.ImageOptions.ImageIndex = 4;
             this.btn_excel.Name = "btn_excel";
-            this.btn_excel.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_excel_ItemClick);
+            this.btn_excel.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_excel_ItemClick);
             // 
             // dteTuNgay
             // 
@@ -186,7 +186,7 @@
             this.btn_tim.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_tim.ImageOptions.Image")));
             this.btn_tim.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btn_tim.ImageOptions.LargeImage")));
             this.btn_tim.Name = "btn_tim";
-            this.btn_tim.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_tim_ItemClick);
+            this.btn_tim.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_tim_ItemClick);
             // 
             // barDockControlTop
             // 
@@ -578,7 +578,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frm_loinhuan";
             this.Text = "Báo Cáo Lợi Nhuận";
-            this.Load += new System.EventHandler(this.frm_loinhuan_Load);
+            this.Load += new System.EventHandler(this.Frm_loinhuan_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit1.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit1)).EndInit();

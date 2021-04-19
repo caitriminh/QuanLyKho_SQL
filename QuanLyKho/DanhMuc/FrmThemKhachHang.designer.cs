@@ -175,7 +175,7 @@
             this.btn_Thoat.Size = new System.Drawing.Size(65, 23);
             this.btn_Thoat.TabIndex = 2;
             this.btn_Thoat.Text = "Thoát";
-            this.btn_Thoat.Click += new System.EventHandler(this.btn_Thoat_Click);
+            this.btn_Thoat.Click += new System.EventHandler(this.Btn_Thoat_Click);
             // 
             // btn_Luu
             // 
@@ -185,7 +185,7 @@
             this.btn_Luu.Size = new System.Drawing.Size(65, 23);
             this.btn_Luu.TabIndex = 1;
             this.btn_Luu.Text = "&Lưu";
-            this.btn_Luu.Click += new System.EventHandler(this.btn_Luu_Click);
+            this.btn_Luu.Click += new System.EventHandler(this.Btn_Luu_Click);
             // 
             // btn_nhaplai
             // 
@@ -195,7 +195,7 @@
             this.btn_nhaplai.Size = new System.Drawing.Size(65, 23);
             this.btn_nhaplai.TabIndex = 3;
             this.btn_nhaplai.Text = "&Nhập lại";
-            this.btn_nhaplai.Click += new System.EventHandler(this.btn_nhaplai_Click);
+            this.btn_nhaplai.Click += new System.EventHandler(this.Btn_nhaplai_Click);
             // 
             // frm_them_khachhang
             // 
@@ -212,9 +212,9 @@
             this.Name = "frm_them_khachhang";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Khách Hàng";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frm_them_khachhang_FormClosing);
-            this.Load += new System.EventHandler(this.frm_them_khachhang_Load);
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frm_add_khachhang_KeyDown);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Frm_them_khachhang_FormClosing);
+            this.Load += new System.EventHandler(this.Frm_them_khachhang_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Frm_add_khachhang_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.GroupControl1)).EndInit();
             this.GroupControl1.ResumeLayout(false);
             this.GroupControl1.PerformLayout();

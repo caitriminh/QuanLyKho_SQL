@@ -67,7 +67,7 @@ namespace QuanLyKho.DanhMuc
         private void Btn_Them_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             Data.Data._int_flag = 1;
-            Frm_them_donvitinh frm = new Frm_them_donvitinh();
+            FrmThemDonViTinh frm = new FrmThemDonViTinh();
             frm.Show();
         }
 

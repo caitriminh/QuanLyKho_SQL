@@ -125,7 +125,7 @@ namespace QuanLyKho.NghiepVu
             cbo_khachhang.Focus();
         }
 
-        private void gridView1_ValidatingEditor(object sender, DevExpress.XtraEditors.Controls.BaseContainerValidateEditorEventArgs e)
+        private void GridView1_ValidatingEditor(object sender, DevExpress.XtraEditors.Controls.BaseContainerValidateEditorEventArgs e)
         {
             GridView view = sender as GridView;
             int i = view.FocusedRowHandle;
@@ -183,12 +183,12 @@ namespace QuanLyKho.NghiepVu
             }
         }
 
-        private void btn_lammoi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void Btn_lammoi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             GetChiTietPhieuXuat();
         }
 
-        private void btn_them_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void Btn_them_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             if (grvViewPhieuXuat.RowCount > 0)
             {
@@ -201,12 +201,12 @@ namespace QuanLyKho.NghiepVu
             txt_diengiai.Text = "";
         }
 
-        private void txt_maphieu_TextChanged(object sender, EventArgs e)
+        private void Txt_maphieu_TextChanged(object sender, EventArgs e)
         {
             GetChiTietPhieuXuat();
         }
 
-        private void btn_xoa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void Btn_xoa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             var dgr = XtraMessageBox.Show("Bạn có muốn xóa phiếu xuất kho " + txt_maphieu.Text + " này không?", "Xác Nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dgr == DialogResult.Yes)
@@ -227,7 +227,7 @@ namespace QuanLyKho.NghiepVu
             }
         }
 
-        private void btn_luu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void Btn_luu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             if (string.IsNullOrEmpty(txt_maphieu.Text))
             {
@@ -270,7 +270,7 @@ namespace QuanLyKho.NghiepVu
             msgBroker.Publish();
         }
 
-        private void gridView2_RowCellClick(object sender, RowCellClickEventArgs e)
+        private void GridView2_RowCellClick(object sender, RowCellClickEventArgs e)
         {
             var i = grvViewPhieuXuat.FocusedRowHandle;
             if (ReferenceEquals(e.Column, col_xoa))
@@ -291,7 +291,7 @@ namespace QuanLyKho.NghiepVu
             }
         }
 
-        private void btn_in_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void Btn_in_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             if (grvViewPhieuXuat.RowCount == 0)
             {
@@ -327,7 +327,7 @@ namespace QuanLyKho.NghiepVu
             Data.Data._edit = false;
         }
 
-        private void btn_excel_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void Btn_excel_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             xtraSaveFileDialog1.Filter = "Excel files |*.xlsx";
             xtraSaveFileDialog1.FileName = "PhieuXuatKho_" + DateTime.Now.ToString("dd-MM-yyyy hh-mm-ss"); ;
@@ -338,7 +338,7 @@ namespace QuanLyKho.NghiepVu
             }
         }
 
-        private void frm_them_nhapkho_FormClosing(object sender, FormClosingEventArgs e)
+        private void Frm_them_nhapkho_FormClosing(object sender, FormClosingEventArgs e)
         {
             Data.Data._edit = false;
             var i = Convert.ToInt32(ExecSQL.ExecProcedureSacalar("prokhoPhieuXuat", new { action = "CHECK_ID", maphieu = txt_maphieu.Text }));
@@ -353,7 +353,7 @@ namespace QuanLyKho.NghiepVu
             }
         }
 
-        private void frm_them_xuatkho_Load(object sender, EventArgs e)
+        private void Frm_them_xuatkho_Load(object sender, EventArgs e)
         {
             GetKhachHang();
             GetHangHoa();
@@ -374,29 +374,29 @@ namespace QuanLyKho.NghiepVu
             }
         }
 
-        private void cbo_khachhang_Click(object sender, EventArgs e)
+        private void Cbo_khachhang_Click(object sender, EventArgs e)
         {
             gridLookUpEdit1View.FocusedRowHandle = GridControl.AutoFilterRowHandle;
             gridLookUpEdit1View.FocusedColumn = gridLookUpEdit1View.Columns["tenkh"];
             gridLookUpEdit1View.ShowEditor();
         }
 
-        private void cbo_khachhang_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        private void Cbo_khachhang_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
             if (e.Button.Kind == DevExpress.XtraEditors.Controls.ButtonPredefines.Plus)
             {
                 Data.Data._int_flag = 2;
-                frm_them_khachhang frm = new frm_them_khachhang();
+                FrmThemKhachHang frm = new FrmThemKhachHang();
                 frm.ShowDialog();
             }
         }
 
-        private void date_ngayxuat_TextChanged(object sender, EventArgs e)
+        private void Date_ngayxuat_TextChanged(object sender, EventArgs e)
         {
             if (Data.Data._edit == false) { txt_maphieu.Text = ExecSQL.ExecProcedureSacalar("prokhoPhieuXuat", new { action = "CREATE_ID", ngayxuat = Convert.ToDateTime(date_ngayxuat.EditValue).ToString("yyyyMMdd") }).ToString(); }
         }
 
-        private void cbo_khachhang_KeyDown(object sender, KeyEventArgs e)
+        private void Cbo_khachhang_KeyDown(object sender, KeyEventArgs e)
         {
             switch (e.KeyCode)
             {

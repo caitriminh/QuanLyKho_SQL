@@ -107,7 +107,7 @@
             this.cbo_dvt.Properties.PopupView = this.gridView1;
             this.cbo_dvt.Size = new System.Drawing.Size(351, 20);
             this.cbo_dvt.TabIndex = 8;
-            this.cbo_dvt.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.cbo_dvt_ButtonClick);
+            this.cbo_dvt.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.Cbo_dvt_ButtonClick);
             // 
             // gridView1
             // 
@@ -144,7 +144,7 @@
             this.cbo_nhomhang.Properties.PopupView = this.gridLookUpEdit1View;
             this.cbo_nhomhang.Size = new System.Drawing.Size(351, 20);
             this.cbo_nhomhang.TabIndex = 1;
-            this.cbo_nhomhang.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.cbo_nhomhang_ButtonClick);
+            this.cbo_nhomhang.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.Cbo_nhomhang_ButtonClick);
             // 
             // gridLookUpEdit1View
             // 
@@ -224,7 +224,7 @@
             this.btn_Thoat.Size = new System.Drawing.Size(65, 23);
             this.btn_Thoat.TabIndex = 2;
             this.btn_Thoat.Text = "Thoát";
-            this.btn_Thoat.Click += new System.EventHandler(this.btn_Thoat_Click);
+            this.btn_Thoat.Click += new System.EventHandler(this.Btn_Thoat_Click);
             // 
             // btn_Luu
             // 
@@ -234,7 +234,7 @@
             this.btn_Luu.Size = new System.Drawing.Size(65, 23);
             this.btn_Luu.TabIndex = 1;
             this.btn_Luu.Text = "&Lưu";
-            this.btn_Luu.Click += new System.EventHandler(this.btn_Luu_Click);
+            this.btn_Luu.Click += new System.EventHandler(this.Btn_Luu_Click);
             // 
             // label1A
             // 
@@ -260,7 +260,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hàng Hóa";
             this.Load += new System.EventHandler(this.Frm_them_hanghoa_Load);
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frm_them_hanghoa_KeyDown);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Frm_them_hanghoa_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.GroupControl1)).EndInit();
             this.GroupControl1.ResumeLayout(false);
             this.GroupControl1.PerformLayout();

@@ -112,7 +112,7 @@
             this.btn_Them.Id = 0;
             this.btn_Them.ImageOptions.ImageIndex = 0;
             this.btn_Them.Name = "btn_Them";
-            this.btn_Them.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_Them_ItemClick);
+            this.btn_Them.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_Them_ItemClick);
             // 
             // btn_Luu
             // 
@@ -120,7 +120,7 @@
             this.btn_Luu.Id = 1;
             this.btn_Luu.ImageOptions.ImageIndex = 3;
             this.btn_Luu.Name = "btn_Luu";
-            this.btn_Luu.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_Luu_ItemClick);
+            this.btn_Luu.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_Luu_ItemClick);
             // 
             // btn_Xoa
             // 
@@ -128,7 +128,7 @@
             this.btn_Xoa.Id = 2;
             this.btn_Xoa.ImageOptions.ImageIndex = 1;
             this.btn_Xoa.Name = "btn_Xoa";
-            this.btn_Xoa.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_Xoa_ItemClick);
+            this.btn_Xoa.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_Xoa_ItemClick);
             // 
             // btn_NapLai
             // 
@@ -136,7 +136,7 @@
             this.btn_NapLai.Id = 3;
             this.btn_NapLai.ImageOptions.ImageIndex = 2;
             this.btn_NapLai.Name = "btn_NapLai";
-            this.btn_NapLai.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_NapLai_ItemClick);
+            this.btn_NapLai.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_NapLai_ItemClick);
             // 
             // btn_excel
             // 
@@ -144,7 +144,7 @@
             this.btn_excel.Id = 5;
             this.btn_excel.ImageOptions.ImageIndex = 4;
             this.btn_excel.Name = "btn_excel";
-            this.btn_excel.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_excel_ItemClick);
+            this.btn_excel.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_excel_ItemClick);
             // 
             // barDockControlTop
             // 
@@ -248,7 +248,7 @@
             this.grvView_KhachHang.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CheckBoxRowSelect;
             this.grvView_KhachHang.OptionsView.ShowAutoFilterRow = true;
             this.grvView_KhachHang.OptionsView.ShowGroupPanel = false;
-            this.grvView_KhachHang.RowCellClick += new DevExpress.XtraGrid.Views.Grid.RowCellClickEventHandler(this.gridView1_RowCellClick);
+            this.grvView_KhachHang.RowCellClick += new DevExpress.XtraGrid.Views.Grid.RowCellClickEventHandler(this.GridView1_RowCellClick);
             // 
             // gridColumn1
             // 
@@ -413,7 +413,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frm_khachhang";
             this.Text = "Khách Hàng";
-            this.Load += new System.EventHandler(this.frm_khachhang_Load);
+            this.Load += new System.EventHandler(this.Frm_khachhang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grcKhachHang)).EndInit();

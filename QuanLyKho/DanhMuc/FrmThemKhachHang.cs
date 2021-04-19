@@ -8,19 +8,19 @@ using System.Windows.Forms;
 
 namespace QuanLyKho.DanhMuc
 {
-    public partial class frm_them_khachhang : XtraForm
+    public partial class FrmThemKhachHang : XtraForm
     {
-        public frm_them_khachhang()
+        public FrmThemKhachHang()
         {
             InitializeComponent();
         }
 
-        private void btn_Thoat_Click(object sender, EventArgs e)
+        private void Btn_Thoat_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
-        private void btn_Luu_Click(object sender, EventArgs e)
+        private void Btn_Luu_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(txt_makh.Text))
             {
@@ -38,7 +38,7 @@ namespace QuanLyKho.DanhMuc
             ExecSQL.ExecProcedureNonData("prokhoKhachHang", new { action = "SAVE", tenkh = txt_khachhang.Text, diachi = txt_diachi.Text, sodt = txt_sodt.Text, sofax = txt_sofax.Text, ghichu = txt_ghichu.Text, nguoitd = Data.Data._strtendangnhap.ToUpper() });
 
             Data.Data._str_makh = txt_makh.Text;
-            _clear_text();
+            Clear_text();
             if (Data.Data._int_flag == 1)
             {
                 //Gửi dữ liệu
@@ -73,7 +73,7 @@ namespace QuanLyKho.DanhMuc
             }
         }
 
-        public void _clear_text()
+        public void Clear_text()
         {
             txt_makh.Text = ExecSQL.ExecProcedureSacalar("prokhoKhachHang", new { action = "CREATE_ID" }).ToString();
             txt_khachhang.Text = "";
@@ -83,17 +83,17 @@ namespace QuanLyKho.DanhMuc
             txt_ghichu.Text = "";
             txt_khachhang.Focus();
         }
-        private void btn_nhaplai_Click(object sender, EventArgs e)
+        private void Btn_nhaplai_Click(object sender, EventArgs e)
         {
-            _clear_text();
+            Clear_text();
         }
 
-        private void frm_add_khachhang_KeyDown(object sender, KeyEventArgs e)
+        private void Frm_add_khachhang_KeyDown(object sender, KeyEventArgs e)
         {
             switch (e.KeyCode)
             {
                 case Keys.Enter:
-                    btn_Luu_Click(sender, e);
+                    Btn_Luu_Click(sender, e);
                     break;
                 case Keys.Escape:
                     Application.Exit();
@@ -101,12 +101,12 @@ namespace QuanLyKho.DanhMuc
             }
         }
 
-        private void frm_them_khachhang_Load(object sender, EventArgs e)
+        private void Frm_them_khachhang_Load(object sender, EventArgs e)
         {
             txt_makh.Text = ExecSQL.ExecProcedureSacalar("prokhoKhachHang", new { action = "CREATE_ID" }).ToString();
         }
 
-        private void frm_them_khachhang_FormClosing(object sender, FormClosingEventArgs e)
+        private void Frm_them_khachhang_FormClosing(object sender, FormClosingEventArgs e)
         {
             Data.Data._int_flag = 1;
         }

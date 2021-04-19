@@ -143,7 +143,7 @@
             this.btn_them.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btn_them.ImageOptions.LargeImage")));
             this.btn_them.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N));
             this.btn_them.Name = "btn_them";
-            this.btn_them.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_them_ItemClick);
+            this.btn_them.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_them_ItemClick);
             // 
             // btn_luu
             // 
@@ -153,7 +153,7 @@
             this.btn_luu.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btn_luu.ImageOptions.LargeImage")));
             this.btn_luu.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S));
             this.btn_luu.Name = "btn_luu";
-            this.btn_luu.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_luu_ItemClick);
+            this.btn_luu.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_luu_ItemClick);
             // 
             // btn_xoa
             // 
@@ -163,7 +163,7 @@
             this.btn_xoa.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btn_xoa.ImageOptions.LargeImage")));
             this.btn_xoa.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Delete));
             this.btn_xoa.Name = "btn_xoa";
-            this.btn_xoa.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_xoa_ItemClick);
+            this.btn_xoa.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_xoa_ItemClick);
             // 
             // barButtonItem4
             // 
@@ -173,7 +173,7 @@
             this.barButtonItem4.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem4.ImageOptions.LargeImage")));
             this.barButtonItem4.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.F5);
             this.barButtonItem4.Name = "barButtonItem4";
-            this.barButtonItem4.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_lammoi_ItemClick);
+            this.barButtonItem4.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_lammoi_ItemClick);
             // 
             // btn_in
             // 
@@ -183,7 +183,7 @@
             this.btn_in.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btn_in.ImageOptions.LargeImage")));
             this.btn_in.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P));
             this.btn_in.Name = "btn_in";
-            this.btn_in.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_in_ItemClick);
+            this.btn_in.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_in_ItemClick);
             // 
             // btn_excel
             // 
@@ -193,7 +193,7 @@
             this.btn_excel.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btn_excel.ImageOptions.LargeImage")));
             this.btn_excel.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E));
             this.btn_excel.Name = "btn_excel";
-            this.btn_excel.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_excel_ItemClick);
+            this.btn_excel.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_excel_ItemClick);
             // 
             // ribbonPage1
             // 
@@ -294,9 +294,9 @@
             this.cbo_khachhang.Properties.SearchMode = DevExpress.XtraEditors.Repository.GridLookUpSearchMode.AutoSuggest;
             this.cbo_khachhang.Size = new System.Drawing.Size(351, 20);
             this.cbo_khachhang.TabIndex = 4;
-            this.cbo_khachhang.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.cbo_khachhang_ButtonClick);
-            this.cbo_khachhang.Click += new System.EventHandler(this.cbo_khachhang_Click);
-            this.cbo_khachhang.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cbo_khachhang_KeyDown);
+            this.cbo_khachhang.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.Cbo_khachhang_ButtonClick);
+            this.cbo_khachhang.Click += new System.EventHandler(this.Cbo_khachhang_Click);
+            this.cbo_khachhang.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Cbo_khachhang_KeyDown);
             // 
             // gridLookUpEdit1View
             // 
@@ -343,7 +343,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.date_ngayxuat.Size = new System.Drawing.Size(149, 20);
             this.date_ngayxuat.TabIndex = 2;
-            this.date_ngayxuat.TextChanged += new System.EventHandler(this.date_ngayxuat_TextChanged);
+            this.date_ngayxuat.TextChanged += new System.EventHandler(this.Date_ngayxuat_TextChanged);
             // 
             // txt_maphieu
             // 
@@ -353,7 +353,7 @@
             this.txt_maphieu.Name = "txt_maphieu";
             this.txt_maphieu.Size = new System.Drawing.Size(135, 20);
             this.txt_maphieu.TabIndex = 1;
-            this.txt_maphieu.TextChanged += new System.EventHandler(this.txt_maphieu_TextChanged);
+            this.txt_maphieu.TextChanged += new System.EventHandler(this.Txt_maphieu_TextChanged);
             // 
             // labelControl1
             // 
@@ -410,9 +410,9 @@
             this.grvViewPhieuXuat.OptionsView.ShowFooter = true;
             this.grvViewPhieuXuat.OptionsView.ShowGroupedColumns = true;
             this.grvViewPhieuXuat.OptionsView.ShowGroupPanel = false;
-            this.grvViewPhieuXuat.RowCellClick += new DevExpress.XtraGrid.Views.Grid.RowCellClickEventHandler(this.gridView2_RowCellClick);
+            this.grvViewPhieuXuat.RowCellClick += new DevExpress.XtraGrid.Views.Grid.RowCellClickEventHandler(this.GridView2_RowCellClick);
             
-            this.grvViewPhieuXuat.ValidatingEditor += new DevExpress.XtraEditors.Controls.BaseContainerValidateEditorEventHandler(this.gridView1_ValidatingEditor);
+            this.grvViewPhieuXuat.ValidatingEditor += new DevExpress.XtraEditors.Controls.BaseContainerValidateEditorEventHandler(this.GridView1_ValidatingEditor);
             // 
             // gridColumn3
             // 
@@ -727,8 +727,8 @@
             this.Name = "frm_them_xuatkho";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Phiếu Xuất Kho";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frm_them_nhapkho_FormClosing);
-            this.Load += new System.EventHandler(this.frm_them_xuatkho_Load);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Frm_them_nhapkho_FormClosing);
+            this.Load += new System.EventHandler(this.Frm_them_xuatkho_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);

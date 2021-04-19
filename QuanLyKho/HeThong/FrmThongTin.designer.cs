@@ -1,6 +1,6 @@
 ﻿namespace QuanLyKho.HeThong
 {
-    partial class frm_thongtin
+    partial class FrmThongTin
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_thongtin));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmThongTin));
             this.GroupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.txt_nguoidaidien = new DevExpress.XtraEditors.TextEdit();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
@@ -236,7 +236,7 @@
             this.btn_Thoat.Size = new System.Drawing.Size(76, 28);
             this.btn_Thoat.TabIndex = 2;
             this.btn_Thoat.Text = "Thoát";
-            this.btn_Thoat.Click += new System.EventHandler(this.btn_Thoat_Click);
+            this.btn_Thoat.Click += new System.EventHandler(this.Btn_Thoat_Click);
             // 
             // btn_Luu
             // 
@@ -247,7 +247,7 @@
             this.btn_Luu.Size = new System.Drawing.Size(76, 28);
             this.btn_Luu.TabIndex = 1;
             this.btn_Luu.Text = "&Lưu";
-            this.btn_Luu.Click += new System.EventHandler(this.btn_Luu_Click);
+            this.btn_Luu.Click += new System.EventHandler(this.Btn_Luu_Click);
             // 
             // txt_tencty2
             // 
@@ -278,7 +278,7 @@
             this.Name = "frm_thongtin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thông Tin Công Ty";
-            this.Load += new System.EventHandler(this.frm_thongtin_Load);
+            this.Load += new System.EventHandler(this.Frm_thongtin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.GroupControl1)).EndInit();
             this.GroupControl1.ResumeLayout(false);
             this.GroupControl1.PerformLayout();

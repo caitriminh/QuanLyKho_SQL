@@ -183,17 +183,17 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DanhMuc\frm_loaichiphi.cs">
+    <Compile Include="DanhMuc\FrmLoaiChiPhi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DanhMuc\frm_loaichiphi.Designer.cs">
-      <DependentUpon>frm_loaichiphi.cs</DependentUpon>
+    <Compile Include="DanhMuc\FrmLoaiChiPhi.Designer.cs">
+      <DependentUpon>FrmLoaiChiPhi.cs</DependentUpon>
     </Compile>
-    <Compile Include="DanhMuc\frm_them_loaichiphi.cs">
+    <Compile Include="DanhMuc\FrmThemLoaiChiPhi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DanhMuc\frm_them_loaichiphi.designer.cs">
-      <DependentUpon>frm_them_loaichiphi.cs</DependentUpon>
+    <Compile Include="DanhMuc\FrmThemLoaiChiPhi.designer.cs">
+      <DependentUpon>FrmThemLoaiChiPhi.cs</DependentUpon>
     </Compile>
     <Compile Include="DanhMuc\FrmThemHangHoa.cs">
       <SubType>Form</SubType>
@@ -207,53 +207,53 @@
     <Compile Include="DanhMuc\FrmHangHoa.Designer.cs">
       <DependentUpon>FrmHangHoa.cs</DependentUpon>
     </Compile>
-    <Compile Include="DanhMuc\frm_them_ncc.cs">
+    <Compile Include="DanhMuc\FrmThemNCC.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DanhMuc\frm_them_ncc.designer.cs">
-      <DependentUpon>frm_them_ncc.cs</DependentUpon>
+    <Compile Include="DanhMuc\FrmThemNCC.designer.cs">
+      <DependentUpon>FrmThemNCC.cs</DependentUpon>
     </Compile>
-    <Compile Include="DanhMuc\frm_ncc.cs">
+    <Compile Include="DanhMuc\FrmNCC.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DanhMuc\frm_ncc.Designer.cs">
-      <DependentUpon>frm_ncc.cs</DependentUpon>
+    <Compile Include="DanhMuc\FrmNCC.Designer.cs">
+      <DependentUpon>FrmNCC.cs</DependentUpon>
     </Compile>
-    <Compile Include="DanhMuc\frm_them_khachhang.cs">
+    <Compile Include="DanhMuc\FrmThemKhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DanhMuc\frm_them_khachhang.designer.cs">
-      <DependentUpon>frm_them_khachhang.cs</DependentUpon>
+    <Compile Include="DanhMuc\FrmThemKhachHang.designer.cs">
+      <DependentUpon>FrmThemKhachHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="DanhMuc\frm_them_nhomhang.cs">
+    <Compile Include="DanhMuc\FrmThemNhomHang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DanhMuc\frm_them_nhomhang.designer.cs">
-      <DependentUpon>frm_them_nhomhang.cs</DependentUpon>
+    <Compile Include="DanhMuc\FrmThemNhomHang.designer.cs">
+      <DependentUpon>FrmThemNhomHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="DanhMuc\frm_khachhang.cs">
+    <Compile Include="DanhMuc\FrmKhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DanhMuc\frm_khachhang.Designer.cs">
-      <DependentUpon>frm_khachhang.cs</DependentUpon>
+    <Compile Include="DanhMuc\FrmKhachHang.Designer.cs">
+      <DependentUpon>FrmKhachHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="DanhMuc\frm_nhomhang.cs">
+    <Compile Include="DanhMuc\FrmNhomHang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DanhMuc\frm_nhomhang.Designer.cs">
-      <DependentUpon>frm_nhomhang.cs</DependentUpon>
+    <Compile Include="DanhMuc\FrmNhomHang.Designer.cs">
+      <DependentUpon>FrmNhomHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="DanhMuc\frm_them_donvitinh.cs">
+    <Compile Include="DanhMuc\FrmThemDonViTinh.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DanhMuc\frm_them_donvitinh.designer.cs">
-      <DependentUpon>frm_them_donvitinh.cs</DependentUpon>
+    <Compile Include="DanhMuc\FrmThemDonViTinh.designer.cs">
+      <DependentUpon>FrmThemDonViTinh.cs</DependentUpon>
     </Compile>
-    <Compile Include="DanhMuc\frm_donvitinh.cs">
+    <Compile Include="DanhMuc\FrmDonViTinh.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DanhMuc\frm_donvitinh.Designer.cs">
-      <DependentUpon>frm_donvitinh.cs</DependentUpon>
+    <Compile Include="DanhMuc\FrmDonViTinh.Designer.cs">
+      <DependentUpon>FrmDonViTinh.cs</DependentUpon>
     </Compile>
     <Compile Include="DanhMuc\rpt_bangbaogia.cs">
       <SubType>Component</SubType>
@@ -304,11 +304,11 @@
     <Compile Include="HeThong\FrmHT_MaskedDialog.designer.cs">
       <DependentUpon>FrmHT_MaskedDialog.cs</DependentUpon>
     </Compile>
-    <Compile Include="HeThong\frm_phanquyen.cs">
+    <Compile Include="HeThong\FrmPhanQuyen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HeThong\frm_phanquyen.Designer.cs">
-      <DependentUpon>frm_phanquyen.cs</DependentUpon>
+    <Compile Include="HeThong\FrmPhanQuyen.Designer.cs">
+      <DependentUpon>FrmPhanQuyen.cs</DependentUpon>
     </Compile>
     <Compile Include="HeThong\FrmHT_NhatKyHeThong.cs">
       <SubType>Form</SubType>
@@ -322,35 +322,35 @@
     <Compile Include="HeThong\FrmHT_Report.Designer.cs">
       <DependentUpon>FrmHT_Report.cs</DependentUpon>
     </Compile>
-    <Compile Include="HeThong\frm_saochep_phanquyen.cs">
+    <Compile Include="HeThong\FrmSaoChepPhanQuyen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HeThong\frm_saochep_phanquyen.designer.cs">
-      <DependentUpon>frm_saochep_phanquyen.cs</DependentUpon>
+    <Compile Include="HeThong\FrmSaoChepPhanQuyen.designer.cs">
+      <DependentUpon>FrmSaoChepPhanQuyen.cs</DependentUpon>
     </Compile>
-    <Compile Include="HeThong\frm_them_nguoidung.cs">
+    <Compile Include="HeThong\FrmThemNguoiDung.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HeThong\frm_them_nguoidung.designer.cs">
-      <DependentUpon>frm_them_nguoidung.cs</DependentUpon>
+    <Compile Include="HeThong\FrmThemNguoiDung.designer.cs">
+      <DependentUpon>FrmThemNguoiDung.cs</DependentUpon>
     </Compile>
-    <Compile Include="HeThong\frm_doimatkhau.cs">
+    <Compile Include="HeThong\FrmDoiMatKhau.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HeThong\frm_doimatkhau.designer.cs">
-      <DependentUpon>frm_doimatkhau.cs</DependentUpon>
+    <Compile Include="HeThong\FrmDoiMatKhau.designer.cs">
+      <DependentUpon>FrmDoiMatKhau.cs</DependentUpon>
     </Compile>
-    <Compile Include="HeThong\frm_nguoidung.cs">
+    <Compile Include="HeThong\FrmNguoiDung.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HeThong\frm_nguoidung.Designer.cs">
-      <DependentUpon>frm_nguoidung.cs</DependentUpon>
+    <Compile Include="HeThong\FrmNguoiDung.Designer.cs">
+      <DependentUpon>FrmNguoiDung.cs</DependentUpon>
     </Compile>
-    <Compile Include="HeThong\frm_thongtin.cs">
+    <Compile Include="HeThong\FrmThongTin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HeThong\frm_thongtin.designer.cs">
-      <DependentUpon>frm_thongtin.cs</DependentUpon>
+    <Compile Include="HeThong\FrmThongTin.designer.cs">
+      <DependentUpon>FrmThongTin.cs</DependentUpon>
     </Compile>
     <Compile Include="Data\Data.cs" />
     <Compile Include="Extension\read_number.cs" />
@@ -385,77 +385,77 @@
     <Compile Include="NghiepVu\FrmThemNhapPhaiThu.designer.cs">
       <DependentUpon>FrmThemNhapPhaiThu.cs</DependentUpon>
     </Compile>
-    <Compile Include="NghiepVu\frm_loinhuan.cs">
+    <Compile Include="NghiepVu\FrmLoiNhuan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NghiepVu\frm_loinhuan.Designer.cs">
-      <DependentUpon>frm_loinhuan.cs</DependentUpon>
+    <Compile Include="NghiepVu\FrmLoiNhuan.Designer.cs">
+      <DependentUpon>FrmLoiNhuan.cs</DependentUpon>
     </Compile>
-    <Compile Include="NghiepVu\frm_tonghop_chiphi.cs">
+    <Compile Include="NghiepVu\FrmTongHopChiPhi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NghiepVu\frm_tonghop_chiphi.Designer.cs">
-      <DependentUpon>frm_tonghop_chiphi.cs</DependentUpon>
+    <Compile Include="NghiepVu\FrmTongHopChiPhi.Designer.cs">
+      <DependentUpon>FrmTongHopChiPhi.cs</DependentUpon>
     </Compile>
-    <Compile Include="NghiepVu\frm_capnhat_sodu_dauky.cs">
+    <Compile Include="NghiepVu\FrmKetChuyenSoDu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NghiepVu\frm_capnhat_sodu_dauky.Designer.cs">
-      <DependentUpon>frm_capnhat_sodu_dauky.cs</DependentUpon>
+    <Compile Include="NghiepVu\FrmKetChuyenSoDu.Designer.cs">
+      <DependentUpon>FrmKetChuyenSoDu.cs</DependentUpon>
     </Compile>
-    <Compile Include="NghiepVu\frm_baocao_banhang.cs">
+    <Compile Include="NghiepVu\FrmBaoCaoBanHang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NghiepVu\frm_baocao_banhang.Designer.cs">
-      <DependentUpon>frm_baocao_banhang.cs</DependentUpon>
+    <Compile Include="NghiepVu\FrmBaoCaoBanHang.Designer.cs">
+      <DependentUpon>FrmBaoCaoBanHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="NghiepVu\frm_nhapxuatkho.cs">
+    <Compile Include="NghiepVu\FrmNhapXuatKho.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NghiepVu\frm_nhapxuatkho.Designer.cs">
-      <DependentUpon>frm_nhapxuatkho.cs</DependentUpon>
+    <Compile Include="NghiepVu\FrmNhapXuatKho.Designer.cs">
+      <DependentUpon>FrmNhapXuatKho.cs</DependentUpon>
     </Compile>
-    <Compile Include="NghiepVu\frm_them_sodudauky.cs">
+    <Compile Include="NghiepVu\FrmThemSoDuDauKy.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NghiepVu\frm_them_sodudauky.designer.cs">
-      <DependentUpon>frm_them_sodudauky.cs</DependentUpon>
+    <Compile Include="NghiepVu\FrmThemSoDuDauKy.designer.cs">
+      <DependentUpon>FrmThemSoDuDauKy.cs</DependentUpon>
     </Compile>
-    <Compile Include="NghiepVu\frm_xulyamkho.cs">
+    <Compile Include="NghiepVu\FrmXuLyAmKho.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NghiepVu\frm_xulyamkho.Designer.cs">
-      <DependentUpon>frm_xulyamkho.cs</DependentUpon>
+    <Compile Include="NghiepVu\FrmXuLyAmKho.Designer.cs">
+      <DependentUpon>FrmXuLyAmKho.cs</DependentUpon>
     </Compile>
-    <Compile Include="NghiepVu\frm_tonkho.cs">
+    <Compile Include="NghiepVu\FrmTonKho.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NghiepVu\frm_tonkho.Designer.cs">
-      <DependentUpon>frm_tonkho.cs</DependentUpon>
+    <Compile Include="NghiepVu\FrmTonKho.Designer.cs">
+      <DependentUpon>FrmTonKho.cs</DependentUpon>
     </Compile>
-    <Compile Include="NghiepVu\frm_xuatkho.cs">
+    <Compile Include="NghiepVu\FrmXuatKho.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NghiepVu\frm_xuatkho.Designer.cs">
-      <DependentUpon>frm_xuatkho.cs</DependentUpon>
+    <Compile Include="NghiepVu\FrmXuatKho.Designer.cs">
+      <DependentUpon>FrmXuatKho.cs</DependentUpon>
     </Compile>
-    <Compile Include="NghiepVu\frm_nhapkho.cs">
+    <Compile Include="NghiepVu\FrmNhapKho.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NghiepVu\frm_nhapkho.Designer.cs">
-      <DependentUpon>frm_nhapkho.cs</DependentUpon>
+    <Compile Include="NghiepVu\FrmNhapKho.Designer.cs">
+      <DependentUpon>FrmNhapKho.cs</DependentUpon>
     </Compile>
-    <Compile Include="NghiepVu\frm_dinhmuc_linhkien.cs">
+    <Compile Include="NghiepVu\FrmDinhMucLinhKien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NghiepVu\frm_dinhmuc_linhkien.Designer.cs">
-      <DependentUpon>frm_dinhmuc_linhkien.cs</DependentUpon>
+    <Compile Include="NghiepVu\FrmDinhMucLinhKien.Designer.cs">
+      <DependentUpon>FrmDinhMucLinhKien.cs</DependentUpon>
     </Compile>
-    <Compile Include="NghiepVu\frm_them_xuatkho.cs">
+    <Compile Include="NghiepVu\FrmThemXuatKho.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NghiepVu\frm_them_xuatkho.designer.cs">
-      <DependentUpon>frm_them_xuatkho.cs</DependentUpon>
+    <Compile Include="NghiepVu\FrmThemXuatKho.designer.cs">
+      <DependentUpon>FrmThemXuatKho.cs</DependentUpon>
     </Compile>
     <Compile Include="NghiepVu\FrmThemNhapkho.cs">
       <SubType>Form</SubType>
@@ -463,11 +463,11 @@
     <Compile Include="NghiepVu\FrmThemNhapkho.designer.cs">
       <DependentUpon>FrmThemNhapkho.cs</DependentUpon>
     </Compile>
-    <Compile Include="NghiepVu\frm_them_dinhmuc_linhkien.cs">
+    <Compile Include="NghiepVu\FrmThemDinhMucLinhKien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NghiepVu\frm_them_dinhmuc_linhkien.designer.cs">
-      <DependentUpon>frm_them_dinhmuc_linhkien.cs</DependentUpon>
+    <Compile Include="NghiepVu\FrmThemDinhMucLinhKien.designer.cs">
+      <DependentUpon>FrmThemDinhMucLinhKien.cs</DependentUpon>
     </Compile>
     <Compile Include="NghiepVu\rptPhieuXuat.cs">
       <SubType>Component</SubType>
@@ -549,11 +549,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="DanhMuc\frm_loaichiphi.resx">
-      <DependentUpon>frm_loaichiphi.cs</DependentUpon>
+    <EmbeddedResource Include="DanhMuc\FrmLoaiChiPhi.resx">
+      <DependentUpon>FrmLoaiChiPhi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DanhMuc\frm_them_loaichiphi.resx">
-      <DependentUpon>frm_them_loaichiphi.cs</DependentUpon>
+    <EmbeddedResource Include="DanhMuc\FrmThemLoaiChiPhi.resx">
+      <DependentUpon>FrmThemLoaiChiPhi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DanhMuc\FrmThemHangHoa.resx">
       <DependentUpon>FrmThemHangHoa.cs</DependentUpon>
@@ -561,29 +561,29 @@
     <EmbeddedResource Include="DanhMuc\FrmHangHoa.resx">
       <DependentUpon>FrmHangHoa.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DanhMuc\frm_them_ncc.resx">
-      <DependentUpon>frm_them_ncc.cs</DependentUpon>
+    <EmbeddedResource Include="DanhMuc\FrmThemNCC.resx">
+      <DependentUpon>FrmThemNCC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DanhMuc\frm_ncc.resx">
-      <DependentUpon>frm_ncc.cs</DependentUpon>
+    <EmbeddedResource Include="DanhMuc\FrmNCC.resx">
+      <DependentUpon>FrmNCC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DanhMuc\frm_them_khachhang.resx">
-      <DependentUpon>frm_them_khachhang.cs</DependentUpon>
+    <EmbeddedResource Include="DanhMuc\FrmThemKhachHang.resx">
+      <DependentUpon>FrmThemKhachHang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DanhMuc\frm_them_nhomhang.resx">
-      <DependentUpon>frm_them_nhomhang.cs</DependentUpon>
+    <EmbeddedResource Include="DanhMuc\FrmThemNhomHang.resx">
+      <DependentUpon>FrmThemNhomHang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DanhMuc\frm_khachhang.resx">
-      <DependentUpon>frm_khachhang.cs</DependentUpon>
+    <EmbeddedResource Include="DanhMuc\FrmKhachHang.resx">
+      <DependentUpon>FrmKhachHang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DanhMuc\frm_nhomhang.resx">
-      <DependentUpon>frm_nhomhang.cs</DependentUpon>
+    <EmbeddedResource Include="DanhMuc\FrmNhomHang.resx">
+      <DependentUpon>FrmNhomHang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DanhMuc\frm_them_donvitinh.resx">
-      <DependentUpon>frm_them_donvitinh.cs</DependentUpon>
+    <EmbeddedResource Include="DanhMuc\FrmThemDonViTinh.resx">
+      <DependentUpon>FrmThemDonViTinh.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DanhMuc\frm_donvitinh.resx">
-      <DependentUpon>frm_donvitinh.cs</DependentUpon>
+    <EmbeddedResource Include="DanhMuc\FrmDonViTinh.resx">
+      <DependentUpon>FrmDonViTinh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DanhMuc\rpt_bangbaogia.resx">
       <DependentUpon>rpt_bangbaogia.cs</DependentUpon>
@@ -600,8 +600,8 @@
     <EmbeddedResource Include="HeThong\FrmHT_MaskedDialog.resx">
       <DependentUpon>FrmHT_MaskedDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HeThong\frm_phanquyen.resx">
-      <DependentUpon>frm_phanquyen.cs</DependentUpon>
+    <EmbeddedResource Include="HeThong\FrmPhanQuyen.resx">
+      <DependentUpon>FrmPhanQuyen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HeThong\FrmHT_NhatKyHeThong.resx">
       <DependentUpon>FrmHT_NhatKyHeThong.cs</DependentUpon>
@@ -609,20 +609,20 @@
     <EmbeddedResource Include="HeThong\FrmHT_Report.resx">
       <DependentUpon>FrmHT_Report.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HeThong\frm_saochep_phanquyen.resx">
-      <DependentUpon>frm_saochep_phanquyen.cs</DependentUpon>
+    <EmbeddedResource Include="HeThong\FrmSaoChepPhanQuyen.resx">
+      <DependentUpon>FrmSaoChepPhanQuyen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HeThong\frm_them_nguoidung.resx">
-      <DependentUpon>frm_them_nguoidung.cs</DependentUpon>
+    <EmbeddedResource Include="HeThong\FrmThemNguoiDung.resx">
+      <DependentUpon>FrmThemNguoiDung.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HeThong\frm_doimatkhau.resx">
-      <DependentUpon>frm_doimatkhau.cs</DependentUpon>
+    <EmbeddedResource Include="HeThong\FrmDoiMatKhau.resx">
+      <DependentUpon>FrmDoiMatKhau.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HeThong\frm_nguoidung.resx">
-      <DependentUpon>frm_nguoidung.cs</DependentUpon>
+    <EmbeddedResource Include="HeThong\FrmNguoiDung.resx">
+      <DependentUpon>FrmNguoiDung.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HeThong\frm_thongtin.resx">
-      <DependentUpon>frm_thongtin.cs</DependentUpon>
+    <EmbeddedResource Include="HeThong\FrmThongTin.resx">
+      <DependentUpon>FrmThongTin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainView.resx">
       <DependentUpon>MainView.cs</DependentUpon>
@@ -639,47 +639,47 @@
     <EmbeddedResource Include="NghiepVu\FrmThemNhapPhaiThu.resx">
       <DependentUpon>FrmThemNhapPhaiThu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NghiepVu\frm_loinhuan.resx">
-      <DependentUpon>frm_loinhuan.cs</DependentUpon>
+    <EmbeddedResource Include="NghiepVu\FrmLoiNhuan.resx">
+      <DependentUpon>FrmLoiNhuan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NghiepVu\frm_tonghop_chiphi.resx">
-      <DependentUpon>frm_tonghop_chiphi.cs</DependentUpon>
+    <EmbeddedResource Include="NghiepVu\FrmTongHopChiPhi.resx">
+      <DependentUpon>FrmTongHopChiPhi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NghiepVu\frm_capnhat_sodu_dauky.resx">
-      <DependentUpon>frm_capnhat_sodu_dauky.cs</DependentUpon>
+    <EmbeddedResource Include="NghiepVu\FrmKetChuyenSoDu.resx">
+      <DependentUpon>FrmKetChuyenSoDu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NghiepVu\frm_baocao_banhang.resx">
-      <DependentUpon>frm_baocao_banhang.cs</DependentUpon>
+    <EmbeddedResource Include="NghiepVu\FrmBaoCaoBanHang.resx">
+      <DependentUpon>FrmBaoCaoBanHang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NghiepVu\frm_nhapxuatkho.resx">
-      <DependentUpon>frm_nhapxuatkho.cs</DependentUpon>
+    <EmbeddedResource Include="NghiepVu\FrmNhapXuatKho.resx">
+      <DependentUpon>FrmNhapXuatKho.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NghiepVu\frm_them_sodudauky.resx">
-      <DependentUpon>frm_them_sodudauky.cs</DependentUpon>
+    <EmbeddedResource Include="NghiepVu\FrmThemSoDuDauKy.resx">
+      <DependentUpon>FrmThemSoDuDauKy.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NghiepVu\frm_xulyamkho.resx">
-      <DependentUpon>frm_xulyamkho.cs</DependentUpon>
+    <EmbeddedResource Include="NghiepVu\FrmXuLyAmKho.resx">
+      <DependentUpon>FrmXuLyAmKho.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NghiepVu\frm_tonkho.resx">
-      <DependentUpon>frm_tonkho.cs</DependentUpon>
+    <EmbeddedResource Include="NghiepVu\FrmTonKho.resx">
+      <DependentUpon>FrmTonKho.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NghiepVu\frm_xuatkho.resx">
-      <DependentUpon>frm_xuatkho.cs</DependentUpon>
+    <EmbeddedResource Include="NghiepVu\FrmXuatKho.resx">
+      <DependentUpon>FrmXuatKho.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NghiepVu\frm_nhapkho.resx">
-      <DependentUpon>frm_nhapkho.cs</DependentUpon>
+    <EmbeddedResource Include="NghiepVu\FrmNhapKho.resx">
+      <DependentUpon>FrmNhapKho.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NghiepVu\frm_dinhmuc_linhkien.resx">
-      <DependentUpon>frm_dinhmuc_linhkien.cs</DependentUpon>
+    <EmbeddedResource Include="NghiepVu\FrmDinhMucLinhKien.resx">
+      <DependentUpon>FrmDinhMucLinhKien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NghiepVu\frm_them_xuatkho.resx">
-      <DependentUpon>frm_them_xuatkho.cs</DependentUpon>
+    <EmbeddedResource Include="NghiepVu\FrmThemXuatKho.resx">
+      <DependentUpon>FrmThemXuatKho.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NghiepVu\FrmThemNhapkho.resx">
       <DependentUpon>FrmThemNhapkho.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NghiepVu\frm_them_dinhmuc_linhkien.resx">
-      <DependentUpon>frm_them_dinhmuc_linhkien.cs</DependentUpon>
+    <EmbeddedResource Include="NghiepVu\FrmThemDinhMucLinhKien.resx">
+      <DependentUpon>FrmThemDinhMucLinhKien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NghiepVu\rptPhieuXuat.resx">
       <DependentUpon>rptPhieuXuat.cs</DependentUpon>

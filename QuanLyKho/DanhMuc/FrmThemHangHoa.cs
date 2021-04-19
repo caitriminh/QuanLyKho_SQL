@@ -42,12 +42,12 @@ namespace QuanLyKho.DanhMuc
             InitializeComponent();
         }
 
-        private void btn_Thoat_Click(object sender, EventArgs e)
+        private void Btn_Thoat_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        private void btn_Luu_Click(object sender, EventArgs e)
+        private void Btn_Luu_Click(object sender, EventArgs e)
         {
             if (cbo_nhomhang.EditValue == null)
             {
@@ -80,12 +80,12 @@ namespace QuanLyKho.DanhMuc
             GetNhomHang();
         }
 
-        private void frm_them_hanghoa_KeyDown(object sender, KeyEventArgs e)
+        private void Frm_them_hanghoa_KeyDown(object sender, KeyEventArgs e)
         {
             switch (e.KeyCode)
             {
                 case Keys.Enter:
-                    btn_Luu_Click(sender, e);
+                    Btn_Luu_Click(sender, e);
                     break;
                 case Keys.Escape:
                     Application.Exit();
@@ -93,22 +93,22 @@ namespace QuanLyKho.DanhMuc
             }
         }
 
-        private void cbo_nhomhang_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        private void Cbo_nhomhang_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
             if (e.Button.Kind == DevExpress.XtraEditors.Controls.ButtonPredefines.Plus)
             {
                 Data.Data._int_flag = 2;
-                frm_them_nhomhang frm = new frm_them_nhomhang();
+                FrmThemNhomHang frm = new FrmThemNhomHang();
                 frm.ShowDialog();
             }
         }
 
-        private void cbo_dvt_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        private void Cbo_dvt_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
             if (e.Button.Kind == DevExpress.XtraEditors.Controls.ButtonPredefines.Plus)
             {
                 Data.Data._int_flag = 2;
-                Frm_them_donvitinh frm = new Frm_them_donvitinh();
+                FrmThemDonViTinh frm = new FrmThemDonViTinh();
                 frm.ShowDialog();
             }
         }

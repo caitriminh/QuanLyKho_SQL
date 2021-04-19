@@ -83,14 +83,14 @@ namespace QuanLyKho.NghiepVu
         #endregion
 
 
-        private void btn_Them_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void Btn_Them_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             Data.Data._str_mahang = lbl_mahang.Text;
             FrmThemDinhMucLinhKien frm = new FrmThemDinhMucLinhKien();
             frm.ShowDialog();
         }
 
-        private void btn_Xoa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void Btn_Xoa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             var i = grvView_DinhMuc.FocusedRowHandle;
             DialogResult dgr = XtraMessageBox.Show("Bạn có muốn xóa quy đổi hàng hóa đã chọn này không?", "Xác Nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -103,12 +103,12 @@ namespace QuanLyKho.NghiepVu
             }
         }
 
-        private void btn_NapLai_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void Btn_NapLai_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             GetChiTietQuyDoi();
         }
 
-        private void btn_Luu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void Btn_Luu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             lbl_mahang.Focus();
             DialogResult dgrResult = XtraMessageBox.Show("Bạn có muốn lưu lại những thay đổi quy đổi hàng hóa không?", "Xác Nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -118,7 +118,7 @@ namespace QuanLyKho.NghiepVu
             }
         }
 
-        private void gridView1_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
+        private void GridView1_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
         {
             var i = grvView_DinhMuc.FocusedRowHandle;
             if (ReferenceEquals(e.Column, col_xoa))

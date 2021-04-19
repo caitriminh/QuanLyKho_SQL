@@ -6,25 +6,45 @@ using System.Windows.Forms;
 
 namespace QuanLyKho.HeThong
 {
-    public partial class frm_thongtin : XtraForm
+    public partial class FrmThongTin : XtraForm
     {
-        public frm_thongtin()
+        public FrmThongTin()
         {
             InitializeComponent();
         }
 
-        private void btn_Thoat_Click(object sender, EventArgs e)
+        private void Btn_Thoat_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        private void btn_Luu_Click(object sender, EventArgs e)
+        private void Btn_Luu_Click(object sender, EventArgs e)
         {
+            if (txt_tencongty.Text == string.Empty)
+            {
+                XtraMessageBox.Show("Bạn vui lòng nhập vào tên công ty.", "Cảnh Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txt_tencongty.Focus();
+                return;
+            }
+            if (txt_diachi.Text == string.Empty)
+            {
+                XtraMessageBox.Show("Bạn vui lòng nhập vào địa chỉ công ty.", "Cảnh Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txt_diachi.Focus();
+                return;
+            }
+
+            if (txt_sodt.Text == string.Empty)
+            {
+                XtraMessageBox.Show("Bạn vui lòng nhập vào số điện thoại công ty.", "Cảnh Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txt_sodt.Focus();
+                return;
+            }
+
             ExecSQL.ExecProcedureNonData("proKhoThongTin", new { action = "SAVE", tencty = txt_tencongty.Text, tencty2 = txt_tencty2.Text, diachi = txt_diachi.Text, sodt = txt_sodt.Text, sofax = txt_sofax.Text, website = txt_website.Text, email = txt_email.Text, masothue = txt_masothue.Text, nguoidaidien = txt_nguoidaidien.Text });
             XtraMessageBox.Show("Đã cập nhật thành công thông tin của công ty.", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        private void frm_thongtin_Load(object sender, EventArgs e)
+        private void Frm_thongtin_Load(object sender, EventArgs e)
         {
             var dt = ExecSQL.ExecProcedureDataFistOrDefault<khoThongTin>("prokhoThongTin", new { action = "GET_DATA" });
             if (dt == null) { return; }

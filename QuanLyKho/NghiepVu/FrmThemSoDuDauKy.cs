@@ -35,12 +35,12 @@ namespace QuanLyKho.NghiepVu
             date_ngaythang.EditValue = DateTime.Now.Date;
         }
 
-        private void btn_Thoat_Click(object sender, EventArgs e)
+        private void Btn_Thoat_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        private void btn_Luu_Click(object sender, EventArgs e)
+        private void Btn_Luu_Click(object sender, EventArgs e)
         {
             if (cbo_tenhanghoa.EditValue == null)
             {
@@ -69,19 +69,19 @@ namespace QuanLyKho.NghiepVu
             msgBroker.Publish();
         }
 
-        private void cbo_tenhanghoa_Click(object sender, EventArgs e)
+        private void Cbo_tenhanghoa_Click(object sender, EventArgs e)
         {
             gridLookUpEdit1View.FocusedRowHandle = GridControl.AutoFilterRowHandle;
             gridLookUpEdit1View.FocusedColumn = gridLookUpEdit1View.Columns["tenhanghoa"];
             gridLookUpEdit1View.ShowEditor();
         }
 
-        private void frm_them_sodudauky_KeyDown(object sender, KeyEventArgs e)
+        private void Frm_them_sodudauky_KeyDown(object sender, KeyEventArgs e)
         {
             switch (e.KeyCode)
             {
                 case Keys.Enter:
-                    btn_Luu_Click(sender, e);
+                    Btn_Luu_Click(sender, e);
                     break;
                 case Keys.Escape:
                     Application.Exit();
@@ -89,18 +89,18 @@ namespace QuanLyKho.NghiepVu
             }
         }
 
-        private void frm_them_sodudauky_Load(object sender, EventArgs e)
+        private void Frm_them_sodudauky_Load(object sender, EventArgs e)
         {
             GetHangHoa();
         }
 
-        private void txt_soluong_TextChanged(object sender, EventArgs e)
+        private void Txt_soluong_TextChanged(object sender, EventArgs e)
         {
             double thanhtien = Convert.ToDouble(txtDonGia.Text) * Convert.ToDouble(txt_soluong.Text);
             lblThanhTien.Text = thanhtien.ToString();
         }
 
-        private void txtDonGia_TextChanged(object sender, EventArgs e)
+        private void TxtDonGia_TextChanged(object sender, EventArgs e)
         {
             double thanhtien = Convert.ToDouble(txtDonGia.Text) * Convert.ToDouble(txt_soluong.Text);
             lblThanhTien.Text = thanhtien.ToString();

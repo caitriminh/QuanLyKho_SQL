@@ -10,7 +10,7 @@ using System.Linq;
 using System.Windows.Forms;
 namespace QuanLyKho.NghiepVu
 {
-    public partial class FrmBaocaoBanhang : XtraForm
+    public partial class FrmBaoCaoBanHang : XtraForm
     {
         #region "Function"
         public void GetPhanQuyen()
@@ -34,7 +34,7 @@ namespace QuanLyKho.NghiepVu
             cboKy.EditValue = 1;
         }
         #endregion
-        public FrmBaocaoBanhang()
+        public FrmBaoCaoBanHang()
         {
             InitializeComponent();
             grvView_BaoCaoDoanhThu.PopupMenuShowing += (s, e) => { GridViewHelper.AddFontAndColortoPopupMenuShowing(s, e, grcBaoCaoDoanhThu, Name); };
@@ -47,12 +47,12 @@ namespace QuanLyKho.NghiepVu
             GetKy();
         }
 
-        private void btn_NapLai_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void Btn_NapLai_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             GetBaoCaoBanHang();
         }
 
-        private void btn_excel_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void Btn_excel_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             xtraSaveFileDialog1.Filter = @"Excel files |*.xlsx";
             xtraSaveFileDialog1.FileName = "BaoCaoDoanhThu_" + DateTime.Now.ToString("dd-MM-yyyy hh-mm-ss"); ;
@@ -63,7 +63,7 @@ namespace QuanLyKho.NghiepVu
             }
         }
 
-        private void btn_in_ItemClick_1(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void Btn_in_ItemClick_1(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             var selectedRow = from f in grvView_BaoCaoDoanhThu.GetSelectedRows() where grvView_BaoCaoDoanhThu.IsDataRow(f) select grvView_BaoCaoDoanhThu.GetDataRow(f);
             if (grvView_BaoCaoDoanhThu.SelectedRowsCount > 0)
@@ -79,12 +79,12 @@ namespace QuanLyKho.NghiepVu
             }
         }
 
-        private void btn_tim_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void Btn_tim_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             GetBaoCaoBanHang();
         }
 
-        private void frm_baocao_banhang_Load(object sender, EventArgs e)
+        private void Frm_baocao_banhang_Load(object sender, EventArgs e)
         {
             GetBaoCaoBanHang();
             GetPhanQuyen();
@@ -92,7 +92,7 @@ namespace QuanLyKho.NghiepVu
             Data.Data._run_history_log("Xem danh muc Báo Cáo Bán Hàng.", "Báo Cáo Bán Hàng");
         }
 
-        private void cboKy_EditValueChanged(object sender, EventArgs e)
+        private void CboKy_EditValueChanged(object sender, EventArgs e)
         {
             DataRowView rowSelected = (DataRowView)cboKy2.GetRowByKeyValue(cboKy.EditValue);
             dteTuNgay.EditValue = Convert.ToDateTime(rowSelected.Row["from"]);

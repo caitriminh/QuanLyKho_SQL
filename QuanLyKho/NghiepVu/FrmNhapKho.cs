@@ -118,14 +118,14 @@ namespace QuanLyKho.NghiepVu
             }
         }
 
-        private void btn_Them_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void Btn_Them_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             Data.Data._int_flag = 1;
             FrmThemNhapkho frm = new FrmThemNhapkho();
             frm.Show();
         }
 
-        private void btn_Xoa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void Btn_Xoa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             var dgr = XtraMessageBox.Show("Bạn có muốn xóa phiếu nhập kho " + lbl_maphieu.Text + " này không?", "Xác Nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dgr == DialogResult.Yes)
@@ -141,12 +141,12 @@ namespace QuanLyKho.NghiepVu
             }
         }
 
-        private void btn_NapLai_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void Btn_NapLai_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             GetPhieuNhap();
         }
 
-        private void btn_Luu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void Btn_Luu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             lbl_maphieu.Focus();
             DialogResult dgrResult = XtraMessageBox.Show("Bạn có muốn lưu lại những thay đổi phiếu nhập kho không?", "Xác Nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -156,7 +156,7 @@ namespace QuanLyKho.NghiepVu
             }
         }
 
-        private void gridView1_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
+        private void GridView1_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
         {
             var i = grvView_PhieuNhap.FocusedRowHandle;
             if (e.Column == col_xoa)
@@ -201,7 +201,7 @@ namespace QuanLyKho.NghiepVu
             }
         }
 
-        private void btn_excel_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void Btn_excel_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             xtraSaveFileDialog1.Filter = "Excel files |*.xlsx";
             xtraSaveFileDialog1.FileName = "PhieuNhapKho_" + DateTime.Now.ToString("dd-MM-yyyy hh-mm-ss"); ;
@@ -212,7 +212,7 @@ namespace QuanLyKho.NghiepVu
             }
         }
 
-        private void frm_hanghoa_Load(object sender, EventArgs e)
+        private void Frm_hanghoa_Load(object sender, EventArgs e)
         {
             this.Subscribe<MessageBroker>(OnNext);
             GetKy();
@@ -224,12 +224,12 @@ namespace QuanLyKho.NghiepVu
             frm.Show();
         }
 
-        private void lbl_maphieu_TextChanged(object sender, EventArgs e)
+        private void Lbl_maphieu_TextChanged(object sender, EventArgs e)
         {
             GetChiTietPhieuNhap();
         }
 
-        private void btn_sua_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void Btn_sua_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             if (VB.Left(lbl_maphieu.Text, 2) == "XT")
             {
@@ -243,7 +243,7 @@ namespace QuanLyKho.NghiepVu
             frm.ShowDialog();
         }
 
-        private void btn_in_ItemClick_1(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void Btn_in_ItemClick_1(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             Data.Data._dtreport = ExecSQL.ExecProcedureDataAsDataTable("prokhoChiTietPhieuNhap", new { action = "GET_DATA_MAPHIEU", maphieu = lbl_maphieu.Text });
             if (Data.Data._dtreport.Rows.Count > 0)
@@ -258,12 +258,12 @@ namespace QuanLyKho.NghiepVu
             }
         }
 
-        private void btn_tim_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void Btn_tim_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             GetPhieuNhap();
         }
 
-        private void cbo_Ky_EditValueChanged(object sender, EventArgs e)
+        private void Cbo_Ky_EditValueChanged(object sender, EventArgs e)
         {
             DataRowView rowSelected = (DataRowView)cbo_Ky2.GetRowByKeyValue(cbo_Ky.EditValue);
             date_tungay.EditValue = Convert.ToDateTime(rowSelected.Row["from"]);

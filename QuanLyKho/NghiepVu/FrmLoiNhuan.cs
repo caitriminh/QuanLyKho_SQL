@@ -40,12 +40,12 @@ namespace QuanLyKho.NghiepVu
 
         #endregion
 
-        private void btn_NapLai_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void Btn_NapLai_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             GetBaoCaoLoiNhuan();
         }
 
-        private void btn_excel_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void Btn_excel_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             xtraSaveFileDialog1.Filter = "Excel files |*.xlsx";
             xtraSaveFileDialog1.FileName = "BaoCaoLoiNhuan_" + DateTime.Now.ToString("dd-MM-yyyy hh-mm-ss"); ;
@@ -56,7 +56,7 @@ namespace QuanLyKho.NghiepVu
             }
         }
 
-        private void btn_in_ItemClick_1(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void Btn_in_ItemClick_1(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             var selectedRow = from f in grvView_BaoCaoLoiNhuan.GetSelectedRows() where grvView_BaoCaoLoiNhuan.IsDataRow(f) select grvView_BaoCaoLoiNhuan.GetDataRow(f);
             if (grvView_BaoCaoLoiNhuan.SelectedRowsCount > 0)
@@ -72,12 +72,12 @@ namespace QuanLyKho.NghiepVu
             }
         }
 
-        private void btn_tim_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void Btn_tim_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             GetBaoCaoLoiNhuan();
         }
 
-        private void frm_loinhuan_Load(object sender, EventArgs e)
+        private void Frm_loinhuan_Load(object sender, EventArgs e)
         {
             dteTuNgay.EditValue = DateTime.Now.Date.ToString("01/MM/yyyy");
             dteDenNgay.EditValue = DateTime.Now.Date.ToString("dd/MM/yyyy");

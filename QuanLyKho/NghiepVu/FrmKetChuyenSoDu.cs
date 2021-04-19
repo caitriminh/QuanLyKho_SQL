@@ -7,20 +7,20 @@ using System.Globalization;
 using System.Windows.Forms;
 namespace QuanLyKho.NghiepVu
 {
-    public partial class frm_capnhat_sodu_dauky : XtraForm
+    public partial class FrmKetChuyenSoDu : XtraForm
     {
-        public frm_capnhat_sodu_dauky()
+        public FrmKetChuyenSoDu()
         {
             InitializeComponent();
             date_thangnam.EditValue = DateTime.Now.Date.ToString("MM/yyyy");
         }
 
-        private void btn_Thoat_Click(object sender, EventArgs e)
+        private void Btn_Thoat_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        private void btn_Luu_Click(object sender, EventArgs e)
+        private void Btn_Luu_Click(object sender, EventArgs e)
         {
             var dgr = XtraMessageBox.Show($"Bạn có muốn kết chuyển số dư sang tháng sau không?", "Xác Nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dgr != DialogResult.Yes) { return; }

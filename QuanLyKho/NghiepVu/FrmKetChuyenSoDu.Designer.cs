@@ -1,6 +1,6 @@
 ﻿namespace QuanLyKho.NghiepVu
 {
-    partial class frm_capnhat_sodu_dauky
+    partial class FrmKetChuyenSoDu
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_capnhat_sodu_dauky));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmKetChuyenSoDu));
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.date_thangnam = new DevExpress.XtraEditors.DateEdit();
@@ -46,23 +46,26 @@
             this.groupControl1.Controls.Add(this.date_thangnam);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
+            this.groupControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(472, 84);
+            this.groupControl1.Size = new System.Drawing.Size(405, 68);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "Thông tin";
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(12, 48);
+            this.labelControl1.Location = new System.Drawing.Point(10, 39);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(70, 16);
+            this.labelControl1.Size = new System.Drawing.Size(57, 13);
             this.labelControl1.TabIndex = 1;
             this.labelControl1.Text = "Tháng năm:";
             // 
             // date_thangnam
             // 
             this.date_thangnam.EditValue = null;
-            this.date_thangnam.Location = new System.Drawing.Point(93, 45);
+            this.date_thangnam.Location = new System.Drawing.Point(80, 37);
+            this.date_thangnam.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.date_thangnam.Name = "date_thangnam";
             this.date_thangnam.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -71,43 +74,42 @@
             this.date_thangnam.Properties.DisplayFormat.FormatString = "MM/yyyy";
             this.date_thangnam.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.date_thangnam.Properties.Mask.EditMask = "MM/yyyy";
-            this.date_thangnam.Size = new System.Drawing.Size(367, 22);
+            this.date_thangnam.Size = new System.Drawing.Size(315, 20);
             this.date_thangnam.TabIndex = 0;
             // 
             // btn_Luu
             // 
             this.btn_Luu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_Luu.ImageOptions.Image")));
-            this.btn_Luu.Location = new System.Drawing.Point(264, 91);
-            this.btn_Luu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btn_Luu.Location = new System.Drawing.Point(226, 74);
             this.btn_Luu.Name = "btn_Luu";
-            this.btn_Luu.Size = new System.Drawing.Size(95, 28);
+            this.btn_Luu.Size = new System.Drawing.Size(81, 23);
             this.btn_Luu.TabIndex = 2;
             this.btn_Luu.Text = "&Thực hiện";
-            this.btn_Luu.Click += new System.EventHandler(this.btn_Luu_Click);
+            this.btn_Luu.Click += new System.EventHandler(this.Btn_Luu_Click);
             // 
             // btn_Thoat
             // 
             this.btn_Thoat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_Thoat.ImageOptions.Image")));
-            this.btn_Thoat.Location = new System.Drawing.Point(365, 91);
-            this.btn_Thoat.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btn_Thoat.Location = new System.Drawing.Point(313, 74);
             this.btn_Thoat.Name = "btn_Thoat";
-            this.btn_Thoat.Size = new System.Drawing.Size(95, 28);
+            this.btn_Thoat.Size = new System.Drawing.Size(81, 23);
             this.btn_Thoat.TabIndex = 3;
             this.btn_Thoat.Text = "Thoát";
-            this.btn_Thoat.Click += new System.EventHandler(this.btn_Thoat_Click);
+            this.btn_Thoat.Click += new System.EventHandler(this.Btn_Thoat_Click);
             // 
-            // frm_capnhat_sodu_dauky
+            // FrmKetChuyenSoDu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(472, 140);
+            this.ClientSize = new System.Drawing.Size(405, 114);
             this.Controls.Add(this.btn_Thoat);
             this.Controls.Add(this.btn_Luu);
             this.Controls.Add(this.groupControl1);
-            this.Name = "frm_capnhat_sodu_dauky";
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MaximizeBox = false;
+            this.Name = "FrmKetChuyenSoDu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Số Dư Đầu Kỳ";
-          
+            this.Text = "Kết Chuyển Số Dư";
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();

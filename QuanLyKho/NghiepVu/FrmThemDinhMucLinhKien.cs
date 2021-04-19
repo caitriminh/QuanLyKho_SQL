@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace QuanLyKho.NghiepVu
 {
-    public partial class FrmThemDinhMucLinhKien : DevExpress.XtraEditors.XtraForm
+    public partial class FrmThemDinhMucLinhKien : XtraForm
     {
         public FrmThemDinhMucLinhKien()
         {
@@ -46,20 +46,20 @@ namespace QuanLyKho.NghiepVu
             grcQuyDoi.DataSource = dt;
         }
         #endregion
-        
-        private void frm_them_quydoi_Load(object sender, EventArgs e)
+
+        private void Frm_them_quydoi_Load(object sender, EventArgs e)
         {
             GetHangHoa();
         }
 
-        private void cbo_hanghoa2_EditValueChanged(object sender, EventArgs e)
+        private void Cbo_hanghoa2_EditValueChanged(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(cbo_hanghoa2.Text)) { return; }
             GetHangHoa2();
             GetChiTietQuyDoi();
         }
 
-        private void gridView1_ValidatingEditor(object sender, DevExpress.XtraEditors.Controls.BaseContainerValidateEditorEventArgs e)
+        private void GridView1_ValidatingEditor(object sender, DevExpress.XtraEditors.Controls.BaseContainerValidateEditorEventArgs e)
         {
             GridView view = sender as GridView;
             int i = view.FocusedRowHandle;
@@ -94,12 +94,12 @@ namespace QuanLyKho.NghiepVu
             msgBroker.Publish();
         }
 
-        private void btn_lammoi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void Btn_lammoi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             GetChiTietQuyDoi();
         }
 
-        private void gridView1_RowCellClick(object sender, RowCellClickEventArgs e)
+        private void GridView1_RowCellClick(object sender, RowCellClickEventArgs e)
         {
             var i = dgvViewQuyDoi.FocusedRowHandle;
             if (ReferenceEquals(e.Column, colXoa))
@@ -118,7 +118,7 @@ namespace QuanLyKho.NghiepVu
             }
         }
 
-        private void btn_luu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void Btn_luu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
 
         }

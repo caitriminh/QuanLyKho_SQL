@@ -228,7 +228,7 @@
             this.btn_Them.Id = 0;
             this.btn_Them.ImageOptions.ImageIndex = 0;
             this.btn_Them.Name = "btn_Them";
-            this.btn_Them.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_Them_ItemClick);
+            this.btn_Them.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_Them_ItemClick);
             // 
             // btn_Luu
             // 
@@ -236,7 +236,7 @@
             this.btn_Luu.Id = 1;
             this.btn_Luu.ImageOptions.ImageIndex = 3;
             this.btn_Luu.Name = "btn_Luu";
-            this.btn_Luu.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_Luu_ItemClick);
+            this.btn_Luu.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_Luu_ItemClick);
             // 
             // btn_sua
             // 
@@ -244,7 +244,7 @@
             this.btn_sua.Id = 11;
             this.btn_sua.ImageOptions.ImageIndex = 6;
             this.btn_sua.Name = "btn_sua";
-            this.btn_sua.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_sua_ItemClick);
+            this.btn_sua.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_sua_ItemClick);
             // 
             // btn_Xoa
             // 
@@ -252,7 +252,7 @@
             this.btn_Xoa.Id = 2;
             this.btn_Xoa.ImageOptions.ImageIndex = 1;
             this.btn_Xoa.Name = "btn_Xoa";
-            this.btn_Xoa.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_Xoa_ItemClick);
+            this.btn_Xoa.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_Xoa_ItemClick);
             // 
             // btn_NapLai
             // 
@@ -260,7 +260,7 @@
             this.btn_NapLai.Id = 3;
             this.btn_NapLai.ImageOptions.ImageIndex = 2;
             this.btn_NapLai.Name = "btn_NapLai";
-            this.btn_NapLai.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_NapLai_ItemClick);
+            this.btn_NapLai.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_NapLai_ItemClick);
             // 
             // btn_in
             // 
@@ -268,7 +268,7 @@
             this.btn_in.Id = 7;
             this.btn_in.ImageOptions.ImageIndex = 5;
             this.btn_in.Name = "btn_in";
-            this.btn_in.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_in_ItemClick_1);
+            this.btn_in.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_in_ItemClick_1);
             // 
             // btn_excel
             // 
@@ -276,7 +276,7 @@
             this.btn_excel.Id = 5;
             this.btn_excel.ImageOptions.ImageIndex = 4;
             this.btn_excel.Name = "btn_excel";
-            this.btn_excel.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_excel_ItemClick);
+            this.btn_excel.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_excel_ItemClick);
             // 
             // cbo_Ky
             // 
@@ -284,7 +284,7 @@
             this.cbo_Ky.Edit = this.cbo_Ky2;
             this.cbo_Ky.Id = 12;
             this.cbo_Ky.Name = "cbo_Ky";
-            this.cbo_Ky.EditValueChanged += new System.EventHandler(this.cbo_Ky_EditValueChanged);
+            this.cbo_Ky.EditValueChanged += new System.EventHandler(this.Cbo_Ky_EditValueChanged);
             // 
             // cbo_Ky2
             // 
@@ -354,7 +354,7 @@
             this.btn_tim.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_tim.ImageOptions.Image")));
             this.btn_tim.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btn_tim.ImageOptions.LargeImage")));
             this.btn_tim.Name = "btn_tim";
-            this.btn_tim.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_tim_ItemClick);
+            this.btn_tim.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_tim_ItemClick);
             // 
             // barDockControlTop
             // 
@@ -411,7 +411,7 @@
             this.lbl_maphieu.Name = "lbl_maphieu";
             this.lbl_maphieu.Size = new System.Drawing.Size(64, 0);
             this.lbl_maphieu.TabIndex = 10;
-            this.lbl_maphieu.TextChanged += new System.EventHandler(this.lbl_maphieu_TextChanged);
+            this.lbl_maphieu.TextChanged += new System.EventHandler(this.Lbl_maphieu_TextChanged);
             // 
             // label1A
             // 
@@ -483,7 +483,7 @@
             this.grvView_PhieuNhap.OptionsView.ShowGroupPanel = false;
             this.grvView_PhieuNhap.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
             new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.gridColumn1, DevExpress.Data.ColumnSortOrder.Descending)});
-            this.grvView_PhieuNhap.RowCellClick += new DevExpress.XtraGrid.Views.Grid.RowCellClickEventHandler(this.gridView1_RowCellClick);
+            this.grvView_PhieuNhap.RowCellClick += new DevExpress.XtraGrid.Views.Grid.RowCellClickEventHandler(this.GridView1_RowCellClick);
             // 
             // colThanhToan
             // 
@@ -1008,7 +1008,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmNhapkho";
             this.Text = "Phiếu Nhập Kho";
-            this.Load += new System.EventHandler(this.frm_hanghoa_Load);
+            this.Load += new System.EventHandler(this.Frm_hanghoa_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbo_Ky2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEdit2View)).EndInit();

@@ -214,7 +214,7 @@
             this.btn_chuyen_sodu_dauky.Id = 0;
             this.btn_chuyen_sodu_dauky.ImageOptions.ImageIndex = 7;
             this.btn_chuyen_sodu_dauky.Name = "btn_chuyen_sodu_dauky";
-            this.btn_chuyen_sodu_dauky.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_capnhat_sodu_dauky_ItemClick);
+            this.btn_chuyen_sodu_dauky.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_capnhat_sodu_dauky_ItemClick);
             // 
             // btnThem
             // 
@@ -224,7 +224,7 @@
             this.btnThem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.ImageOptions.Image")));
             this.btnThem.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnThem.ImageOptions.LargeImage")));
             this.btnThem.Name = "btnThem";
-            this.btnThem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_capnhat_sodudauky_ItemClick);
+            this.btnThem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_capnhat_sodudauky_ItemClick);
             // 
             // btnLuu
             // 
@@ -234,7 +234,7 @@
             this.btnLuu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.ImageOptions.Image")));
             this.btnLuu.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnLuu.ImageOptions.LargeImage")));
             this.btnLuu.Name = "btnLuu";
-            this.btnLuu.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnLuu_ItemClick);
+            this.btnLuu.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnLuu_ItemClick);
             // 
             // btn_xoa
             // 
@@ -242,7 +242,7 @@
             this.btn_xoa.Id = 12;
             this.btn_xoa.ImageOptions.ImageIndex = 1;
             this.btn_xoa.Name = "btn_xoa";
-            this.btn_xoa.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_xoa_ItemClick);
+            this.btn_xoa.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_xoa_ItemClick);
             // 
             // btn_NapLai
             // 
@@ -250,7 +250,7 @@
             this.btn_NapLai.Id = 3;
             this.btn_NapLai.ImageOptions.ImageIndex = 2;
             this.btn_NapLai.Name = "btn_NapLai";
-            this.btn_NapLai.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_NapLai_ItemClick);
+            this.btn_NapLai.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_NapLai_ItemClick);
             // 
             // barSubItem1
             // 
@@ -267,14 +267,14 @@
             this.btn_rpt_baocao_tonkho_giatri.Caption = "Báo cáo tồn kho (giá trị)";
             this.btn_rpt_baocao_tonkho_giatri.Id = 7;
             this.btn_rpt_baocao_tonkho_giatri.Name = "btn_rpt_baocao_tonkho_giatri";
-            this.btn_rpt_baocao_tonkho_giatri.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_rpt_baocao_tonkho_giatri_ItemClick);
+            this.btn_rpt_baocao_tonkho_giatri.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_rpt_baocao_tonkho_giatri_ItemClick);
             // 
             // btn_rpt_baocao_tongkho_soluong
             // 
             this.btn_rpt_baocao_tongkho_soluong.Caption = "Báo cáo tồn kho (số lượng)";
             this.btn_rpt_baocao_tongkho_soluong.Id = 15;
             this.btn_rpt_baocao_tongkho_soluong.Name = "btn_rpt_baocao_tongkho_soluong";
-            this.btn_rpt_baocao_tongkho_soluong.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_rpt_baocao_tongkho_soluong_ItemClick);
+            this.btn_rpt_baocao_tongkho_soluong.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_rpt_baocao_tongkho_soluong_ItemClick);
             // 
             // barSubItem3
             // 
@@ -291,7 +291,7 @@
             this.btn_excel.Caption = "Tồn kho";
             this.btn_excel.Id = 5;
             this.btn_excel.Name = "btn_excel";
-            this.btn_excel.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_excel_ItemClick);
+            this.btn_excel.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_excel_ItemClick);
             // 
             // btnExcelSoDuDauKy
             // 
@@ -299,7 +299,7 @@
             this.btnExcelSoDuDauKy.Enabled = false;
             this.btnExcelSoDuDauKy.Id = 20;
             this.btnExcelSoDuDauKy.Name = "btnExcelSoDuDauKy";
-            this.btnExcelSoDuDauKy.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnExcelSoDuDauKy_ItemClick);
+            this.btnExcelSoDuDauKy.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnExcelSoDuDauKy_ItemClick);
             // 
             // date_thangnam
             // 
@@ -329,7 +329,7 @@
             this.btn_tim.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_tim.ImageOptions.Image")));
             this.btn_tim.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btn_tim.ImageOptions.LargeImage")));
             this.btn_tim.Name = "btn_tim";
-            this.btn_tim.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_tim_ItemClick);
+            this.btn_tim.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_tim_ItemClick);
             // 
             // barDockControlTop
             // 
@@ -434,7 +434,7 @@
             this.xtraTabControl2.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.tabTonKho,
             this.tabSoDuDauKy});
-            this.xtraTabControl2.SelectedPageChanged += new DevExpress.XtraTab.TabPageChangedEventHandler(this.xtraTabControl2_SelectedPageChanged);
+            this.xtraTabControl2.SelectedPageChanged += new DevExpress.XtraTab.TabPageChangedEventHandler(this.XtraTabControl2_SelectedPageChanged);
             // 
             // tabTonKho
             // 
@@ -845,7 +845,7 @@
             this.grvView_SoDuDauKy.OptionsView.ShowGroupPanel = false;
             this.grvView_SoDuDauKy.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
             new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.gridColumn48, DevExpress.Data.ColumnSortOrder.Ascending)});
-            this.grvView_SoDuDauKy.RowCellClick += new DevExpress.XtraGrid.Views.Grid.RowCellClickEventHandler(this.gridView6_RowCellClick);
+            this.grvView_SoDuDauKy.RowCellClick += new DevExpress.XtraGrid.Views.Grid.RowCellClickEventHandler(this.GridView6_RowCellClick);
             // 
             // gridColumn43
             // 
@@ -1106,7 +1106,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmTonkho";
             this.Text = "Danh Mục Tồn Kho";
-            this.Load += new System.EventHandler(this.frm_tonkho_Load);
+            this.Load += new System.EventHandler(this.Frm_tonkho_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit1.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit1)).EndInit();

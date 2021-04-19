@@ -66,7 +66,7 @@ namespace QuanLyKho.NghiepVu
             for (var index = 0; index <= grvView_SoDuDauKy.RowCount - 1; index++)
             {
                 var dr = grvView_SoDuDauKy.GetDataRow(Convert.ToInt32(index));
-                if (ReferenceEquals(dr, null))
+                if (dr is null)
                 {
                     break;
                 }
@@ -98,7 +98,7 @@ namespace QuanLyKho.NghiepVu
             date_thangnam.EditValue = DateTime.Now.Date;
         }
 
-        private void btn_NapLai_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void Btn_NapLai_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             if (xtraTabControl2.SelectedTabPage == tabTonKho)
             {
@@ -110,7 +110,7 @@ namespace QuanLyKho.NghiepVu
             }
         }
 
-        private void btn_excel_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void Btn_excel_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             xtraSaveFileDialog1.Filter = @"Excel files |*.xlsx";
             xtraSaveFileDialog1.FileName = "BaoCaoTonKho_" + DateTime.Now.ToString("dd-MM-yyyy hh-mm-ss"); ;
@@ -121,7 +121,7 @@ namespace QuanLyKho.NghiepVu
             }
         }
 
-        private void btn_tim_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void Btn_tim_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             if (xtraTabControl2.SelectedTabPage == tabTonKho)
             {
@@ -133,7 +133,7 @@ namespace QuanLyKho.NghiepVu
             }
         }
 
-        private void btn_xoa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void Btn_xoa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             if (xtraTabControl2.SelectedTabPage == tabTonKho)
             {
@@ -159,7 +159,7 @@ namespace QuanLyKho.NghiepVu
             }
         }
 
-        private void frm_tonkho_Load(object sender, EventArgs e)
+        private void Frm_tonkho_Load(object sender, EventArgs e)
         {
             this.Subscribe<MessageBroker>(OnNext);
             GetTonKho();
@@ -168,13 +168,13 @@ namespace QuanLyKho.NghiepVu
             Data.Data._run_history_log("Xem danh mục tồn kho.", "Tồn Kho");
         }
 
-        private void btn_capnhat_sodu_dauky_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void Btn_capnhat_sodu_dauky_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            frm_capnhat_sodu_dauky frm = new frm_capnhat_sodu_dauky();
+            FrmKetChuyenSoDu frm = new FrmKetChuyenSoDu();
             frm.ShowDialog();
         }
 
-        private void btn_rpt_baocao_tongkho_soluong_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void Btn_rpt_baocao_tongkho_soluong_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             var selectedRow = from f in grvView_TonKho.GetSelectedRows() where grvView_TonKho.IsDataRow(f) select grvView_TonKho.GetDataRow(f);
             if (grvView_TonKho.SelectedRowsCount > 0)
@@ -190,7 +190,7 @@ namespace QuanLyKho.NghiepVu
             }
         }
 
-        private void btn_rpt_baocao_tonkho_giatri_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void Btn_rpt_baocao_tonkho_giatri_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             var selectedRow = from f in grvView_TonKho.GetSelectedRows() where grvView_TonKho.IsDataRow(f) select grvView_TonKho.GetDataRow(f);
             if (grvView_TonKho.SelectedRowsCount > 0)
@@ -206,13 +206,13 @@ namespace QuanLyKho.NghiepVu
             }
         }
 
-        private void btn_capnhat_sodudauky_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void Btn_capnhat_sodudauky_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            frm_them_sodudauky frm = new frm_them_sodudauky();
+            FrmThemSoDuDauKy frm = new FrmThemSoDuDauKy();
             frm.ShowDialog();
         }
 
-        private void xtraTabControl2_SelectedPageChanged(object sender, DevExpress.XtraTab.TabPageChangedEventArgs e)
+        private void XtraTabControl2_SelectedPageChanged(object sender, DevExpress.XtraTab.TabPageChangedEventArgs e)
         {
             var dt = ExecSQL.ExecProcedureDataFistOrDefault<khoPhanQuyen>("prokhoPhanQuyen", new { action = "PHANQUYEN", tendangnhap = Data.Data._strtendangnhap.ToUpper(), mamenu = 12 });
             if (xtraTabControl2.SelectedTabPage == tabTonKho)
@@ -238,7 +238,7 @@ namespace QuanLyKho.NghiepVu
             }
         }
 
-        private void gridView6_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
+        private void GridView6_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
         {
             var i = grvView_SoDuDauKy.FocusedRowHandle;
             if (ReferenceEquals(e.Column, colXoa))
@@ -254,7 +254,7 @@ namespace QuanLyKho.NghiepVu
             }
         }
 
-        private void btnExcelSoDuDauKy_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void BtnExcelSoDuDauKy_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             xtraSaveFileDialog1.Filter = "Excel files |*.xlsx";
             xtraSaveFileDialog1.FileName = "SuDuDauKy_" + DateTime.Now.ToString("dd-MM-yyyy hh-mm-ss"); ;
@@ -265,7 +265,7 @@ namespace QuanLyKho.NghiepVu
             }
         }
 
-        private void btnLuu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void BtnLuu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             lbl_mahanghoa.Focus();
             var dgr = XtraMessageBox.Show("Bạn có muốn lưu lại những thay đổi không?", "Xác Nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);

@@ -163,8 +163,8 @@
             this.ribbonPage4});
             this.ribbonControl1.Size = new System.Drawing.Size(999, 158);
             this.ribbonControl1.StatusBar = this.ribbonStatusBar1;
-            this.ribbonControl1.Merge += new DevExpress.XtraBars.Ribbon.RibbonMergeEventHandler(this.ribbonControl1_Merge);
-            this.ribbonControl1.UnMerge += new DevExpress.XtraBars.Ribbon.RibbonMergeEventHandler(this.ribbonControl1_UnMerge);
+            this.ribbonControl1.Merge += new DevExpress.XtraBars.Ribbon.RibbonMergeEventHandler(this.RibbonControl1_Merge);
+            this.ribbonControl1.UnMerge += new DevExpress.XtraBars.Ribbon.RibbonMergeEventHandler(this.RibbonControl1_UnMerge);
             // 
             // rib_skin
             // 
@@ -186,7 +186,7 @@
             this.btn_NguoiDung.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_NguoiDung.ImageOptions.Image")));
             this.btn_NguoiDung.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btn_NguoiDung.ImageOptions.LargeImage")));
             this.btn_NguoiDung.Name = "btn_NguoiDung";
-            this.btn_NguoiDung.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_NguoiDung_ItemClick);
+            this.btn_NguoiDung.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_NguoiDung_ItemClick);
             // 
             // btnPhanQuyen
             // 
@@ -196,7 +196,7 @@
             this.btnPhanQuyen.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnPhanQuyen.ImageOptions.Image")));
             this.btnPhanQuyen.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnPhanQuyen.ImageOptions.LargeImage")));
             this.btnPhanQuyen.Name = "btnPhanQuyen";
-            this.btnPhanQuyen.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnPhanQuyen_ItemClick);
+            this.btnPhanQuyen.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnPhanQuyen_ItemClick);
             // 
             // btn_nhatky_hethong
             // 
@@ -205,7 +205,7 @@
             this.btn_nhatky_hethong.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_nhatky_hethong.ImageOptions.Image")));
             this.btn_nhatky_hethong.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btn_nhatky_hethong.ImageOptions.LargeImage")));
             this.btn_nhatky_hethong.Name = "btn_nhatky_hethong";
-            this.btn_nhatky_hethong.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_nhatky_hethong_ItemClick);
+            this.btn_nhatky_hethong.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_nhatky_hethong_ItemClick);
             // 
             // btn_doimatkhau
             // 
@@ -214,7 +214,7 @@
             this.btn_doimatkhau.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_doimatkhau.ImageOptions.Image")));
             this.btn_doimatkhau.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btn_doimatkhau.ImageOptions.LargeImage")));
             this.btn_doimatkhau.Name = "btn_doimatkhau";
-            this.btn_doimatkhau.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_doimatkhau_ItemClick);
+            this.btn_doimatkhau.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_doimatkhau_ItemClick);
             // 
             // btn_khoaungdung
             // 
@@ -223,7 +223,7 @@
             this.btn_khoaungdung.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_khoaungdung.ImageOptions.Image")));
             this.btn_khoaungdung.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btn_khoaungdung.ImageOptions.LargeImage")));
             this.btn_khoaungdung.Name = "btn_khoaungdung";
-            this.btn_khoaungdung.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_khoaungdung_ItemClick);
+            this.btn_khoaungdung.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_khoaungdung_ItemClick);
             // 
             // btn_thongtin
             // 
@@ -232,7 +232,7 @@
             this.btn_thongtin.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_thongtin.ImageOptions.Image")));
             this.btn_thongtin.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btn_thongtin.ImageOptions.LargeImage")));
             this.btn_thongtin.Name = "btn_thongtin";
-            this.btn_thongtin.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_thongtin_ItemClick);
+            this.btn_thongtin.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_thongtin_ItemClick);
             // 
             // btnTacGia
             // 
@@ -241,7 +241,7 @@
             this.btnTacGia.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnTacGia.ImageOptions.Image")));
             this.btnTacGia.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnTacGia.ImageOptions.LargeImage")));
             this.btnTacGia.Name = "btnTacGia";
-            this.btnTacGia.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnTacGia_ItemClick);
+            this.btnTacGia.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnTacGia_ItemClick);
             // 
             // barButtonItem8
             // 
@@ -259,7 +259,7 @@
             this.btn_Dong.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_Dong.ImageOptions.Image")));
             this.btn_Dong.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btn_Dong.ImageOptions.LargeImage")));
             this.btn_Dong.Name = "btn_Dong";
-            this.btn_Dong.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_Dong_ItemClick);
+            this.btn_Dong.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_Dong_ItemClick);
             // 
             // btn_donvitinh
             // 
@@ -268,7 +268,7 @@
             this.btn_donvitinh.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_donvitinh.ImageOptions.Image")));
             this.btn_donvitinh.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btn_donvitinh.ImageOptions.LargeImage")));
             this.btn_donvitinh.Name = "btn_donvitinh";
-            this.btn_donvitinh.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_donvitinh_ItemClick);
+            this.btn_donvitinh.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_donvitinh_ItemClick);
             // 
             // btn_nhomhang
             // 
@@ -277,7 +277,7 @@
             this.btn_nhomhang.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_nhomhang.ImageOptions.Image")));
             this.btn_nhomhang.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btn_nhomhang.ImageOptions.LargeImage")));
             this.btn_nhomhang.Name = "btn_nhomhang";
-            this.btn_nhomhang.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_nhomhang_ItemClick);
+            this.btn_nhomhang.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_nhomhang_ItemClick);
             // 
             // btn_khachhang
             // 
@@ -286,7 +286,7 @@
             this.btn_khachhang.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_khachhang.ImageOptions.Image")));
             this.btn_khachhang.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btn_khachhang.ImageOptions.LargeImage")));
             this.btn_khachhang.Name = "btn_khachhang";
-            this.btn_khachhang.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_khachhang_ItemClick);
+            this.btn_khachhang.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_khachhang_ItemClick);
             // 
             // btn_nhapkho
             // 
@@ -295,7 +295,7 @@
             this.btn_nhapkho.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_nhapkho.ImageOptions.Image")));
             this.btn_nhapkho.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btn_nhapkho.ImageOptions.LargeImage")));
             this.btn_nhapkho.Name = "btn_nhapkho";
-            this.btn_nhapkho.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_nhapkho_ItemClick);
+            this.btn_nhapkho.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_nhapkho_ItemClick);
             // 
             // btn_xuatkho
             // 
@@ -304,7 +304,7 @@
             this.btn_xuatkho.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_xuatkho.ImageOptions.Image")));
             this.btn_xuatkho.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btn_xuatkho.ImageOptions.LargeImage")));
             this.btn_xuatkho.Name = "btn_xuatkho";
-            this.btn_xuatkho.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_xuatkho_ItemClick);
+            this.btn_xuatkho.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_xuatkho_ItemClick);
             // 
             // btn_tonkho
             // 
@@ -313,7 +313,7 @@
             this.btn_tonkho.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_tonkho.ImageOptions.Image")));
             this.btn_tonkho.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btn_tonkho.ImageOptions.LargeImage")));
             this.btn_tonkho.Name = "btn_tonkho";
-            this.btn_tonkho.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_tonkho_ItemClick);
+            this.btn_tonkho.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_tonkho_ItemClick);
             // 
             // btn_dinhmuc
             // 
@@ -322,7 +322,7 @@
             this.btn_dinhmuc.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_dinhmuc.ImageOptions.Image")));
             this.btn_dinhmuc.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btn_dinhmuc.ImageOptions.LargeImage")));
             this.btn_dinhmuc.Name = "btn_dinhmuc";
-            this.btn_dinhmuc.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_quydoi_ItemClick);
+            this.btn_dinhmuc.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_quydoi_ItemClick);
             // 
             // btn_baocao_banhang
             // 
@@ -331,7 +331,7 @@
             this.btn_baocao_banhang.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_baocao_banhang.ImageOptions.Image")));
             this.btn_baocao_banhang.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btn_baocao_banhang.ImageOptions.LargeImage")));
             this.btn_baocao_banhang.Name = "btn_baocao_banhang";
-            this.btn_baocao_banhang.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_baocao_banhang_ItemClick);
+            this.btn_baocao_banhang.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_baocao_banhang_ItemClick);
             // 
             // btn_ncc
             // 
@@ -340,7 +340,7 @@
             this.btn_ncc.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_ncc.ImageOptions.Image")));
             this.btn_ncc.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btn_ncc.ImageOptions.LargeImage")));
             this.btn_ncc.Name = "btn_ncc";
-            this.btn_ncc.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_ncc_ItemClick);
+            this.btn_ncc.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_ncc_ItemClick);
             // 
             // btn_hanghoa
             // 
@@ -349,7 +349,7 @@
             this.btn_hanghoa.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_hanghoa.ImageOptions.Image")));
             this.btn_hanghoa.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btn_hanghoa.ImageOptions.LargeImage")));
             this.btn_hanghoa.Name = "btn_hanghoa";
-            this.btn_hanghoa.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_hanghoa_ItemClick);
+            this.btn_hanghoa.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_hanghoa_ItemClick);
             // 
             // btn_nhapxuatkho
             // 
@@ -358,7 +358,7 @@
             this.btn_nhapxuatkho.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_nhapxuatkho.ImageOptions.Image")));
             this.btn_nhapxuatkho.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btn_nhapxuatkho.ImageOptions.LargeImage")));
             this.btn_nhapxuatkho.Name = "btn_nhapxuatkho";
-            this.btn_nhapxuatkho.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_nhapxuatkho_ItemClick);
+            this.btn_nhapxuatkho.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_nhapxuatkho_ItemClick);
             // 
             // btnLoaiChiPhi
             // 
@@ -367,7 +367,7 @@
             this.btnLoaiChiPhi.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLoaiChiPhi.ImageOptions.Image")));
             this.btnLoaiChiPhi.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnLoaiChiPhi.ImageOptions.LargeImage")));
             this.btnLoaiChiPhi.Name = "btnLoaiChiPhi";
-            this.btnLoaiChiPhi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnLoaiChiPhi_ItemClick);
+            this.btnLoaiChiPhi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnLoaiChiPhi_ItemClick);
             // 
             // btnTongHopChiPhi
             // 
@@ -376,7 +376,7 @@
             this.btnTongHopChiPhi.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnTongHopChiPhi.ImageOptions.Image")));
             this.btnTongHopChiPhi.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnTongHopChiPhi.ImageOptions.LargeImage")));
             this.btnTongHopChiPhi.Name = "btnTongHopChiPhi";
-            this.btnTongHopChiPhi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnTongHopChiPhi_ItemClick);
+            this.btnTongHopChiPhi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnTongHopChiPhi_ItemClick);
             // 
             // btnLoiNhuan
             // 
@@ -385,7 +385,7 @@
             this.btnLoiNhuan.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLoiNhuan.ImageOptions.Image")));
             this.btnLoiNhuan.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnLoiNhuan.ImageOptions.LargeImage")));
             this.btnLoiNhuan.Name = "btnLoiNhuan";
-            this.btnLoiNhuan.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnLoiNhuan_ItemClick);
+            this.btnLoiNhuan.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnLoiNhuan_ItemClick);
             // 
             // btnXoaDuLieu
             // 
@@ -412,14 +412,14 @@
             this.btnDonViTinh2.Caption = "Đơn vị tính";
             this.btnDonViTinh2.Id = 31;
             this.btnDonViTinh2.Name = "btnDonViTinh2";
-            this.btnDonViTinh2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDonViTinh2_ItemClick);
+            this.btnDonViTinh2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnDonViTinh2_ItemClick);
             // 
             // btnLoaiChiPhi2
             // 
             this.btnLoaiChiPhi2.Caption = "Loại chi phí";
             this.btnLoaiChiPhi2.Id = 32;
             this.btnLoaiChiPhi2.Name = "btnLoaiChiPhi2";
-            this.btnLoaiChiPhi2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnLoaiChiPhi2_ItemClick);
+            this.btnLoaiChiPhi2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnLoaiChiPhi2_ItemClick);
             // 
             // btnKho2
             // 
@@ -441,7 +441,7 @@
             this.btnChuyenSoDu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnChuyenSoDu.ImageOptions.Image")));
             this.btnChuyenSoDu.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnChuyenSoDu.ImageOptions.LargeImage")));
             this.btnChuyenSoDu.Name = "btnChuyenSoDu";
-            this.btnChuyenSoDu.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnChuyenSoDu_ItemClick);
+            this.btnChuyenSoDu.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnChuyenSoDu_ItemClick);
             // 
             // barTrangThai
             // 
@@ -456,7 +456,7 @@
             this.btnUpdate.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdate.ImageOptions.Image")));
             this.btnUpdate.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnUpdate.ImageOptions.LargeImage")));
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnUpdate_ItemClick);
+            this.btnUpdate.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnUpdate_ItemClick);
             // 
             // btnXuLyAmKho
             // 
@@ -465,7 +465,7 @@
             this.btnXuLyAmKho.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnXuLyAmKho.ImageOptions.Image")));
             this.btnXuLyAmKho.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnXuLyAmKho.ImageOptions.LargeImage")));
             this.btnXuLyAmKho.Name = "btnXuLyAmKho";
-            this.btnXuLyAmKho.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnXuLyAmKho_ItemClick);
+            this.btnXuLyAmKho.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnXuLyAmKho_ItemClick);
             // 
             // btnSoDuCongNo
             // 
@@ -482,7 +482,7 @@
             this.btnPhaiThu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnPhaiThu.ImageOptions.Image")));
             this.btnPhaiThu.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnPhaiThu.ImageOptions.LargeImage")));
             this.btnPhaiThu.Name = "btnPhaiThu";
-            this.btnPhaiThu.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnPhaiThu_ItemClick);
+            this.btnPhaiThu.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnPhaiThu_ItemClick);
             // 
             // btnPhaiTra
             // 
@@ -491,7 +491,7 @@
             this.btnPhaiTra.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnPhaiTra.ImageOptions.Image")));
             this.btnPhaiTra.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnPhaiTra.ImageOptions.LargeImage")));
             this.btnPhaiTra.Name = "btnPhaiTra";
-            this.btnPhaiTra.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnPhaiTra_ItemClick);
+            this.btnPhaiTra.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnPhaiTra_ItemClick);
             // 
             // btnCongNo
             // 
