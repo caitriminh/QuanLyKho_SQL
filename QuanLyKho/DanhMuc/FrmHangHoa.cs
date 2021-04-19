@@ -195,7 +195,7 @@ namespace QuanLyKho.DanhMuc
 
         private void Btn_Them_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            frm_them_hanghoa frm = new frm_them_hanghoa();
+            FrmThemHangHoa frm = new FrmThemHangHoa();
             frm.ShowDialog();
         }
 

@@ -195,11 +195,11 @@
     <Compile Include="DanhMuc\frm_them_loaichiphi.designer.cs">
       <DependentUpon>frm_them_loaichiphi.cs</DependentUpon>
     </Compile>
-    <Compile Include="DanhMuc\frm_them_hanghoa.cs">
+    <Compile Include="DanhMuc\FrmThemHangHoa.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DanhMuc\frm_them_hanghoa.designer.cs">
-      <DependentUpon>frm_them_hanghoa.cs</DependentUpon>
+    <Compile Include="DanhMuc\FrmThemHangHoa.designer.cs">
+      <DependentUpon>FrmThemHangHoa.cs</DependentUpon>
     </Compile>
     <Compile Include="DanhMuc\FrmHangHoa.cs">
       <SubType>Form</SubType>
@@ -555,8 +555,8 @@
     <EmbeddedResource Include="DanhMuc\frm_them_loaichiphi.resx">
       <DependentUpon>frm_them_loaichiphi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DanhMuc\frm_them_hanghoa.resx">
-      <DependentUpon>frm_them_hanghoa.cs</DependentUpon>
+    <EmbeddedResource Include="DanhMuc\FrmThemHangHoa.resx">
+      <DependentUpon>FrmThemHangHoa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DanhMuc\FrmHangHoa.resx">
       <DependentUpon>FrmHangHoa.cs</DependentUpon>

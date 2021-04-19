@@ -229,7 +229,7 @@ namespace QuanLyKho
 
         private void btn_thongtin_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            var frm = new frm_thongtin();
+            var frm = new FrmThongTin();
             frm.ShowDialog();
         }
 
@@ -242,12 +242,12 @@ namespace QuanLyKho
 
         private void btn_NguoiDung_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            OpenForm(typeof(frm_nguoidung));
+            OpenForm(typeof(FrmNguoiDung));
         }
 
         private void btn_doimatkhau_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            var frm = new frm_doimatkhau();
+            var frm = new FrmDoiMatKhau();
             frm.ShowDialog();
         }
 
@@ -258,17 +258,17 @@ namespace QuanLyKho
 
         private void btn_donvitinh_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            OpenForm(typeof(frm_donvitinh));
+            OpenForm(typeof(FrmDonViTinh));
         }
 
         private void btn_nhomhang_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            OpenForm(typeof(frm_nhomhang));
+            OpenForm(typeof(FrmNhomHang));
         }
 
         private void btn_khachhang_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            OpenForm(typeof(frm_khachhang));
+            OpenForm(typeof(FrmKhachHang));
         }
 
         private void btn_khoaungdung_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -284,7 +284,7 @@ namespace QuanLyKho
 
         private void btn_ncc_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            OpenForm(typeof(frm_ncc));
+            OpenForm(typeof(FrmNCC));
         }
 
         private void btn_hanghoa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -294,7 +294,7 @@ namespace QuanLyKho
 
         private void btn_quydoi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            OpenForm(typeof(frm_dinhmuc_linhkien));
+            OpenForm(typeof(FrmDinhMucLinhKien));
         }
 
         private void btn_nhapkho_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -304,7 +304,7 @@ namespace QuanLyKho
 
         private void btn_xuatkho_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            OpenForm(typeof(frm_xuatkho));
+            OpenForm(typeof(FrmXuatKho));
         }
 
         private void btn_tonkho_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -319,42 +319,42 @@ namespace QuanLyKho
 
         private void btn_nhapxuatkho_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            OpenForm(typeof(frm_nhapxuatkho));
+            OpenForm(typeof(FrmNhapXuatKho));
         }
 
         private void btnPhanQuyen_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            OpenForm(typeof(frm_phanquyen));
+            OpenForm(typeof(FrmPhanQuyen));
         }
 
         private void btnLoaiChiPhi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            OpenForm(typeof(frm_loaichiphi));
+            OpenForm(typeof(FrmLoaiChiPhi));
         }
 
         private void btnTongHopChiPhi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            OpenForm(typeof(frm_tonghop_chiphi));
+            OpenForm(typeof(FrmTongHopChiPhi));
         }
 
         private void btnLoiNhuan_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            OpenForm(typeof(frm_loinhuan));
+            OpenForm(typeof(FrmLoiNhuan));
         }
 
         private void btnDonViTinh2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            OpenForm(typeof(frm_donvitinh));
+            OpenForm(typeof(FrmDonViTinh));
         }
 
         private void btnLoaiChiPhi2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            OpenForm(typeof(frm_loaichiphi));
+            OpenForm(typeof(FrmLoaiChiPhi));
         }
 
         private void btnChuyenSoDu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            var frm = new frm_capnhat_sodu_dauky();
+            var frm = new FrmKetChuyenSoDu();
             frm.ShowDialog();
         }
 
@@ -410,7 +410,7 @@ namespace QuanLyKho
 
         private void btnXuLyAmKho_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            OpenForm(typeof(frm_xulyamkho));
+            OpenForm(typeof(FrmXuLyAmKho));
         }
 
 

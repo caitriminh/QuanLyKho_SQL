@@ -368,7 +368,7 @@ namespace QuanLyKho.NghiepVu
             if (e.Button.Kind == DevExpress.XtraEditors.Controls.ButtonPredefines.Plus)
             {
                 Data.Data._int_flag = 2;
-                frm_them_ncc frm = new frm_them_ncc();
+                FrmThemNCC frm = new FrmThemNCC();
                 frm.ShowDialog();
             }
         }
