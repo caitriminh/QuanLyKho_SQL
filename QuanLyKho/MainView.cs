@@ -5,6 +5,7 @@ using DevExpress.UserSkins;
 using DevExpress.XtraBars.Helpers;
 using DevExpress.XtraBars.Ribbon;
 using DevExpress.XtraEditors;
+using QuanLyKho.BieuDo;
 using QuanLyKho.DanhMuc;
 using QuanLyKho.Data;
 using QuanLyKho.Entities.HeThong;
@@ -443,6 +444,11 @@ namespace QuanLyKho
         {
             RibbonControl parentRRibbon = sender as RibbonControl;
             parentRRibbon.StatusBar.UnMergeStatusBar();
+        }
+
+        private void barDoanhThu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            OpenForm(typeof(FrmBieuDo));
         }
     }
 }

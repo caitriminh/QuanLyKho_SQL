@@ -634,3 +634,9 @@ D:\Project\QuanLyKho_SQL\QuanLyKho\obj\Release\QuanLyKho.NghiepVu.FrmXuatKho.res
 D:\Project\QuanLyKho_SQL\QuanLyKho\obj\Release\QuanLyKho.NghiepVu.FrmDinhMucLinhKien.resources
 D:\Project\QuanLyKho_SQL\QuanLyKho\obj\Release\QuanLyKho.NghiepVu.FrmThemXuatKho.resources
 D:\Project\QuanLyKho_SQL\QuanLyKho\obj\Release\QuanLyKho.NghiepVu.FrmThemDinhMucLinhKien.resources
+D:\Project\QuanLyKho_SQL\QuanLyKho\obj\Release\QuanLyKho.BieuDo.FrmBieuDo.resources
+D:\Project\QuanLyKho_SQL\QuanLyKho\obj\Release\QuanLyKho.BieuDo.UcBieuDo.resources
+D:\Project\QuanLyKho_SQL\QuanLyKho\obj\Release\ComicPro2019.NghiepVu.BanLamViec.UserGiaTri.resources
+D:\Project\QuanLyKho_SQL\QuanLyKho\obj\Release\ComicPro2019.NghiepVu.BanLamViec.UserLoaiTruyen.resources
+D:\Project\QuanLyKho_SQL\QuanLyKho\obj\Release\ComicPro2019.NghiepVu.BanLamViec.UserTuaTruyen.resources
+D:\Project\QuanLyKho_SQL\QuanLyKho\obj\Release\QuanLyKho.BieuDo.UcDoanhThu.resources
