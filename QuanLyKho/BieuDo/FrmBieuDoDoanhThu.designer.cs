@@ -1,6 +1,6 @@
 ﻿namespace QuanLyKho.BieuDo
 {
-    partial class FrmBieuDo
+    partial class FrmBieuDoDoanhThu
     {
         /// <summary>
         /// Required designer variable.
@@ -28,25 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.userBieuDo1 = new QuanLyKho.BieuDo.UcBieuDo();
+            this.userBieuDo1 = new QuanLyKho.BieuDo.UcBieuDoDoanhThu();
             this.SuspendLayout();
             // 
-            // userBanLamViec1
+            // userBieuDo1
             // 
             this.userBieuDo1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.userBieuDo1.Location = new System.Drawing.Point(0, 0);
+            this.userBieuDo1.Margin = new System.Windows.Forms.Padding(2);
             this.userBieuDo1.Name = "userBieuDo1";
-            this.userBieuDo1.Size = new System.Drawing.Size(1328, 589);
+            this.userBieuDo1.Size = new System.Drawing.Size(1138, 479);
             this.userBieuDo1.TabIndex = 0;
             // 
-            // FrmBanLamViec
+            // FrmBieuDo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1328, 589);
+            this.ClientSize = new System.Drawing.Size(1138, 479);
             this.Controls.Add(this.userBieuDo1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmBieuDo";
-            this.Text = "Bàn Làm Việc";
+            this.Text = "Biểu Đồ Doanh Thu";
             this.Load += new System.EventHandler(this.FrmBanLamViec_Load);
             this.ResumeLayout(false);
 
@@ -54,6 +56,6 @@
 
         #endregion
 
-        private UcBieuDo userBieuDo1;
+        private UcBieuDoDoanhThu userBieuDo1;
     }
 }

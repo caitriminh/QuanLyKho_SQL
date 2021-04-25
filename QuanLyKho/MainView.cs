@@ -27,19 +27,13 @@ namespace QuanLyKho
         public MainView()
         {
             InitializeComponent();
-            //if (!mvvmContext1.IsDesignMode)
-            //    InitializeBindings();
             InitSkins();
             InitSkinGallery();
-
             Assembly asm = typeof(OfficeSkins).Assembly;
             SkinManager.Default.RegisterAssembly(asm);
             //Load giao diện
-            //UserLookAndFeel.Default.SkinName = Settings.Default["ApplicationSkinName"].ToString();
             UserLookAndFeel.Default.SkinName = ConfigAppSetting.GetSetting("ApplicationSkinName");
             var skin = CommonSkins.GetSkin(UserLookAndFeel.Default);
-
-            //DevExpress.Utils.Svg.SvgPalette fireBall = skin.CustomSvgPalettes[Settings.Default["ApplicationPalletName"].ToString()];
             DevExpress.Utils.Svg.SvgPalette fireBall = skin.CustomSvgPalettes[ConfigAppSetting.GetSetting("ApplicationPalletName")];
             if (fireBall != null)
             {
@@ -49,10 +43,6 @@ namespace QuanLyKho
 
             FormClosing += (s, e) =>
             {
-                //Settings.Default["ApplicationSkinName"] = UserLookAndFeel.Default.SkinName;  
-                //Settings.Default["ApplicationPalletName"] = UserLookAndFeel.Default.ActiveSvgPaletteName;
-                //Settings.Default.Save();
-
                 ConfigAppSetting.SetSetting("ApplicationSkinName", UserLookAndFeel.Default.SkinName);
                 ConfigAppSetting.SetSetting("ApplicationPalletName", UserLookAndFeel.Default.ActiveSvgPaletteName);
             };
@@ -120,7 +110,6 @@ namespace QuanLyKho
         {
             SkinManager.EnableFormSkins();
             BonusSkins.Register();
-            // defaultLookAndFeel1.LookAndFeel.SetSkinStyle(Settings.Default.skin);
         }
 
         private void InitSkinGallery()
@@ -220,13 +209,6 @@ namespace QuanLyKho
             btnPhaiTra.Enabled = dt19.xem == true;
         }
 
-        private void MainView_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            //Lưu lại skin đã chọn trước đó
-            //   var strSkin = defaultLookAndFeel1.LookAndFeel.SkinName;
-            //Settings.Default.skin = strSkin;
-            //Settings.Default.Save();
-        }
 
         private void Btn_thongtin_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
@@ -274,13 +256,9 @@ namespace QuanLyKho
 
         private void Btn_khoaungdung_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            using (FrmHT_DangNhap frm = new FrmHT_DangNhap())
-            {
-                if (FrmHT_MaskedDialog.ShowDialog(this, frm) == DialogResult.OK)
-                {
-
-                }
-            }
+            Data.Data._flag_login = false;
+            FrmHT_DangNhap frm = new FrmHT_DangNhap();
+            FrmHT_MaskedDialog.ShowDialog(this, frm);
         }
 
         private void Btn_ncc_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -448,7 +426,12 @@ namespace QuanLyKho
 
         private void barDoanhThu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            OpenForm(typeof(FrmBieuDo));
+            OpenForm(typeof(FrmBieuDoDoanhThu));
+        }
+
+        private void barChiPhi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            OpenForm(typeof(FrmBieuDoChiPhi));
         }
     }
 }

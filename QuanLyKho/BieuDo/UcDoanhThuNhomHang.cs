@@ -18,8 +18,7 @@ namespace QuanLyKho.BieuDo
 
         private void UcDoanhThu_Load(object sender, EventArgs e)
         {
-            //var tong = ExecSQL.ExecQuerySacalar("SELECT SUM(slnhap*dongia) AS tong FROM dbo.tbl_ct_phieunhapxuat");
-            Text = @"Giá trị: "; //+ string.Format("{0:#,##}", tong) + @" VND";
+            Text = @"Doanh Thu Nhóm Hàng";
             var chartControl1 = new ChartControl();
             chartControl1.Dock = DockStyle.Fill;
             panelControl.Controls.Add(chartControl1);
@@ -36,11 +35,14 @@ namespace QuanLyKho.BieuDo
                     {
                         seriesGiatri.Points.Add(new SeriesPoint(dr["nhomhang"], dr["thanhtien"]));
                     }
-
                     seriesGiatri.Label.TextPattern = "{V:#,##0}";
 
                     chartControl1.Series.AddRange(new[] { seriesGiatri });
                     chartControl1.Legend.Visibility = DefaultBoolean.True;
+
+                    //Format Cột dọc
+                    XYDiagram diagram = chartControl1.Diagram as XYDiagram;
+                    diagram.AxisY.Label.TextPattern = "{V:#,##0}";
 
                     Legend legend = chartControl1.Legend;
                     // chartControl1.Legend.AlignmentVertical = LegendAlignmentVertical.Center

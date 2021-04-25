@@ -11,9 +11,9 @@ using DevExpress.XtraEditors;
 
 namespace QuanLyKho.BieuDo
 {
-    public partial class FrmBieuDo : DevExpress.XtraEditors.XtraForm
+    public partial class FrmBieuDoDoanhThu : DevExpress.XtraEditors.XtraForm
     {
-        public FrmBieuDo()
+        public FrmBieuDoDoanhThu()
         {
             InitializeComponent();
         }

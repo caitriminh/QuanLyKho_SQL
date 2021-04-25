@@ -11,6 +11,7 @@ namespace QuanLyKho.Data
     {
         public static string _strtendangnhap = "ADMIN", _strmaphieu, _str_mancc, _str_makh, _str_tungay, _str_dennngay, _str_thang, _str_mahang, _str_manhomhang, _str_madvt;
         public static bool _bol_start, _edit, _amkho;
+        public static bool _flag_login = true;
         public static int _report, _int_flag;
         public static DataSet _dsreport;
         public static DataTable _dtreport;

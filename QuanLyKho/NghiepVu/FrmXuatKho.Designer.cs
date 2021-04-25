@@ -208,7 +208,6 @@
             this.bar2.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
             this.bar2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btn_Them, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btn_Luu, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btn_sua, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btn_Xoa, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btn_NapLai, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
@@ -548,6 +547,7 @@
             this.gridColumn9.FieldName = "nguoilap";
             this.gridColumn9.MinWidth = 21;
             this.gridColumn9.Name = "gridColumn9";
+            this.gridColumn9.OptionsColumn.ReadOnly = true;
             this.gridColumn9.Visible = true;
             this.gridColumn9.VisibleIndex = 6;
             this.gridColumn9.Width = 146;
@@ -559,6 +559,7 @@
             this.gridColumn11.MinWidth = 21;
             this.gridColumn11.Name = "gridColumn11";
             this.gridColumn11.OptionsColumn.FixedWidth = true;
+            this.gridColumn11.OptionsColumn.ReadOnly = true;
             this.gridColumn11.Visible = true;
             this.gridColumn11.VisibleIndex = 7;
             this.gridColumn11.Width = 69;
@@ -569,6 +570,7 @@
             this.gridColumn13.FieldName = "tenkh";
             this.gridColumn13.MinWidth = 21;
             this.gridColumn13.Name = "gridColumn13";
+            this.gridColumn13.OptionsColumn.ReadOnly = true;
             this.gridColumn13.Visible = true;
             this.gridColumn13.VisibleIndex = 8;
             this.gridColumn13.Width = 214;
@@ -996,7 +998,7 @@
             this.splitContainerControl1.SplitterPosition = 242;
             this.splitContainerControl1.TabIndex = 42;
             // 
-            // frm_xuatkho
+            // FrmXuatKho
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -1009,7 +1011,7 @@
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "frm_xuatkho";
+            this.Name = "FrmXuatKho";
             this.Text = "Phiếu Xuất Kho";
             this.Load += new System.EventHandler(this.frm_hanghoa_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();

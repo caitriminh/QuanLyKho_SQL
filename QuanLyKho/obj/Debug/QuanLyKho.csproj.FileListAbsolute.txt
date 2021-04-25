@@ -1103,8 +1103,6 @@ D:\Project\QuanLyKho_SQL\QuanLyKho\obj\Debug\QuanLyKho.csproj.CoreCompileInputs.
 D:\Project\QuanLyKho_SQL\QuanLyKho\obj\Debug\QuanLyKho.csproj.CopyComplete
 D:\Project\QuanLyKho_SQL\QuanLyKho\obj\Debug\QuanLyKho.exe
 D:\Project\QuanLyKho_SQL\QuanLyKho\obj\Debug\QuanLyKho.pdb
-D:\Project\QuanLyKho_SQL\QuanLyKho\obj\Debug\QuanLyKho.BieuDo.FrmBieuDo.resources
-D:\Project\QuanLyKho_SQL\QuanLyKho\obj\Debug\QuanLyKho.BieuDo.UcBieuDo.resources
 D:\Project\QuanLyKho_SQL\QuanLyKho\obj\Debug\QuanLyKho.DanhMuc.FrmLoaiChiPhi.resources
 D:\Project\QuanLyKho_SQL\QuanLyKho\obj\Debug\QuanLyKho.DanhMuc.FrmThemLoaiChiPhi.resources
 D:\Project\QuanLyKho_SQL\QuanLyKho\obj\Debug\QuanLyKho.DanhMuc.FrmThemHangHoa.resources
@@ -1136,3 +1134,12 @@ D:\Project\QuanLyKho_SQL\QuanLyKho\bin\Debug\DevExpress.XtraCharts.v20.1.UI.dll
 D:\Project\QuanLyKho_SQL\QuanLyKho\bin\Debug\DevExpress.XtraCharts.v20.1.UI.xml
 D:\Project\QuanLyKho_SQL\QuanLyKho\obj\Debug\QuanLyKho.BieuDo.UcDoanhThuNhomHang.resources
 D:\Project\QuanLyKho_SQL\QuanLyKho\obj\Debug\QuanLyKho.BieuDo.UcSSDoanhThu.resources
+D:\Project\QuanLyKho_SQL\QuanLyKho\obj\Debug\QuanLyKho.BieuDo.UcDoanhThuTheoNgay.resources
+D:\Project\QuanLyKho_SQL\QuanLyKho\obj\Debug\QuanLyKho.BieuDo.FrmBieuDoDoanhThu.resources
+D:\Project\QuanLyKho_SQL\QuanLyKho\obj\Debug\QuanLyKho.BieuDo.UcBieuDoDoanhThu.resources
+D:\Project\QuanLyKho_SQL\QuanLyKho\obj\Debug\QuanLyKho.BieuDo.FrmBieuDoChiPhi.resources
+D:\Project\QuanLyKho_SQL\QuanLyKho\obj\Debug\QuanLyKho.BieuDo.UcBieuDoChiPhi.resources
+D:\Project\QuanLyKho_SQL\QuanLyKho\obj\Debug\QuanLyKho.BieuDo.UcChiPhiTheoNhom.resources
+D:\Project\QuanLyKho_SQL\QuanLyKho\obj\Debug\QuanLyKho.BieuDo.UcChiPhiCungKy.resources
+D:\Project\QuanLyKho_SQL\QuanLyKho\obj\Debug\QuanLyKho.BieuDo.UcChiPhiTheoThang.resources
+D:\Project\QuanLyKho_SQL\QuanLyKho\bin\Debug\Guna.UI2.dll

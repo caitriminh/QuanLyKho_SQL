@@ -32,7 +32,8 @@ namespace QuanLyKho.HeThong
             txt_tendangnhap.Text = ConfigAppSetting.GetSetting("UserName");
             txt_matkhau.Text = ConfigAppSetting.GetSetting("Password");
             chkGhiNho.Checked = ConfigAppSetting.GetSetting("GhiNho") == "True" ? true : false;
-            btnDangNhap_Click(sender, e);
+            if (Data.Data._flag_login)
+                btnDangNhap_Click(sender, e);
         }
 
         /// <summary>

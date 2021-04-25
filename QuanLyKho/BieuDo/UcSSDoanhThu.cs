@@ -24,6 +24,7 @@ namespace QuanLyKho.BieuDo
 
         private void UserSSDoanhThu_Load(object sender, EventArgs e)
         {
+            Text = "Doanh Thu Cùng Kỳ";
             Task.Factory.StartNew(() =>
             {
                 var dataTable1 = ExecSQL.ExecProcedureDataAsDataTable("prokhoBieuDo_DoanhThu", new { action = "SS_DOANHTHU1" });
@@ -54,6 +55,8 @@ namespace QuanLyKho.BieuDo
 
                     XYDiagram diagram = chartControl1.Diagram as XYDiagram;
                     diagram.AxisY.Label.TextPattern = "{V:#,##0}";
+
+
 
                     Legend legend = chartControl1.Legend;
                     // chartControl1.Legend.AlignmentVertical = LegendAlignmentVertical.Center
