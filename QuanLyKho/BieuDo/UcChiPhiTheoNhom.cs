@@ -38,6 +38,7 @@ namespace QuanLyKho.BieuDo
                     seriesLoaiChiPhi.Label.TextPattern = "{V:#,##0}";
                     seriesLoaiChiPhi.LegendTextPattern = "{A}";
 
+
                     chartControl1.Series.AddRange(new[] { seriesLoaiChiPhi });
                     chartControl1.Legend.Visibility = DefaultBoolean.True;
 

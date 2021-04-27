@@ -33,6 +33,7 @@ namespace QuanLyKho.BieuDo
                     foreach (DataRow dr in dataTable1.Rows)
                         seriesChiPhi1.Points.Add(new SeriesPoint(dr["thang"], dr["thanhtien"]));
                     seriesChiPhi1.Label.TextPattern = "{V:#,##0}";
+                    seriesChiPhi1.ToolTipPointPattern = "{A}: {V:#,##0}";
 
                     chartControl1.Series.AddRange(new Series[] { seriesChiPhi1 });
 

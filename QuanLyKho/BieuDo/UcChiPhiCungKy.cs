@@ -46,9 +46,11 @@ namespace QuanLyKho.BieuDo
                         seriesChiPhi1.Points.Add(new SeriesPoint(dr["thang"], dr["thanhtien"]));
                     seriesChiPhi1.Label.TextPattern = "{V:#,##0}";
 
+
                     foreach (DataRow dr in dataTable2.Rows)
                         seriesChiPhi2.Points.Add(new SeriesPoint(dr["thang"], dr["thanhtien"]));
                     seriesChiPhi2.Label.TextPattern = "{V:#,##0}";
+
 
                     chartControl1.Series.AddRange(new Series[] { seriesChiPhi1 });
                     chartControl1.Series.AddRange(new Series[] { seriesChiPhi2 });
@@ -63,6 +65,7 @@ namespace QuanLyKho.BieuDo
                     legend.AlignmentHorizontal = LegendAlignmentHorizontal.Right;
                     legend.AlignmentVertical = LegendAlignmentVertical.Top;
                     legend.Direction = LegendDirection.LeftToRight;
+
 
                 }));
 

@@ -238,11 +238,15 @@ namespace QuanLyKho.BieuDo
                 seriesLoaiChiPhi.Points.Add(new SeriesPoint(dr["loaichiphi"], dr["thanhtien"]));
             seriesLoaiChiPhi.Label.TextPattern = "{V:#,##0}";
 
+
+
             chartControl1.Series.AddRange(new Series[] { seriesLoaiChiPhi });
             chartControl1.Legend.Visibility = DefaultBoolean.True;
 
             XYDiagram diagram = chartControl1.Diagram as XYDiagram;
             diagram.AxisY.Label.TextPattern = "{V:#,##0}";
+
+
 
             Legend legend = chartControl1.Legend;
             // chartControl1.Legend.AlignmentVertical = LegendAlignmentVertical.Center
@@ -250,6 +254,10 @@ namespace QuanLyKho.BieuDo
             legend.AlignmentHorizontal = LegendAlignmentHorizontal.Right;
             legend.AlignmentVertical = LegendAlignmentVertical.Top;
             legend.Direction = LegendDirection.LeftToRight;
+
+            chartControl1.ToolTipEnabled = DefaultBoolean.True;
+            seriesLoaiChiPhi.ToolTipPointPattern = "{A} : {V:#,##0}";
+
             if (_flag == 1)
             {
                 chiphi_theonhom.Control.Controls[0].Controls.Add(chartControl1);

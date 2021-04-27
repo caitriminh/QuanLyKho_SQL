@@ -19,8 +19,10 @@ namespace QuanLyKho.BieuDo
         private void UcDoanhThuTheoNgay_Load(object sender, EventArgs e)
         {
             Text = @"Doanh Thu Theo Ngày"; //+ string.Format("{0:#,##}", tong) + @" VND";
-            var chartControl1 = new ChartControl();
-            chartControl1.Dock = DockStyle.Fill;
+            var chartControl1 = new ChartControl
+            {
+                Dock = DockStyle.Fill
+            };
             panelControl.Controls.Add(chartControl1);
             Task.Factory.StartNew(() =>
             {
@@ -40,6 +42,9 @@ namespace QuanLyKho.BieuDo
 
                     chartControl1.Series.AddRange(new[] { seriesThanhTien });
                     chartControl1.Legend.Visibility = DefaultBoolean.True;
+
+                    XYDiagram diagram = chartControl1.Diagram as XYDiagram;
+                    diagram.AxisY.Label.TextPattern = "{V:#,##0}";
 
                     Legend legend = chartControl1.Legend;
                     // chartControl1.Legend.AlignmentVertical = LegendAlignmentVertical.Center
