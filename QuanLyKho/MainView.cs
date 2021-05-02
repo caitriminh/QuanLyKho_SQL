@@ -207,6 +207,21 @@ namespace QuanLyKho
             var dt19 = ExecSQL.ExecProcedureDataFistOrDefault<khoPhanQuyen>("prokhoPhanQuyen", new { action = "PHANQUYEN", tendangnhap = Data.Data._strtendangnhap.ToUpper(), mamenu = 19 });
             btnPhaiThu.Enabled = dt19.xem == true;
             btnPhaiTra.Enabled = dt19.xem == true;
+
+            //Biều đồ doanh thu
+            var dt20 = ExecSQL.ExecProcedureDataFistOrDefault<khoPhanQuyen>("prokhoPhanQuyen", new { action = "PHANQUYEN", tendangnhap = Data.Data._strtendangnhap.ToUpper(), mamenu = 20 });
+            barDoanhThu.Enabled = dt20.xem == true;
+            barDoanhThu.Enabled = dt20.xem == true;
+
+            //Biều đồ chi phí
+            var dt21 = ExecSQL.ExecProcedureDataFistOrDefault<khoPhanQuyen>("prokhoPhanQuyen", new { action = "PHANQUYEN", tendangnhap = Data.Data._strtendangnhap.ToUpper(), mamenu = 21 });
+            barChiPhi.Enabled = dt21.xem == true;
+            barChiPhi.Enabled = dt21.xem == true;
+
+            //Biểu đồ lợi nhuận
+            var dt22 = ExecSQL.ExecProcedureDataFistOrDefault<khoPhanQuyen>("prokhoPhanQuyen", new { action = "PHANQUYEN", tendangnhap = Data.Data._strtendangnhap.ToUpper(), mamenu = 22 });
+            barLoiNhuan.Enabled = dt22.xem == true;
+            barLoiNhuan.Enabled = dt22.xem == true;
         }
 
 
@@ -432,6 +447,11 @@ namespace QuanLyKho
         private void barChiPhi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             OpenForm(typeof(FrmBieuDoChiPhi));
+        }
+
+        private void barLoiNhuan_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            OpenForm(typeof(FrmBieuDoLoiNhuan));
         }
     }
 }

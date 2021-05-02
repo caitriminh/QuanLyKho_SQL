@@ -71,6 +71,7 @@
             this.btnPhaiTra = new DevExpress.XtraBars.BarButtonItem();
             this.btnCongNo = new DevExpress.XtraBars.BarButtonItem();
             this.barDoanhThu = new DevExpress.XtraBars.BarButtonItem();
+            this.barChiPhi = new DevExpress.XtraBars.BarButtonItem();
             this.imageCollection1 = new DevExpress.Utils.ImageCollection(this.components);
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -99,7 +100,7 @@
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.imageCollection2 = new DevExpress.Utils.ImageCollection(this.components);
-            this.barChiPhi = new DevExpress.XtraBars.BarButtonItem();
+            this.barLoiNhuan = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
@@ -153,10 +154,11 @@
             this.btnPhaiTra,
             this.btnCongNo,
             this.barDoanhThu,
-            this.barChiPhi});
+            this.barChiPhi,
+            this.barLoiNhuan});
             this.ribbonControl1.LargeImages = this.imageCollection1;
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 47;
+            this.ribbonControl1.MaxItemId = 48;
             this.ribbonControl1.MdiMergeStyle = DevExpress.XtraBars.Ribbon.RibbonMdiMergeStyle.Always;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.OptionsMenuMinWidth = 283;
@@ -515,6 +517,15 @@
             this.barDoanhThu.Name = "barDoanhThu";
             this.barDoanhThu.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barDoanhThu_ItemClick);
             // 
+            // barChiPhi
+            // 
+            this.barChiPhi.Caption = "Chi phí";
+            this.barChiPhi.Id = 46;
+            this.barChiPhi.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barChiPhi.ImageOptions.Image")));
+            this.barChiPhi.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barChiPhi.ImageOptions.LargeImage")));
+            this.barChiPhi.Name = "barChiPhi";
+            this.barChiPhi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barChiPhi_ItemClick);
+            // 
             // imageCollection1
             // 
             this.imageCollection1.ImageSize = new System.Drawing.Size(32, 32);
@@ -602,6 +613,7 @@
             // 
             this.ribbonPageGroup6.ItemLinks.Add(this.barDoanhThu);
             this.ribbonPageGroup6.ItemLinks.Add(this.barChiPhi);
+            this.ribbonPageGroup6.ItemLinks.Add(this.barLoiNhuan);
             this.ribbonPageGroup6.Name = "ribbonPageGroup6";
             this.ribbonPageGroup6.Text = "Biểu đồ";
             // 
@@ -731,14 +743,14 @@
             this.imageCollection2.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("imageCollection2.ImageStream")));
             this.imageCollection2.Images.SetKeyName(0, "saveas_16x16.png");
             // 
-            // barChiPhi
+            // barLoiNhuan
             // 
-            this.barChiPhi.Caption = "Chi phí";
-            this.barChiPhi.Id = 46;
-            this.barChiPhi.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barChiPhi.ImageOptions.Image")));
-            this.barChiPhi.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barChiPhi.ImageOptions.LargeImage")));
-            this.barChiPhi.Name = "barChiPhi";
-            this.barChiPhi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barChiPhi_ItemClick);
+            this.barLoiNhuan.Caption = "Lợi nhuận";
+            this.barLoiNhuan.Id = 47;
+            this.barLoiNhuan.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barLoiNhuan.ImageOptions.Image")));
+            this.barLoiNhuan.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barLoiNhuan.ImageOptions.LargeImage")));
+            this.barLoiNhuan.Name = "barLoiNhuan";
+            this.barLoiNhuan.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barLoiNhuan_ItemClick);
             // 
             // MainView
             // 
@@ -758,7 +770,6 @@
             this.StatusBar = this.ribbonStatusBar1;
             this.Text = "Quản Lý Kho";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-           
             this.Load += new System.EventHandler(this.MainView_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).EndInit();
@@ -841,6 +852,7 @@
         private DevExpress.XtraBars.BarButtonItem barDoanhThu;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup6;
         private DevExpress.XtraBars.BarButtonItem barChiPhi;
+        private DevExpress.XtraBars.BarButtonItem barLoiNhuan;
     }
 }
 

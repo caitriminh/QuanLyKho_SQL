@@ -198,6 +198,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BieuDo\FrmBieuDoLoiNhuan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BieuDo\FrmBieuDoLoiNhuan.designer.cs">
+      <DependentUpon>FrmBieuDoLoiNhuan.cs</DependentUpon>
+    </Compile>
     <Compile Include="BieuDo\FrmBieuDoChiPhi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -210,6 +216,12 @@
     <Compile Include="BieuDo\FrmBieuDoDoanhThu.designer.cs">
       <DependentUpon>FrmBieuDoDoanhThu.cs</DependentUpon>
     </Compile>
+    <Compile Include="BieuDo\UcBieuDoLoiNhuan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BieuDo\UcBieuDoLoiNhuan.designer.cs">
+      <DependentUpon>UcBieuDoLoiNhuan.cs</DependentUpon>
+    </Compile>
     <Compile Include="BieuDo\UcBieuDoChiPhi.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -221,6 +233,18 @@
     </Compile>
     <Compile Include="BieuDo\UcBieuDoDoanhThu.designer.cs">
       <DependentUpon>UcBieuDoDoanhThu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BieuDo\UcLoiNhuanCungKy.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BieuDo\UcLoiNhuanCungKy.Designer.cs">
+      <DependentUpon>UcLoiNhuanCungKy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BieuDo\UcLoiNhuanTheoThang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BieuDo\UcLoiNhuanTheoThang.Designer.cs">
+      <DependentUpon>UcLoiNhuanTheoThang.cs</DependentUpon>
     </Compile>
     <Compile Include="BieuDo\UcChiPhiTheoThang.cs">
       <SubType>UserControl</SubType>
@@ -624,17 +648,29 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BieuDo\FrmBieuDoLoiNhuan.resx">
+      <DependentUpon>FrmBieuDoLoiNhuan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BieuDo\FrmBieuDoChiPhi.resx">
       <DependentUpon>FrmBieuDoChiPhi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BieuDo\FrmBieuDoDoanhThu.resx">
       <DependentUpon>FrmBieuDoDoanhThu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BieuDo\UcBieuDoLoiNhuan.resx">
+      <DependentUpon>UcBieuDoLoiNhuan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BieuDo\UcBieuDoChiPhi.resx">
       <DependentUpon>UcBieuDoChiPhi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BieuDo\UcBieuDoDoanhThu.resx">
       <DependentUpon>UcBieuDoDoanhThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BieuDo\UcLoiNhuanCungKy.resx">
+      <DependentUpon>UcLoiNhuanCungKy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BieuDo\UcLoiNhuanTheoThang.resx">
+      <DependentUpon>UcLoiNhuanTheoThang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BieuDo\UcChiPhiTheoThang.resx">
       <DependentUpon>UcChiPhiTheoThang.cs</DependentUpon>

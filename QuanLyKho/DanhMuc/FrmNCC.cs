@@ -27,6 +27,7 @@ namespace QuanLyKho.DanhMuc
         public void GetPhanQuyen()
         {
             var dt = ExecSQL.ExecProcedureDataFistOrDefault<khoPhanQuyen>("prokhoPhanQuyen", new { action = "PHANQUYEN", tendangnhap = Data.Data._strtendangnhap.ToUpper(), mamenu = 6 });
+            if (dt != null) { return; }
             btn_Them.Enabled = dt.luu == true;
             btn_Xoa.Enabled = dt.xoa == true;
             col_xoa.Visible = dt.xoa == true;
@@ -85,20 +86,21 @@ namespace QuanLyKho.DanhMuc
         {
             int i = grvView_NCC.FocusedRowHandle;
             DialogResult dgr = XtraMessageBox.Show("Bạn có muốn xóa nhà cung cấp (" + grvView_NCC.GetRowCellValue(i, "ncc") + ") này không?", "Xác Nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (dgr == DialogResult.Yes)
+            if (dgr != DialogResult.Yes)
             {
-                var dt = ExecSQL.ExecProcedureDataAsDataTable("prokhoNhaCungCap", new { action = "DELETE", mancc = grvView_NCC.GetRowCellValue(i, "mancc").ToString() });
-                if (dt.Rows[0]["status"].ToString() == "NO")
-                {
-                    XtraMessageBox.Show("Nhà cung cấp " + grvView_NCC.GetRowCellValue(i, "ncc") + " đã được sử dụng.", "Xác Nhận", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-                else
-                {
-                    //Ghi lại log
-                    //Data.Data._run_history_log("Đã xóa thông tin nhà cung cấp " + gridView1.GetRowCellValue(i, "ncc") + ".", "Danh mục nhà cung cấp");
-                    GetNhaCungCap();
-                }
+                return;
+            }
+            var dt = ExecSQL.ExecProcedureDataAsDataTable("prokhoNhaCungCap", new { action = "DELETE", mancc = grvView_NCC.GetRowCellValue(i, "mancc").ToString() });
+            if (dt.Rows[0]["status"].ToString() == "NO")
+            {
+                XtraMessageBox.Show("Nhà cung cấp " + grvView_NCC.GetRowCellValue(i, "ncc") + " đã được sử dụng.", "Xác Nhận", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            else
+            {
+                //Ghi lại log
+                //Data.Data._run_history_log("Đã xóa thông tin nhà cung cấp " + gridView1.GetRowCellValue(i, "ncc") + ".", "Danh mục nhà cung cấp");
+                GetNhaCungCap();
             }
         }
 

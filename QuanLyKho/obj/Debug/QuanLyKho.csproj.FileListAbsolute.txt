@@ -1143,3 +1143,7 @@ D:\Project\QuanLyKho_SQL\QuanLyKho\obj\Debug\QuanLyKho.BieuDo.UcChiPhiTheoNhom.r
 D:\Project\QuanLyKho_SQL\QuanLyKho\obj\Debug\QuanLyKho.BieuDo.UcChiPhiCungKy.resources
 D:\Project\QuanLyKho_SQL\QuanLyKho\obj\Debug\QuanLyKho.BieuDo.UcChiPhiTheoThang.resources
 D:\Project\QuanLyKho_SQL\QuanLyKho\bin\Debug\Guna.UI2.dll
+D:\Project\QuanLyKho_SQL\QuanLyKho\obj\Debug\QuanLyKho.BieuDo.FrmBieuDoLoiNhuan.resources
+D:\Project\QuanLyKho_SQL\QuanLyKho\obj\Debug\QuanLyKho.BieuDo.UcBieuDoLoiNhuan.resources
+D:\Project\QuanLyKho_SQL\QuanLyKho\obj\Debug\QuanLyKho.BieuDo.UcLoiNhuanTheoThang.resources
+D:\Project\QuanLyKho_SQL\QuanLyKho\obj\Debug\QuanLyKho.BieuDo.UcLoiNhuanCungKy.resources
