@@ -48,7 +48,7 @@
             this.Controls.Add(this.ucBieuDoLoiNhuan1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmBieuDoLoiNhuan";
-            this.Text = "Biểu Đồ Chi Phí";
+            this.Text = "Biểu Đồ Lợi Nhuận";
             this.ResumeLayout(false);
 
         }

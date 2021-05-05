@@ -16,6 +16,7 @@ namespace QuanLyKho.BieuDo
             Load += UcDoanhThuTheoNgay_Load;
         }
 
+
         private void UcDoanhThuTheoNgay_Load(object sender, EventArgs e)
         {
             Text = @"Doanh Thu Theo Ngày"; //+ string.Format("{0:#,##}", tong) + @" VND";

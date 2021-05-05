@@ -651,3 +651,4 @@ D:\Project\QuanLyKho_SQL\QuanLyKho\obj\Release\QuanLyKho.BieuDo.FrmBieuDoLoiNhua
 D:\Project\QuanLyKho_SQL\QuanLyKho\obj\Release\QuanLyKho.BieuDo.UcBieuDoLoiNhuan.resources
 D:\Project\QuanLyKho_SQL\QuanLyKho\obj\Release\QuanLyKho.BieuDo.UcLoiNhuanCungKy.resources
 D:\Project\QuanLyKho_SQL\QuanLyKho\obj\Release\QuanLyKho.BieuDo.UcLoiNhuanTheoThang.resources
+D:\Project\QuanLyKho_SQL\QuanLyKho\obj\Release\QuanLyKho.BieuDo.UcDoanhThuHangHoa.resources

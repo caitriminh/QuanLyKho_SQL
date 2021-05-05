@@ -1147,3 +1147,4 @@ D:\Project\QuanLyKho_SQL\QuanLyKho\obj\Debug\QuanLyKho.BieuDo.FrmBieuDoLoiNhuan.
 D:\Project\QuanLyKho_SQL\QuanLyKho\obj\Debug\QuanLyKho.BieuDo.UcBieuDoLoiNhuan.resources
 D:\Project\QuanLyKho_SQL\QuanLyKho\obj\Debug\QuanLyKho.BieuDo.UcLoiNhuanTheoThang.resources
 D:\Project\QuanLyKho_SQL\QuanLyKho\obj\Debug\QuanLyKho.BieuDo.UcLoiNhuanCungKy.resources
+D:\Project\QuanLyKho_SQL\QuanLyKho\obj\Debug\QuanLyKho.BieuDo.UcDoanhThuHangHoa.resources

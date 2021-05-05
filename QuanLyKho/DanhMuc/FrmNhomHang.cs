@@ -21,6 +21,14 @@ namespace QuanLyKho.DanhMuc
 
             grvView_NhomHang.CustomDrawRowIndicator += (ss, ee) => { AutoNumberGridView.GridView_CustomDrawRowIndicator(ss, ee, grcNhomHang, grvView_NhomHang); };
             grvView_NhomHang.PopupMenuShowing += (s, e) => { GridViewHelper.AddFontAndColortoPopupMenuShowing(s, e, grcNhomHang, Name); };
+            grvView_NhomHang.FocusedRowChanged += GrvView_NhomHang_FocusedRowChanged;
+        }
+
+        private void GrvView_NhomHang_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
+        {
+            var i = grvView_NhomHang.FocusedRowHandle;
+            if (grvView_NhomHang.GetRowCellValue(i, "manhom") == null) { return; }
+            strMaNhom = grvView_NhomHang.GetRowCellValue(i, "manhom").ToString();
         }
 
         #region "Function"
@@ -70,13 +78,6 @@ namespace QuanLyKho.DanhMuc
         }
 
         #endregion
-
-        private void GridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
-        {
-            var i = grvView_NhomHang.FocusedRowHandle;
-            if (grvView_NhomHang.GetRowCellValue(i, "manhom") == null) { return; }
-            strMaNhom = grvView_NhomHang.GetRowCellValue(i, "manhom").ToString();
-        }
 
         private void Btn_Them_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {

@@ -37,17 +37,17 @@
             this.userBieuDo1.Location = new System.Drawing.Point(0, 0);
             this.userBieuDo1.Margin = new System.Windows.Forms.Padding(2);
             this.userBieuDo1.Name = "userBieuDo1";
-            this.userBieuDo1.Size = new System.Drawing.Size(1138, 479);
+            this.userBieuDo1.Size = new System.Drawing.Size(1138, 635);
             this.userBieuDo1.TabIndex = 0;
             // 
-            // FrmBieuDo
+            // FrmBieuDoDoanhThu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1138, 479);
+            this.ClientSize = new System.Drawing.Size(1138, 635);
             this.Controls.Add(this.userBieuDo1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "FrmBieuDo";
+            this.Name = "FrmBieuDoDoanhThu";
             this.Text = "Biểu Đồ Doanh Thu";
             this.Load += new System.EventHandler(this.FrmBanLamViec_Load);
             this.ResumeLayout(false);
