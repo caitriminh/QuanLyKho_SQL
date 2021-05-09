@@ -134,7 +134,7 @@
             this.widgetView1.Rows.AddRange(new DevExpress.XtraBars.Docking2010.Views.Widget.RowDefinition[] {
             this.rowDefinition1,
             this.rowDefinition2});
-            this.widgetView1.QueryControl += new DevExpress.XtraBars.Docking2010.Views.QueryControlEventHandler(this.widgetView1_QueryControl);
+            this.widgetView1.QueryControl += new DevExpress.XtraBars.Docking2010.Views.QueryControlEventHandler(this.WidgetView1_QueryControl);
             // 
             // popupMenu1
             // 

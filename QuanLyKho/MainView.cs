@@ -15,6 +15,7 @@ using QuanLyKho.NghiepVu;
 using QuanLyKho.Properties;
 using System;
 using System.Data;
+using System.Diagnostics;
 using System.Linq;
 using System.Reflection;
 using System.Windows.Forms;
@@ -136,7 +137,6 @@ namespace QuanLyKho
         private void MainView_Load(object sender, EventArgs e)
         {
             AutoUpdater.Start("http://triminh.xyz/update/update.xml");
-
         }
 
         public void GetPhanQuyen()
@@ -384,7 +384,6 @@ namespace QuanLyKho
                         if (FrmHT_MaskedDialog.ShowDialog(this, frm) == DialogResult.OK)
                         {
                             GetPhanQuyen();
-
                         }
                     }
                 }
@@ -439,17 +438,17 @@ namespace QuanLyKho
             parentRRibbon.StatusBar.UnMergeStatusBar();
         }
 
-        private void barDoanhThu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void BarDoanhThu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             OpenForm(typeof(FrmBieuDoDoanhThu));
         }
 
-        private void barChiPhi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void BarChiPhi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             OpenForm(typeof(FrmBieuDoChiPhi));
         }
 
-        private void barLoiNhuan_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void BarLoiNhuan_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             OpenForm(typeof(FrmBieuDoLoiNhuan));
         }

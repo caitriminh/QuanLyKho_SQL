@@ -31,8 +31,10 @@ namespace QuanLyKho.BieuDo
                 chartControl1.DataSource = dataTable;
                 chartControl1.BeginInvoke(new Action(() =>
                 {
-                    Series seriesThanhTien = new Series("Doanh thu", ViewType.Bar);
-                    seriesThanhTien.LabelsVisibility = DefaultBoolean.True;
+                    Series seriesThanhTien = new Series("Doanh thu", ViewType.Bar)
+                    {
+                        LabelsVisibility = DefaultBoolean.True
+                    };
 
                     foreach (DataRow dr in dataTable.Rows)
                     {

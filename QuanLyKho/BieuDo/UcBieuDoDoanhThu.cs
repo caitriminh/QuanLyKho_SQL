@@ -40,14 +40,18 @@ namespace QuanLyKho.BieuDo
             {
                 doanhthu_cungky.Control.Controls[0].Controls.Clear();
             }
-            var chartControl1 = new ChartControl();
-            chartControl1.Dock = DockStyle.Fill;
+            var chartControl1 = new ChartControl
+            {
+                Dock = DockStyle.Fill
+            };
             var dataTable = ExecSQL.ExecProcedureDataAsDataTable("prokhoBieuDo_DoanhThu", new { action = "DOANHTHU_THEONAM" });
             chartControl1.DataSource = dataTable;
 
 
-            Series seriesNam = new Series("Năm", ViewType.Bar);
-            seriesNam.LabelsVisibility = DefaultBoolean.True;
+            Series seriesNam = new Series("Năm", ViewType.Bar)
+            {
+                LabelsVisibility = DefaultBoolean.True
+            };
 
             // Add points to them, with their arguments different.
             foreach (DataRow dr in dataTable.Rows)
@@ -96,21 +100,25 @@ namespace QuanLyKho.BieuDo
             {
                 doanhthu_cungky.Control.Controls[0].Controls.Clear();
             }
-            var chartControl1 = new ChartControl();
-            chartControl1.Dock = DockStyle.Fill;
+            var chartControl1 = new ChartControl
+            {
+                Dock = DockStyle.Fill
+            };
             var dataTable = ExecSQL.ExecProcedureDataAsDataTable("prokhoBieuDo_DoanhThu", new { action = "DOANHTHU_NHOMHANG" });
             chartControl1.DataSource = dataTable;
 
 
-            Series seriesNhomHang = new Series("Nhóm Hàng", ViewType.Pie);
-            seriesNhomHang.LabelsVisibility = DefaultBoolean.True;
+            Series seriesNhomHang = new Series("Nhóm Hàng", ViewType.Pie)
+            {
+                LabelsVisibility = DefaultBoolean.True
+            };
 
             // Add points to them, with their arguments different.
             foreach (DataRow dr in dataTable.Rows)
             {
                 seriesNhomHang.Points.Add(new SeriesPoint(dr["nhomhang"], dr["thanhtien"]));
             }
-            seriesNhomHang.Label.TextPattern = "{V:#,##0}";
+            seriesNhomHang.Label.TextPattern = "{VP:p1}";
             seriesNhomHang.LegendTextPattern = "{A}";
 
             chartControl1.Series.AddRange(new Series[] { seriesNhomHang });
@@ -156,13 +164,17 @@ namespace QuanLyKho.BieuDo
                 doanhthu_cungky.Caption = @"Doanh Thu Cùng Kỳ";
             }
 
-            var chartControl1 = new ChartControl();
-            chartControl1.Dock = DockStyle.Fill;
+            var chartControl1 = new ChartControl
+            {
+                Dock = DockStyle.Fill
+            };
             var dataTable2 = ExecSQL.ExecProcedureDataAsDataTable("prokhoBieuDo_DoanhThu", new { action = "SS_DOANHTHU2" });
             chartControl1.DataSource = dataTable2;
 
-            Series seriesDoanhThu2 = new Series("Doanh Thu " + dataTable2.Rows[0]["nam"], ViewType.Bar);
-            seriesDoanhThu2.LabelsVisibility = DefaultBoolean.True;
+            Series seriesDoanhThu2 = new Series("Doanh Thu " + dataTable2.Rows[0]["nam"], ViewType.Bar)
+            {
+                LabelsVisibility = DefaultBoolean.True
+            };
 
             // Add points to them, with their arguments different.
 
@@ -231,19 +243,25 @@ namespace QuanLyKho.BieuDo
                 doanhthu_cungky.Control.Controls[0].Controls.Clear();
             }
 
-            var chartControl1 = new ChartControl();
-            chartControl1.Dock = DockStyle.Fill;
+            var chartControl1 = new ChartControl
+            {
+                Dock = DockStyle.Fill
+            };
             var dataTable1 = ExecSQL.ExecProcedureDataAsDataTable("prokhoBieuDo_DoanhThu", new { action = "SS_DOANHTHU1" });
             var dataTable2 = ExecSQL.ExecProcedureDataAsDataTable("prokhoBieuDo_DoanhThu", new { action = "SS_DOANHTHU2" });
 
             chartControl1.DataSource = dataTable1;
             chartControl1.DataSource = dataTable2;
 
-            Series seriesDoanhThu1 = new Series("Doanh Thu " + dataTable1.Rows[0]["nam"], ViewType.Bar);
-            seriesDoanhThu1.LabelsVisibility = DefaultBoolean.True;
+            Series seriesDoanhThu1 = new Series("Doanh Thu " + dataTable1.Rows[0]["nam"], ViewType.Bar)
+            {
+                LabelsVisibility = DefaultBoolean.True
+            };
 
-            Series seriesDoanhThu2 = new Series("Doanh Thu " + dataTable2.Rows[0]["nam"], ViewType.Bar);
-            seriesDoanhThu2.LabelsVisibility = DefaultBoolean.True;
+            Series seriesDoanhThu2 = new Series("Doanh Thu " + dataTable2.Rows[0]["nam"], ViewType.Bar)
+            {
+                LabelsVisibility = DefaultBoolean.True
+            };
 
             // Add points to them, with their arguments different.
             foreach (DataRow dr in dataTable1.Rows)
@@ -297,14 +315,18 @@ namespace QuanLyKho.BieuDo
                 doanhthu_cungky.Control.Controls[0].Controls.Clear();
             }
 
-            var chartControl1 = new ChartControl();
-            chartControl1.Dock = DockStyle.Fill;
+            var chartControl1 = new ChartControl
+            {
+                Dock = DockStyle.Fill
+            };
             var dataTable = ExecSQL.ExecProcedureDataAsDataTable("prokhoBieuDo_DoanhThu", new { action = "DOANHTHU_THEONGAY" });
             chartControl1.DataSource = dataTable;
 
 
-            Series seriesNhomHang = new Series("Ngày", ViewType.Bar);
-            seriesNhomHang.LabelsVisibility = DefaultBoolean.True;
+            Series seriesNhomHang = new Series("Ngày", ViewType.Bar)
+            {
+                LabelsVisibility = DefaultBoolean.True
+            };
 
             // Add points to them, with their arguments different.
             foreach (DataRow dr in dataTable.Rows)
@@ -354,14 +376,18 @@ namespace QuanLyKho.BieuDo
                 doanhthu_cungky.Control.Controls[0].Controls.Clear();
 
             }
-            var chartControl1 = new ChartControl();
-            chartControl1.Dock = DockStyle.Fill;
+            var chartControl1 = new ChartControl
+            {
+                Dock = DockStyle.Fill
+            };
             var dataTable = ExecSQL.ExecProcedureDataAsDataTable("prokhoBieuDo_DoanhThu", new { action = "DOANHTHU_NHOMHANG" });
             chartControl1.DataSource = dataTable;
 
 
-            Series seriesNhomHang = new Series("Nhóm Hàng", ViewType.Bar);
-            seriesNhomHang.LabelsVisibility = DefaultBoolean.True;
+            Series seriesNhomHang = new Series("Nhóm Hàng", ViewType.Bar)
+            {
+                LabelsVisibility = DefaultBoolean.True
+            };
 
             // Add points to them, with their arguments different.
             foreach (DataRow dr in dataTable.Rows)
@@ -396,7 +422,7 @@ namespace QuanLyKho.BieuDo
         }
 
 
-        private void widgetView1_QueryControl(object sender, DevExpress.XtraBars.Docking2010.Views.QueryControlEventArgs e)
+        private void WidgetView1_QueryControl(object sender, DevExpress.XtraBars.Docking2010.Views.QueryControlEventArgs e)
         {
             if (!string.IsNullOrEmpty(e.Document.ControlTypeName))
             {

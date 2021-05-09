@@ -515,7 +515,7 @@
             this.barDoanhThu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barDoanhThu.ImageOptions.Image")));
             this.barDoanhThu.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barDoanhThu.ImageOptions.LargeImage")));
             this.barDoanhThu.Name = "barDoanhThu";
-            this.barDoanhThu.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barDoanhThu_ItemClick);
+            this.barDoanhThu.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BarDoanhThu_ItemClick);
             // 
             // barChiPhi
             // 
@@ -524,7 +524,7 @@
             this.barChiPhi.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barChiPhi.ImageOptions.Image")));
             this.barChiPhi.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barChiPhi.ImageOptions.LargeImage")));
             this.barChiPhi.Name = "barChiPhi";
-            this.barChiPhi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barChiPhi_ItemClick);
+            this.barChiPhi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BarChiPhi_ItemClick);
             // 
             // imageCollection1
             // 
@@ -750,7 +750,7 @@
             this.barLoiNhuan.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barLoiNhuan.ImageOptions.Image")));
             this.barLoiNhuan.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barLoiNhuan.ImageOptions.LargeImage")));
             this.barLoiNhuan.Name = "barLoiNhuan";
-            this.barLoiNhuan.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barLoiNhuan_ItemClick);
+            this.barLoiNhuan.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BarLoiNhuan_ItemClick);
             // 
             // MainView
             // 

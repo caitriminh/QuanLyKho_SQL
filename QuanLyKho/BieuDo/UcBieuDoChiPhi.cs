@@ -111,7 +111,7 @@ namespace QuanLyKho.BieuDo
 
             foreach (DataRow dr in dataTable2.Rows)
                 seriesLoaiChiPhi.Points.Add(new SeriesPoint(dr["loaichiphi"], dr["thanhtien"]));
-            seriesLoaiChiPhi.Label.TextPattern = "{V:#,##0}";
+            seriesLoaiChiPhi.Label.TextPattern = "{VP:p1}";//Format percent
             seriesLoaiChiPhi.LegendTextPattern = "{A}";
 
             chartControl1.Series.AddRange(new Series[] { seriesLoaiChiPhi });

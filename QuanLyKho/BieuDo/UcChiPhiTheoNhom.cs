@@ -35,7 +35,7 @@ namespace QuanLyKho.BieuDo
                     {
                         seriesLoaiChiPhi.Points.Add(new SeriesPoint(dr["loaichiphi"], dr["thanhtien"]));
                     }
-                    seriesLoaiChiPhi.Label.TextPattern = "{V:#,##0}";
+                    seriesLoaiChiPhi.Label.TextPattern = "{VP:p1}";
                     seriesLoaiChiPhi.LegendTextPattern = "{A}";
 
 

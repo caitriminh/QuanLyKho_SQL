@@ -55,7 +55,7 @@
 
         #endregion
 
-        private UcBieuDoChiPhi userBieuDoChiPhi1;
+        //private UcBieuDoChiPhi userBieuDoChiPhi1;
         private UcBieuDoLoiNhuan ucBieuDoLoiNhuan1;
     }
 }

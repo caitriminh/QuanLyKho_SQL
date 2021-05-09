@@ -50,8 +50,10 @@ namespace QuanLyKho.BieuDo
                 chartControl1.DataSource = dataTable;
                 chartControl1.BeginInvoke(new Action(() =>
                 {
-                    Series seriesGiatri = new Series("Doanh thu", ViewType.Bar);
-                    seriesGiatri.LabelsVisibility = DefaultBoolean.True;
+                    Series seriesGiatri = new Series("Doanh thu", ViewType.Bar)
+                    {
+                        LabelsVisibility = DefaultBoolean.True
+                    };
 
                     foreach (DataRow dr in dataTable.Rows)
                     {
