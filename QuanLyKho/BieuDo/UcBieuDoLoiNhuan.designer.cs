@@ -34,14 +34,12 @@
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.XtraBars.Docking.CustomHeaderButtonImageOptions customHeaderButtonImageOptions2 = new DevExpress.XtraBars.Docking.CustomHeaderButtonImageOptions();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraBars.Docking.CustomHeaderButtonImageOptions customHeaderButtonImageOptions3 = new DevExpress.XtraBars.Docking.CustomHeaderButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
             this.loinhuan_theothang = new DevExpress.XtraBars.Docking2010.Views.Widget.Document(this.components);
             this.loinhuan_cungky = new DevExpress.XtraBars.Docking2010.Views.Widget.Document(this.components);
             this.documentManager1 = new DevExpress.XtraBars.Docking2010.DocumentManager(this.components);
             this.widgetView1 = new DevExpress.XtraBars.Docking2010.Views.Widget.WidgetView(this.components);
-            this.columnDefinition1 = new DevExpress.XtraBars.Docking2010.Views.Widget.ColumnDefinition();
-            this.columnDefinition2 = new DevExpress.XtraBars.Docking2010.Views.Widget.ColumnDefinition();
-            this.rowDefinition1 = new DevExpress.XtraBars.Docking2010.Views.Widget.RowDefinition();
-            this.rowDefinition2 = new DevExpress.XtraBars.Docking2010.Views.Widget.RowDefinition();
             this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
             this.mnu_loinhuan_theothang = new DevExpress.XtraBars.BarButtonItem();
             this.mnu_loinhuan_cungky = new DevExpress.XtraBars.BarButtonItem();
@@ -57,16 +55,24 @@
             this.bar1 = new DevExpress.XtraBars.Bar();
             this.bar2 = new DevExpress.XtraBars.Bar();
             this.bar3 = new DevExpress.XtraBars.Bar();
+            this.tysuat_loinhuan = new DevExpress.XtraBars.Docking2010.Views.Widget.Document(this.components);
+            this.rowDefinition1 = new DevExpress.XtraBars.Docking2010.Views.Widget.RowDefinition();
+            this.rowDefinition2 = new DevExpress.XtraBars.Docking2010.Views.Widget.RowDefinition();
+            this.columnDefinition1 = new DevExpress.XtraBars.Docking2010.Views.Widget.ColumnDefinition();
+            this.columnDefinition2 = new DevExpress.XtraBars.Docking2010.Views.Widget.ColumnDefinition();
+            this.columnDefinition3 = new DevExpress.XtraBars.Docking2010.Views.Widget.ColumnDefinition();
             ((System.ComponentModel.ISupportInitialize)(this.loinhuan_theothang)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.loinhuan_cungky)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.widgetView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.columnDefinition1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.columnDefinition2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rowDefinition1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rowDefinition2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tysuat_loinhuan)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rowDefinition1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rowDefinition2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.columnDefinition1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.columnDefinition2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.columnDefinition3)).BeginInit();
             this.SuspendLayout();
             // 
             // loinhuan_theothang
@@ -92,7 +98,6 @@
             this.loinhuan_cungky.CustomHeaderButtons.AddRange(new DevExpress.XtraBars.Docking2010.IButton[] {
             new DevExpress.XtraBars.Docking.CustomHeaderButton("", true, customHeaderButtonImageOptions2, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, serializableAppearanceObject2, null, -1)});
             this.loinhuan_cungky.Height = 674;
-            this.loinhuan_cungky.RowSpan = 2;
             this.loinhuan_cungky.Width = 652;
             // 
             // documentManager1
@@ -106,10 +111,12 @@
             // 
             this.widgetView1.Columns.AddRange(new DevExpress.XtraBars.Docking2010.Views.Widget.ColumnDefinition[] {
             this.columnDefinition1,
-            this.columnDefinition2});
+            this.columnDefinition2,
+            this.columnDefinition3});
             this.widgetView1.Documents.AddRange(new DevExpress.XtraBars.Docking2010.Views.BaseDocument[] {
             this.loinhuan_theothang,
-            this.loinhuan_cungky});
+            this.loinhuan_cungky,
+            this.tysuat_loinhuan});
             this.widgetView1.LayoutMode = DevExpress.XtraBars.Docking2010.Views.Widget.LayoutMode.TableLayout;
             this.widgetView1.RootContainer.Orientation = System.Windows.Forms.Orientation.Vertical;
             this.widgetView1.Rows.AddRange(new DevExpress.XtraBars.Docking2010.Views.Widget.RowDefinition[] {
@@ -130,7 +137,6 @@
             this.mnu_loinhuan_theothang.Caption = "Lợi nhuận theo tháng";
             this.mnu_loinhuan_theothang.Id = 3;
             this.mnu_loinhuan_theothang.Name = "mnu_loinhuan_theothang";
-          
             // 
             // mnu_loinhuan_cungky
             // 
@@ -238,6 +244,18 @@
             this.bar3.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
             this.bar3.Text = "Custom 3";
             // 
+            // tysuat_loinhuan
+            // 
+            this.tysuat_loinhuan.Caption = "Tỷ Suất Lợi Nhuận";
+            this.tysuat_loinhuan.ColumnIndex = 1;
+            this.tysuat_loinhuan.ColumnSpan = 2;
+            this.tysuat_loinhuan.ControlName = "tysuat_loinhuan";
+            this.tysuat_loinhuan.ControlTypeName = "QuanLyKho.BieuDo.UcTySuatLoiNhuan";
+            customHeaderButtonImageOptions3.Image = ((System.Drawing.Image)(resources.GetObject("customHeaderButtonImageOptions3.Image")));
+            this.tysuat_loinhuan.CustomHeaderButtons.AddRange(new DevExpress.XtraBars.Docking2010.IButton[] {
+            new DevExpress.XtraBars.Docking.CustomHeaderButton("", true, customHeaderButtonImageOptions3, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, serializableAppearanceObject3, null, -1)});
+            this.tysuat_loinhuan.RowIndex = 1;
+            // 
             // UcBieuDoLoiNhuan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -253,12 +271,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.loinhuan_cungky)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.widgetView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.columnDefinition1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.columnDefinition2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rowDefinition1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rowDefinition2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tysuat_loinhuan)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rowDefinition1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rowDefinition2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.columnDefinition1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.columnDefinition2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.columnDefinition3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -287,6 +307,8 @@
         private DevExpress.XtraBars.BarButtonItem mnu_doanhthu_nhomhang_pie;
         private DevExpress.XtraBars.Docking2010.Views.Widget.ColumnDefinition columnDefinition1;
         private DevExpress.XtraBars.Docking2010.Views.Widget.ColumnDefinition columnDefinition2;
+        private DevExpress.XtraBars.Docking2010.Views.Widget.ColumnDefinition columnDefinition3;
+        private DevExpress.XtraBars.Docking2010.Views.Widget.Document tysuat_loinhuan;
         private DevExpress.XtraBars.Docking2010.Views.Widget.RowDefinition rowDefinition1;
         private DevExpress.XtraBars.Docking2010.Views.Widget.RowDefinition rowDefinition2;
     }

@@ -26,11 +26,13 @@ namespace QuanLyKho.BieuDo
         private void UcLoiNhuanCungKy_Load(object sender, EventArgs e)
         {
             Text = "Lợi Nhuận Cùng Kỳ";
-            //Task.Factory.StartNew(() =>
-            //{
-                var dataTable1 = ExecSQL.ExecProcedureDataAsDataTable("prokhoBaoCaoLoiNhuan", new { action = "GET_DATA", option = 3, tungay = Convert.ToDateTime(DateTime.Now).ToString("yyyyMM01"), denngay = Convert.ToDateTime(DateTime.Now).ToString("yyyyMMdd") });
 
-                var dataTable2 = ExecSQL.ExecProcedureDataAsDataTable("prokhoBaoCaoLoiNhuan", new { action = "GET_DATA", option = 2, tungay = Convert.ToDateTime(DateTime.Now).ToString("yyyyMM01"), denngay = Convert.ToDateTime(DateTime.Now).ToString("yyyyMMdd") });
+            var dataTable1 = ExecSQL.ExecProcedureDataAsDataTable("prokhoBaoCaoLoiNhuan", new { action = "GET_DATA", option = 3, tungay = Convert.ToDateTime(DateTime.Now).ToString("yyyyMM01"), denngay = Convert.ToDateTime(DateTime.Now).ToString("yyyyMMdd") });
+
+            var dataTable2 = ExecSQL.ExecProcedureDataAsDataTable("prokhoBaoCaoLoiNhuan", new { action = "GET_DATA", option = 2, tungay = Convert.ToDateTime(DateTime.Now).ToString("yyyyMM01"), denngay = Convert.ToDateTime(DateTime.Now).ToString("yyyyMMdd") });
+
+            Task.Factory.StartNew(() =>
+            {
 
                 chartControl1.DataSource = dataTable1;
                 chartControl1.BeginInvoke(new Action(() =>
@@ -69,7 +71,7 @@ namespace QuanLyKho.BieuDo
 
                 }));
 
-            //});
+            });
         }
 
 

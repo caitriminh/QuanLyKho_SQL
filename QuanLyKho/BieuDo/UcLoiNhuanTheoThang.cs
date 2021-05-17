@@ -22,7 +22,11 @@ namespace QuanLyKho.BieuDo
             Task.Factory.StartNew(() =>
             {
                 var dataTable1 = ExecSQL.ExecProcedureDataAsDataTable("prokhoBaoCaoLoiNhuan", new { action = "GET_DATA", option = 2, tungay = Convert.ToDateTime(DateTime.Now).ToString("yyyyMM01"), denngay = Convert.ToDateTime(DateTime.Now).ToString("yyyyMMdd") });
-
+                if (dataTable1.Rows.Count == 0)
+                {
+                    XtraMessageBox.Show("Không tìm thấy dữ liệu.", "Cảnh Báo");
+                    return;
+                }
                 chartControl1.DataSource = dataTable1;
                 chartControl1.BeginInvoke(new Action(() =>
                 {

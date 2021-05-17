@@ -241,6 +241,12 @@
     <Compile Include="BieuDo\UcDoanhThuHangHoa.designer.cs">
       <DependentUpon>UcDoanhThuHangHoa.cs</DependentUpon>
     </Compile>
+    <Compile Include="BieuDo\UcTySuatLoiNhuan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BieuDo\UcTySuatLoiNhuan.Designer.cs">
+      <DependentUpon>UcTySuatLoiNhuan.cs</DependentUpon>
+    </Compile>
     <Compile Include="BieuDo\UcLoiNhuanCungKy.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -675,6 +681,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BieuDo\UcDoanhThuHangHoa.resx">
       <DependentUpon>UcDoanhThuHangHoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BieuDo\UcTySuatLoiNhuan.resx">
+      <DependentUpon>UcTySuatLoiNhuan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BieuDo\UcLoiNhuanCungKy.resx">
       <DependentUpon>UcLoiNhuanCungKy.cs</DependentUpon>
