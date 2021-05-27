@@ -18,6 +18,8 @@ namespace QuanLyKho.BieuDo
     public partial class UcTySuatLoiNhuan : XtraUserControl
     {
         private string strMaNhom = "CARD";
+
+        [Obsolete]
         public UcTySuatLoiNhuan()
         {
             InitializeComponent();
@@ -25,6 +27,7 @@ namespace QuanLyKho.BieuDo
             grvViewNhomHang.FocusedRowChanged += GrvViewNhomHang_FocusedRowChanged;
         }
 
+        [Obsolete]
         private void GrvViewNhomHang_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
             var i = grvViewNhomHang.FocusedRowHandle;
@@ -41,57 +44,82 @@ namespace QuanLyKho.BieuDo
             grcNhomHang.DataSource = dt;
         }
 
+        [Obsolete]
         public void GetBieuDo()
         {
             Text = "Tỷ Suất Lợi Nhuận";
             var dataTable1 = ExecSQL.ExecProcedureDataAsDataTable("prokhoTySuatLoiNhuan", new { ngaythang = Convert.ToDateTime(DateTime.Now).ToString("yyyyMM01"), manhom = strMaNhom });
-            var dataTable2 = ExecSQL.ExecProcedureDataAsDataTable("prokhoBieuDo_DoanhThu", new { action = "DOANHTHU_HANGHOA", manhom = strMaNhom });
             var chartControl1 = new ChartControl
             {
                 Dock = DockStyle.Fill
             };
-            panelControl.Controls.Add(chartControl1);
-            Task.Factory.StartNew(() =>
+            // Create two series.
+            Series seriesGiaVon = new Series("Giá vốn", ViewType.Bar);
+            seriesGiaVon.LabelsVisibility = DefaultBoolean.True;
+
+            Series seriesDoanhThu = new Series("Doanh thu", ViewType.Bar);
+            seriesDoanhThu.LabelsVisibility = DefaultBoolean.True;
+
+            Series seriesTySuat = new Series("Tỷ suất", ViewType.Line);
+            seriesTySuat.LabelsVisibility = DefaultBoolean.True;
+
+            foreach (DataRow dr in dataTable1.Rows)
             {
+                seriesGiaVon.Points.Add(new SeriesPoint(dr["tenhanghoa"], dr["giavonxuat"]));
+                seriesDoanhThu.Points.Add(new SeriesPoint(dr["tenhanghoa"], dr["doanhthu"]));
+                seriesTySuat.Points.Add(new SeriesPoint(dr["tenhanghoa"], dr["tysuat"]));
+            }
+            //Format
+            seriesGiaVon.Label.TextPattern = "{V:#,##0}";
+            seriesDoanhThu.Label.TextPattern = "{V:#,##0}";
+            seriesTySuat.Label.TextPattern = "{V:#,##0.0}";
 
-                chartControl1.DataSource = dataTable1;
-                chartControl1.BeginInvoke(new Action(() =>
-                {
-                    Series seriesGiaVon = new Series("Giá vốn", ViewType.Bar);
-                    seriesGiaVon.LabelsVisibility = DefaultBoolean.True;
+            // Add both series to the chart.
+            chartControl1.Series.AddRange(new Series[] { seriesGiaVon, seriesDoanhThu, seriesTySuat });
 
-                    Series seriesDoanhThu = new Series("Doanh thu", ViewType.Bar);
-                    seriesDoanhThu.LabelsVisibility = DefaultBoolean.True;
+            // Hide the legend (optional).
+            chartControl1.Legend.Visible = false;
 
-                    // Add points to them, with their arguments different.
-                    foreach (DataRow dr in dataTable1.Rows)
-                        seriesGiaVon.Points.Add(new SeriesPoint(dr["tenhanghoa"], dr["giavonxuat"]));
-                    seriesGiaVon.Label.TextPattern = "{V:#,##0}";
+            // Create two secondary axes, and add them to the chart's Diagram.
+            SecondaryAxisX myAxisX = new SecondaryAxisX("my X-Axis");
+            SecondaryAxisY myAxisY = new SecondaryAxisY("my Y-Axis");
 
+            ((XYDiagram)chartControl1.Diagram).SecondaryAxesX.Add(myAxisX);
+            ((XYDiagram)chartControl1.Diagram).SecondaryAxesY.Add(myAxisY);
 
-                    foreach (DataRow dr in dataTable2.Rows)
-                        seriesDoanhThu.Points.Add(new SeriesPoint(dr["tenhanghoa"], dr["thanhtien"]));
-                    seriesDoanhThu.Label.TextPattern = "{V:#,##0}";
+            // Assign the series2 to the created axes.
+            ((LineSeriesView)seriesTySuat.View).AxisX = myAxisX;
+            ((LineSeriesView)seriesTySuat.View).AxisY = myAxisY;
 
+            // Customize the appearance of the secondary axes (optional).
+            myAxisX.Title.Text = "Tỷ suất lợi nhuận";
+            myAxisX.Title.Visible = true;
+            myAxisX.Title.TextColor = Color.Red;
+            myAxisX.Label.TextColor = Color.Red;
+            myAxisX.Color = Color.Red;
 
-                    chartControl1.Series.AddRange(new Series[] { seriesGiaVon });
-                    chartControl1.Series.AddRange(new Series[] { seriesDoanhThu });
-                    chartControl1.Legend.Visibility = DefaultBoolean.True;
+            myAxisY.Title.Text = "Tỷ suất lợi nhuận";
+            myAxisY.Title.Visible = true;
+            myAxisY.Title.TextColor = Color.White;
+            myAxisY.Label.TextColor = Color.White;
+            myAxisY.Color = Color.White;
 
-                    XYDiagram diagram = chartControl1.Diagram as XYDiagram;
-                    diagram.AxisY.Label.TextPattern = "{V:#,##0}";
+            chartControl1.Legend.Visibility = DefaultBoolean.True;
 
-                    Legend legend = chartControl1.Legend;
-                    // chartControl1.Legend.AlignmentVertical = LegendAlignmentVertical.Center
-                    legend.Margins.All = 8;
-                    legend.AlignmentHorizontal = LegendAlignmentHorizontal.Right;
-                    legend.AlignmentVertical = LegendAlignmentVertical.Top;
-                    legend.Direction = LegendDirection.LeftToRight;
-                }));
+            XYDiagram diagram = chartControl1.Diagram as XYDiagram;
+            diagram.AxisY.Label.TextPattern = "{V:#,##0}";
 
-            });
+            Legend legend = chartControl1.Legend;
+            legend.Margins.All = 8;
+            legend.AlignmentHorizontal = LegendAlignmentHorizontal.Right;
+            legend.AlignmentVertical = LegendAlignmentVertical.Top;
+            legend.Direction = LegendDirection.LeftToRight;
+
+            // Add the chart to the form.
+            panelControl.Controls.Add(chartControl1);
         }
 
+        [Obsolete]
         private void UcTySuatLoiNhuan_Load(object sender, EventArgs e)
         {
             GetNhomHang();
