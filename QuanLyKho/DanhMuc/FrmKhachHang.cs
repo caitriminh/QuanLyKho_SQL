@@ -59,8 +59,8 @@ namespace QuanLyKho.DanhMuc
                 if (dr.RowState == DataRowState.Modified)
                 {
                     ExecSQL.ExecProcedureNonData("prokhoKhachHang", new { action = "UPDATE", makh = dr["makh"].ToString(), tenkh = dr["tenkh"].ToString(), diachi = dr["diachi"].ToString(), sodt = dr["sodt"].ToString(), sofax = dr["sofax"].ToString(), ghichu = dr["ghichu"].ToString(), nguoitd2 = Data.Data._strtendangnhap.ToUpper() });
-                    //Ghi lại log
-                    // Data.Data._run_history_log("Đã cập nhật lại thông tin khách hàng " + dr["tenkh"] + ".", "Danh mục khách hàng");
+                    //Ghi lại nhật ký
+                    Data.Data._run_history_log($"Cập nhật thông tin khách hàng ({dr["tenkh"]}).", "Danh Mục Khách Hàng");
 
                 }
             }
@@ -97,9 +97,9 @@ namespace QuanLyKho.DanhMuc
                 }
                 else
                 {
-                    //Ghi lại log
-                    //Data.Data._run_history_log("Đã xóa thông tin khách hàng " + gridView1.GetRowCellValue(i, "tenkh") + ".", "Danh mục khách hàng");
-                    GetKhachHang();
+                    grvView_KhachHang.DeleteRow(i);
+                    //Ghi lại nhật ký
+                    Data.Data._run_history_log($"Xóa thông tin khách hàng ({grvView_KhachHang.GetRowCellValue(i, "tenkh")}).", "Danh Mục Khách Hàng");
                 }
             }
         }
@@ -113,6 +113,8 @@ namespace QuanLyKho.DanhMuc
         {
             this.Subscribe<MessageBroker>(OnNext);
             GetKhachHang();
+            //Ghi lại nhật ký
+            Data.Data._run_history_log($"Xem thông tin khách hàng.", "Danh Mục Khách Hàng");
         }
 
         private void Btn_Luu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -141,9 +143,9 @@ namespace QuanLyKho.DanhMuc
                     }
                     else
                     {
-                        //Ghi lại log
-                        //Data.Data._run_history_log("Đã xóa thông tin khách hàng " + gridView1.GetRowCellValue(i, "tenkh") + ".", "Danh mục khách hàng");
-                        GetKhachHang();
+                        grvView_KhachHang.DeleteRow(i);
+                        //Ghi lại nhật ký
+                        Data.Data._run_history_log($"Xóa thông tin khách hàng ({grvView_KhachHang.GetRowCellValue(i, "tenkh")}).", "Danh Mục Khách Hàng");
                     }
                 }
             }

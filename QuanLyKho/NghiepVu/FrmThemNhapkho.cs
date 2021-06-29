@@ -168,7 +168,7 @@ namespace QuanLyKho.NghiepVu
                 txt_soluong.Focus();
                 return;
             }
-            ExecSQL.ExecProcedureNonData("prokhoChiTietPhieuNhap", new { action = "SAVE_QUYDOI", maphieu = txt_maphieu.Text, mahanghoa = cbo_mathang2.EditValue.ToString(), nguoitd = Data.Data._strtendangnhap.ToUpper() });
+            ExecSQL.ExecProcedureNonData("prokhoChiTietPhieuNhap", new { action = "SAVE_QUYDOI", maphieu = txt_maphieu.Text, mahanghoa = cbo_mathang2.EditValue.ToString(), nguoitd = Data.Data._strtendangnhap.ToUpper(), soluong = Convert.ToDecimal(txt_soluong.Text), ngaynhap = Convert.ToDateTime(dte_ngaynhap.EditValue).ToString("yyyyMMdd") });
         }
 
         #endregion
@@ -300,28 +300,36 @@ namespace QuanLyKho.NghiepVu
                     txt_maphieu.Text = ExecSQL.ExecProcedureSacalar("proKhoPhieuNhap", new { action = "CREATE_ID", ngaynhap = Convert.ToDateTime(dte_ngaynhap.EditValue).ToString("yyyyMMdd") }).ToString();
                 }
             }
-            if (grvView_NhapKho.RowCount == 0)
-            {
-                XtraMessageBox.Show("Bạn vui lòng nhập vào chi tiết mã hàng.", "Cảnh Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-            ExecSQL.ExecProcedureNonData("proKhoPhieuNhap", new { action = "SAVE", maphieu = txt_maphieu.Text, mancc = cbo_ncc.EditValue.ToString(), ngaynhap = Convert.ToDateTime(dte_ngaynhap.EditValue).ToString("yyyyMMdd"), diengiai = txt_diengiai.Text, nguoitd = Data.Data._strtendangnhap.ToUpper(), thanhtoan = Convert.ToBoolean(chkThanhToan.Checked) });
-            //Ghi lại nhật ký
-            Data.Data._run_history_log($"Thêm mới phiếu nhập ({txt_maphieu.Text}) của nhà cung cấp ({cbo_ncc.Text})", "Phiếu Nhập");
             if (xtraTabControl1.SelectedTabPage == tabQuyDoi)
             {
+                ExecSQL.ExecProcedureNonData("proKhoPhieuNhap", new { action = "SAVE", maphieu = txt_maphieu.Text, mancc = cbo_ncc.EditValue.ToString(), ngaynhap = Convert.ToDateTime(dte_ngaynhap.EditValue).ToString("yyyyMMdd"), diengiai = txt_diengiai.Text, nguoitd = Data.Data._strtendangnhap.ToUpper(), thanhtoan = Convert.ToBoolean(chkThanhToan.Checked) });
+                //Ghi lại nhật ký
+                Data.Data._run_history_log($"Thêm mới phiếu nhập ({txt_maphieu.Text}) của nhà cung cấp ({cbo_ncc.Text})", "Phiếu Nhập");
+
                 CapNhatQuyDoi();
                 //Tạo phiếu xuất kho sau khi chuyển đổi
-                LuuPhieuXuatKho();
+
                 txt_soluong.Text = "0";
+                lblSLTon.Text = "0";
                 cbo_mathang2.EditValue = DBNull.Value;
                 xtraTabControl1.SelectedTabPage = tabPhieuNhap;
-
+                //Load chi tiết
+                GetChiTietPhieuNhap();
                 XtraMessageBox.Show("Đã cập nhật thành công phiếu nhập và phiếu xuất kho " + _strmaphieuxuat + ".", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 //Tạo mã phiếu
             }
             else
             {
+                if (grvView_NhapKho.RowCount == 0)
+                {
+                    XtraMessageBox.Show("Bạn vui lòng nhập vào chi tiết mã hàng.", "Cảnh Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                ExecSQL.ExecProcedureNonData("proKhoPhieuNhap", new { action = "SAVE", maphieu = txt_maphieu.Text, mancc = cbo_ncc.EditValue.ToString(), ngaynhap = Convert.ToDateTime(dte_ngaynhap.EditValue).ToString("yyyyMMdd"), diengiai = txt_diengiai.Text, nguoitd = Data.Data._strtendangnhap.ToUpper(), thanhtoan = Convert.ToBoolean(chkThanhToan.Checked) });
+                //Ghi lại nhật ký
+                Data.Data._run_history_log($"Thêm mới phiếu nhập ({txt_maphieu.Text}) của nhà cung cấp ({cbo_ncc.Text})", "Phiếu Nhập");
+
                 LuuChiTietPhieuNhapKho();
                 Data.Data._edit = true;
                 XtraMessageBox.Show("Đã cập nhật thành công phiếu nhập.", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);

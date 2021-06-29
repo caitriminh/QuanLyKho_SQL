@@ -1,10 +1,8 @@
 ﻿using DevExpress.XtraEditors;
 using QuanLyKho.Data;
 using QuanLyKho.Extension;
-using QuanLyKho.NghiepVu;
 using SimpleBroker;
 using System;
-using System.Data.SQLite;
 using System.Globalization;
 using System.Windows.Forms;
 
@@ -37,9 +35,10 @@ namespace QuanLyKho.DanhMuc
                 return;
             }
             ExecSQL.ExecProcedureNonData("prokhoNhaCungCap", new { action = "SAVE", ncc = txt_ncc.Text, diachi = txt_diachi.Text, sodt = txt_sodt.Text, sofax = txt_sofax.Text, email = txt_email.Text, masothue = txt_masothue.Text, ghichu = txt_ghichu.Text, nguoitd = Data.Data._strtendangnhap.ToUpper() });
-            //Ghi lại log
+            //Ghi lại nhật ký
+            Data.Data._run_history_log($"Thêm mới thông tin nhà cung cấp ({txt_ncc.Text}).", "Danh Mục Nhà Cung Cấp");
             Data.Data._str_mancc = txt_mancc.Text;
-            //  Data.Data._run_history_log("Đã thêm mới nhà cung cấp " + txt_ncc.Text + ".", "Danh mục nhà cung cấp");
+
             _clear_text();
             if (Data.Data._int_flag == 1)
             {
@@ -62,11 +61,7 @@ namespace QuanLyKho.DanhMuc
                 msgBroker.Publish();
                 this.Close();
             }
-
-
         }
-
-
 
         public void _clear_text()
         {
@@ -107,8 +102,5 @@ namespace QuanLyKho.DanhMuc
         {
             txt_mancc.Text = ExecSQL.ExecProcedureSacalar("prokhoNhaCungCap", new { action = "CREATE_ID" }).ToString();
         }
-
-
-
     }
 }

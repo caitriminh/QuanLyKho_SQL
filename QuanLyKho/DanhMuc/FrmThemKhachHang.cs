@@ -37,6 +37,9 @@ namespace QuanLyKho.DanhMuc
 
             ExecSQL.ExecProcedureNonData("prokhoKhachHang", new { action = "SAVE", tenkh = txt_khachhang.Text, diachi = txt_diachi.Text, sodt = txt_sodt.Text, sofax = txt_sofax.Text, ghichu = txt_ghichu.Text, nguoitd = Data.Data._strtendangnhap.ToUpper() });
 
+            //Ghi lại nhật ký
+            Data.Data._run_history_log($"Thêm mới khách hàng ({txt_khachhang.Text}).", "Danh Mục Khách Hàng");
+
             Data.Data._str_makh = txt_makh.Text;
             Clear_text();
             if (Data.Data._int_flag == 1)

@@ -46,8 +46,10 @@ namespace QuanLyKho.BieuDo
                 loinhuan_cungky.Caption = @"Lợi Nhuận Cùng Kỳ";
             }
 
-            var chartControl1 = new ChartControl();
-            chartControl1.Dock = DockStyle.Fill;
+            var chartControl1 = new ChartControl
+            {
+                Dock = DockStyle.Fill
+            };
             var dataTable2 = ExecSQL.ExecProcedureDataAsDataTable("prokhoBaoCaoLoiNhuan", new { action = "GET_DATA", option = 2, tungay = Convert.ToDateTime(DateTime.Now).ToString("yyyyMM01"), denngay = Convert.ToDateTime(DateTime.Now).ToString("yyyyMMdd") });
             chartControl1.DataSource = dataTable2;
 

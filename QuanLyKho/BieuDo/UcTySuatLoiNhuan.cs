@@ -49,6 +49,7 @@ namespace QuanLyKho.BieuDo
         {
             Text = "Tỷ Suất Lợi Nhuận";
             var dataTable1 = ExecSQL.ExecProcedureDataAsDataTable("prokhoTySuatLoiNhuan", new { ngaythang = Convert.ToDateTime(DateTime.Now).ToString("yyyyMM01"), manhom = strMaNhom });
+            if (dataTable1.Rows.Count == 0) { return; }
             var chartControl1 = new ChartControl
             {
                 Dock = DockStyle.Fill

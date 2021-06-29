@@ -67,8 +67,8 @@ namespace QuanLyKho.DanhMuc
                 if (dr.RowState == DataRowState.Modified)
                 {
                     ExecSQL.ExecProcedureNonData("prokhoNhaCungCap", new { action = "UPDATE", mancc = dr["mancc"].ToString(), ncc = dr["ncc"].ToString(), diachi = dr["diachi"].ToString(), sodt = dr["sodt"].ToString(), sofax = dr["sofax"].ToString(), email = dr["email"].ToString(), masothue = dr["masothue"].ToString(), ghichu = dr["ghichu"].ToString(), nguoitd2 = Data.Data._strtendangnhap.ToUpper() });
-                    //Ghi lại log
-                    //Data.Data._run_history_log("Đã cập nhật thông tin nhà cung cấp " + dr["ncc"] + ".", "Danh mục nhà cung cấp");
+                    //Ghi lại nhật ký
+                    Data.Data._run_history_log($"Cập nhật thông tin nhà cung cấp ({dr["ncc"]}).", "Danh Mục Nhà Cung Cấp");
                 }
             }
             GetNhaCungCap();
@@ -98,9 +98,9 @@ namespace QuanLyKho.DanhMuc
             }
             else
             {
-                //Ghi lại log
-                //Data.Data._run_history_log("Đã xóa thông tin nhà cung cấp " + gridView1.GetRowCellValue(i, "ncc") + ".", "Danh mục nhà cung cấp");
-                GetNhaCungCap();
+                grvView_NCC.DeleteRow(i);
+                //Ghi lại nhật ký
+                Data.Data._run_history_log($"Xóa nhà cung cấp ({grvView_NCC.GetRowCellValue(i, "ncc")}).", "Danh Mục Nhà Cung Cấp");
             }
         }
 
@@ -134,9 +134,9 @@ namespace QuanLyKho.DanhMuc
                 }
                 else
                 {
-                    //Ghi lại log
-                    //Data.Data._run_history_log("Đã xóa thông tin nhà cung cấp " + gridView1.GetRowCellValue(i, "ncc") + ".", "Danh mục nhà cung cấp");
-                    GetNhaCungCap();
+                    grvView_NCC.DeleteRow(i);
+                    //Ghi lại nhật ký
+                    Data.Data._run_history_log($"Xóa nhà cung cấp ({grvView_NCC.GetRowCellValue(i, "ncc")}).", "Danh Mục Nhà Cung Cấp");
                 }
             }
         }
@@ -164,8 +164,8 @@ namespace QuanLyKho.DanhMuc
         {
             this.Subscribe<MessageBroker>(OnNext);
             GetNhaCungCap();
+            //Ghi lại nhật ký
+            Data.Data._run_history_log($"Xem thông tin nhà cung cấp.", "Danh Mục Nhà Cung Cấp");
         }
-
-
     }
 }

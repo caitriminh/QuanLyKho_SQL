@@ -16,12 +16,68 @@ namespace QuanLyKho.NghiepVu
         public FrmThemDinhMucLinhKien()
         {
             InitializeComponent();
+            grvViewQuyDoi.RowCellClick += GrvViewQuyDoi_RowCellClick;
+            grvViewQuyDoi.ValidatingEditor += GrvViewQuyDoi_ValidatingEditor;
+        }
+
+        private void GrvViewQuyDoi_ValidatingEditor(object sender, DevExpress.XtraEditors.Controls.BaseContainerValidateEditorEventArgs e)
+        {
+            GridView view = sender as GridView;
+            int i = view.FocusedRowHandle;
+            if (view.FocusedColumn.FieldName == "mahanghoa_qd")
+            {
+                var dt = ExecSQL.ExecProcedureDataFistOrDefault<khoHangHoa>("proKhoHangHoa", new { action = "GET_DATA_MAHANG", mahanghoa = e.Value.ToString() });
+                if (dt == null) { return; }
+                view.SetRowCellValue(i, "tenhanghoa1", dt.tenhanghoa);
+                view.SetRowCellValue(i, "tendvt1", dt.tendvt);
+
+                var dt2 = ExecSQL.ExecProcedureDataAsDataTable("prokhoQuyDoi", new { action = "SAVE", mahanghoa = cbo_hanghoa2.EditValue.ToString(), mahanghoa_qd = e.Value.ToString(), heso = 0, thamsoquydoi = Convert.ToDecimal(txtThamSoQuyDoi.Text), ghichu = txt_ghichu.Text, nguoitd = Data.Data._strtendangnhap.ToUpper() });
+                if (dt2.Rows.Count > 0)
+                {
+                    //XtraMessageBox.Show("Mã hàng này đã tồn tại trong danh mục quy đổi.", "Cảnh Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    GetChiTietQuyDoi();
+                    return;
+                }
+                ////Ghi lại log
+                //Data.Data._run_history_log("Đã thêm mới quy đổi hàng hóa " + cbo_hanghoa2.Text, "Quy đổi hàng hóa");
+            }
+            else if (view.FocusedColumn.FieldName == "heso")
+            {
+                if (e.Value == null) { return; }
+                ExecSQL.ExecProcedureNonData("prokhoQuyDoi", new { action = "UPDATE_HESO", mahanghoa = cbo_hanghoa2.EditValue.ToString(), mahanghoa_qd = view.GetRowCellValue(i, "mahanghoa_qd").ToString(), heso = Convert.ToDecimal(e.Value) });
+            }
+            //Gửi dữ liệu
+            var msgBroker = new MessageBroker
+            {
+                data = DateTime.Now.ToString(CultureInfo.InvariantCulture),
+                task = "quydoi"
+            };
+            msgBroker.Publish();
+        }
+
+        private void GrvViewQuyDoi_RowCellClick(object sender, RowCellClickEventArgs e)
+        {
+            var i = grvViewQuyDoi.FocusedRowHandle;
+            if (ReferenceEquals(e.Column, colXoa))
+            {
+                var dgr = XtraMessageBox.Show($@"Bạn có muốn xóa mã hàng này {grvViewQuyDoi.GetRowCellValue(i, "tenhanghoa")} không?", "Xác Nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dgr != DialogResult.Yes) { return; }
+                ExecSQL.ExecProcedureNonData("prokhoQuyDoi", new { action = "DELETE", id = Convert.ToInt32(grvViewQuyDoi.GetRowCellValue(i, "id")) });
+                grvViewQuyDoi.DeleteRow(i);
+                //Gửi dữ liệu
+                var msgBroker = new MessageBroker
+                {
+                    data = DateTime.Now.ToString(CultureInfo.InvariantCulture),
+                    task = "quydoi"
+                };
+                msgBroker.Publish();
+            }
         }
 
         #region "Function"
         public async void GetHangHoa()
         {
-            var dt = await ExecSQL.ExecProcedureDataAsyncAsDataTable("proKhoHangHoa", new { action = "GET_DATA_ACTIVE" });
+            var dt = await ExecSQL.ExecProcedureDataAsyncAsDataTable("proKhoHangHoa", new { action = "GET_DATA" });
             cbo_hanghoa2.Properties.DataSource = dt;
             cbo_hanghoa2.Properties.DisplayMember = "tenhanghoa";
             cbo_hanghoa2.Properties.ValueMember = "mahanghoa";
@@ -33,9 +89,9 @@ namespace QuanLyKho.NghiepVu
 
         public async void GetHangHoa2()
         {
-            var dt = await ExecSQL.ExecProcedureDataAsyncAsDataTable("proKhoHangHoa", new { action = "GET_DATA_ACTIVE2", mahanghoa = cbo_hanghoa2.EditValue.ToString() });
+            var dt = await ExecSQL.ExecProcedureDataAsyncAsDataTable("proKhoHangHoa", new { action = "GET_DATA", mahanghoa = cbo_hanghoa2.EditValue.ToString() });
             cbo_hanghoa.DataSource = dt;
-            cbo_hanghoa.DisplayMember = "mahanghoa";
+            cbo_hanghoa.DisplayMember = "mathamchieu";
             cbo_hanghoa.ValueMember = "mahanghoa";
         }
 
@@ -59,68 +115,15 @@ namespace QuanLyKho.NghiepVu
             GetChiTietQuyDoi();
         }
 
-        private void GridView1_ValidatingEditor(object sender, DevExpress.XtraEditors.Controls.BaseContainerValidateEditorEventArgs e)
-        {
-            GridView view = sender as GridView;
-            int i = view.FocusedRowHandle;
-            if (view.FocusedColumn.FieldName == "mahanghoa_qd")
-            {
-                var dt = ExecSQL.ExecProcedureDataFistOrDefault<khoHangHoa>("proKhoHangHoa", new { action = "GET_DATA_MAHANG", mahanghoa = e.Value.ToString() });
-                if (dt == null) { return; }
-                view.SetRowCellValue(i, "tenhanghoa1", dt.tenhanghoa);
-                view.SetRowCellValue(i, "tendvt1", dt.tendvt);
-
-                var dt2 = ExecSQL.ExecProcedureDataAsDataTable("prokhoQuyDoi", new { action = "SAVE", mahanghoa = cbo_hanghoa2.EditValue.ToString(), mahanghoa_qd = e.Value.ToString(), heso = 0, thamsoquydoi = Convert.ToDecimal(txtThamSoQuyDoi.Text), ghichu = txt_ghichu.Text, nguoitd = Data.Data._strtendangnhap.ToUpper() });
-                if (dt2.Rows.Count > 0)
-                {
-                    XtraMessageBox.Show("Mã hàng này đã tồn tại trong danh mục quy đổi.", "Cảnh Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    GetChiTietQuyDoi();
-                    return;
-                }
-                ////Ghi lại log
-                //Data.Data._run_history_log("Đã thêm mới quy đổi hàng hóa " + cbo_hanghoa2.Text, "Quy đổi hàng hóa");
-            }
-            else if (view.FocusedColumn.FieldName == "heso")
-            {
-                if (e.Value == null) { return; }
-                ExecSQL.ExecProcedureNonData("prokhoQuyDoi", new { action = "UPDATE_HESO", mahanghoa = cbo_hanghoa2.EditValue.ToString(), mahanghoa_qd = view.GetRowCellValue(i, "mahanghoa_qd").ToString(), heso = Convert.ToDecimal(e.Value) });
-            }
-            //Gửi dữ liệu
-            var msgBroker = new MessageBroker
-            {
-                data = DateTime.Now.ToString(CultureInfo.InvariantCulture),
-                task = "quydoi"
-            };
-            msgBroker.Publish();
-        }
-
         private void Btn_lammoi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            grvViewQuyDoi.OptionsView.NewItemRowPosition = NewItemRowPosition.None;
             GetChiTietQuyDoi();
         }
 
-        private void GridView1_RowCellClick(object sender, RowCellClickEventArgs e)
+        private void btnThem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            var i = dgvViewQuyDoi.FocusedRowHandle;
-            if (ReferenceEquals(e.Column, colXoa))
-            {
-                var dgr = XtraMessageBox.Show($@"Bạn có muốn xóa mã hàng này {dgvViewQuyDoi.GetRowCellValue(i, "tenhanghoa")} không?", "Xác Nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (dgr != DialogResult.Yes) { return; }
-                ExecSQL.ExecProcedureNonData("prokhoQuyDoi", new { action = "DELETE", id = Convert.ToInt32(dgvViewQuyDoi.GetRowCellValue(i, "id")) });
-                GetChiTietQuyDoi();
-                //Gửi dữ liệu
-                var msgBroker = new MessageBroker
-                {
-                    data = DateTime.Now.ToString(CultureInfo.InvariantCulture),
-                    task = "quydoi"
-                };
-                msgBroker.Publish();
-            }
-        }
-
-        private void Btn_luu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-
+            grvViewQuyDoi.OptionsView.NewItemRowPosition = NewItemRowPosition.Top;
         }
     }
 }

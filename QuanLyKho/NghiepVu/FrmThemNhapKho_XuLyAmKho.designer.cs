@@ -88,10 +88,6 @@
             this.repositoryItemTextEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.gridColumn14 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn16 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn17 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn18 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn19 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.col_xoa = new DevExpress.XtraGrid.Columns.GridColumn();
             this._btn_xoa = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -412,10 +408,6 @@
             this.gridColumn12,
             this.gridColumn14,
             this.gridColumn16,
-            this.gridColumn7,
-            this.gridColumn17,
-            this.gridColumn18,
-            this.gridColumn19,
             this.col_xoa,
             this.gridColumn1,
             this.gridColumn6});
@@ -441,7 +433,7 @@
             this.gridColumn3.OptionsColumn.FixedWidth = true;
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 1;
-            this.gridColumn3.Width = 94;
+            this.gridColumn3.Width = 106;
             // 
             // cbo_hanghoa
             // 
@@ -517,7 +509,7 @@
             this.gridColumn4.OptionsColumn.ReadOnly = true;
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 2;
-            this.gridColumn4.Width = 171;
+            this.gridColumn4.Width = 218;
             // 
             // gridColumn8
             // 
@@ -593,58 +585,6 @@
             this.gridColumn16.Visible = true;
             this.gridColumn16.VisibleIndex = 7;
             this.gridColumn16.Width = 86;
-            // 
-            // gridColumn7
-            // 
-            this.gridColumn7.Caption = "Ngày tạo";
-            this.gridColumn7.FieldName = "thoigian";
-            this.gridColumn7.MinWidth = 21;
-            this.gridColumn7.Name = "gridColumn7";
-            this.gridColumn7.OptionsColumn.AllowFocus = false;
-            this.gridColumn7.OptionsColumn.FixedWidth = true;
-            this.gridColumn7.OptionsColumn.ReadOnly = true;
-            this.gridColumn7.Visible = true;
-            this.gridColumn7.VisibleIndex = 9;
-            this.gridColumn7.Width = 129;
-            // 
-            // gridColumn17
-            // 
-            this.gridColumn17.Caption = "Người tạo";
-            this.gridColumn17.FieldName = "nguoitd";
-            this.gridColumn17.MinWidth = 21;
-            this.gridColumn17.Name = "gridColumn17";
-            this.gridColumn17.OptionsColumn.AllowFocus = false;
-            this.gridColumn17.OptionsColumn.FixedWidth = true;
-            this.gridColumn17.OptionsColumn.ReadOnly = true;
-            this.gridColumn17.Visible = true;
-            this.gridColumn17.VisibleIndex = 8;
-            this.gridColumn17.Width = 103;
-            // 
-            // gridColumn18
-            // 
-            this.gridColumn18.Caption = "Người sửa";
-            this.gridColumn18.FieldName = "nguoitd2";
-            this.gridColumn18.MinWidth = 21;
-            this.gridColumn18.Name = "gridColumn18";
-            this.gridColumn18.OptionsColumn.AllowFocus = false;
-            this.gridColumn18.OptionsColumn.FixedWidth = true;
-            this.gridColumn18.OptionsColumn.ReadOnly = true;
-            this.gridColumn18.Visible = true;
-            this.gridColumn18.VisibleIndex = 10;
-            this.gridColumn18.Width = 94;
-            // 
-            // gridColumn19
-            // 
-            this.gridColumn19.Caption = "Ngày sửa";
-            this.gridColumn19.FieldName = "thoigian2";
-            this.gridColumn19.MinWidth = 21;
-            this.gridColumn19.Name = "gridColumn19";
-            this.gridColumn19.OptionsColumn.AllowFocus = false;
-            this.gridColumn19.OptionsColumn.FixedWidth = true;
-            this.gridColumn19.OptionsColumn.ReadOnly = true;
-            this.gridColumn19.Visible = true;
-            this.gridColumn19.VisibleIndex = 11;
-            this.gridColumn19.Width = 129;
             // 
             // col_xoa
             // 
@@ -805,10 +745,6 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn14;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn16;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn17;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn18;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn19;
         private DevExpress.XtraGrid.Columns.GridColumn col_xoa;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit _btn_xoa;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;

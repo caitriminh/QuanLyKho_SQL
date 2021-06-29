@@ -1149,3 +1149,4 @@ D:\Project\QuanLyKho_SQL\QuanLyKho\obj\Debug\QuanLyKho.csproj.CopyComplete
 D:\Project\QuanLyKho_SQL\QuanLyKho\obj\Debug\QuanLyKho.exe
 D:\Project\QuanLyKho_SQL\QuanLyKho\obj\Debug\QuanLyKho.pdb
 D:\Project\QuanLyKho_SQL\QuanLyKho\obj\Debug\QuanLyKho.csprojAssemblyReference.cache
+D:\Project\QuanLyKho_SQL\QuanLyKho\obj\Debug\QuanLyKho.BieuDo.UcTySuatLoiNhuan.resources
