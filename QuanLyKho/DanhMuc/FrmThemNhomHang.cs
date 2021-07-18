@@ -98,5 +98,10 @@ namespace QuanLyKho.DanhMuc
         {
             txt_manhom.Text = txt_manhom.Text.ToUpper();
         }
+
+        private void FrmThemNhomHang_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
