@@ -12,17 +12,15 @@ using QuanLyKho.Entities.HeThong;
 using QuanLyKho.Extension;
 using QuanLyKho.HeThong;
 using QuanLyKho.NghiepVu;
-using QuanLyKho.Properties;
 using System;
 using System.Data;
-using System.Diagnostics;
 using System.Linq;
 using System.Reflection;
 using System.Windows.Forms;
 
 namespace QuanLyKho
 {
-    public partial class MainView : DevExpress.XtraBars.Ribbon.RibbonForm
+    public partial class MainView : RibbonForm
     {
         //ITelegramBotClient botClient;
         public MainView()

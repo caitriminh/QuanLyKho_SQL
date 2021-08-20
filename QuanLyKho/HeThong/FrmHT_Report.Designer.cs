@@ -267,10 +267,10 @@
             // 
             this.documentViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.documentViewer1.IsMetric = false;
-            this.documentViewer1.Location = new System.Drawing.Point(0, 150);
+            this.documentViewer1.Location = new System.Drawing.Point(0, 183);
             this.documentViewer1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.documentViewer1.Name = "documentViewer1";
-            this.documentViewer1.Size = new System.Drawing.Size(726, 249);
+            this.documentViewer1.Size = new System.Drawing.Size(1286, 308);
             this.documentViewer1.TabIndex = 0;
             // 
             // documentViewerRibbonController1
@@ -282,9 +282,11 @@
             // ribbonControl1
             // 
             this.ribbonControl1.AutoHideEmptyItems = true;
+            this.ribbonControl1.EmptyAreaImageOptions.ImagePadding = new System.Windows.Forms.Padding(35, 37, 35, 37);
             this.ribbonControl1.ExpandCollapseItem.Id = 0;
             this.ribbonControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbonControl1.ExpandCollapseItem,
+            this.ribbonControl1.SearchEditItem,
             this.printPreviewBarItem1,
             this.printPreviewBarItem2,
             this.printPreviewBarItem3,
@@ -341,19 +343,17 @@
             this.progressBarEditItem1,
             this.printPreviewBarItem52,
             this.printPreviewStaticItem2,
-            this.zoomTrackBarEditItem1,
-            this.ribbonControl1.SearchEditItem});
+            this.zoomTrackBarEditItem1});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
             this.ribbonControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ribbonControl1.MaxItemId = 58;
             this.ribbonControl1.Name = "ribbonControl1";
-            this.ribbonControl1.OptionsMenuMinWidth = 283;
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
             this.ribbonControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemProgressBar1,
             this.repositoryItemZoomTrackBar1});
-            this.ribbonControl1.Size = new System.Drawing.Size(726, 150);
+            this.ribbonControl1.Size = new System.Drawing.Size(1286, 183);
             this.ribbonControl1.StatusBar = this.ribbonStatusBar1;
             this.ribbonControl1.TransparentEditorsMode = DevExpress.Utils.DefaultBoolean.True;
             // 
@@ -1463,22 +1463,22 @@
             this.ribbonStatusBar1.ItemLinks.Add(this.printPreviewBarItem52);
             this.ribbonStatusBar1.ItemLinks.Add(this.printPreviewStaticItem2);
             this.ribbonStatusBar1.ItemLinks.Add(this.zoomTrackBarEditItem1);
-            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 399);
+            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 491);
             this.ribbonStatusBar1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ribbonStatusBar1.Name = "ribbonStatusBar1";
             this.ribbonStatusBar1.Ribbon = this.ribbonControl1;
-            this.ribbonStatusBar1.Size = new System.Drawing.Size(726, 27);
+            this.ribbonStatusBar1.Size = new System.Drawing.Size(1286, 33);
             // 
-            // frm_report
+            // FrmHT_Report
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(726, 426);
+            this.ClientSize = new System.Drawing.Size(1286, 524);
             this.Controls.Add(this.documentViewer1);
             this.Controls.Add(this.ribbonStatusBar1);
             this.Controls.Add(this.ribbonControl1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "frm_report";
+            this.Name = "FrmHT_Report";
             this.Text = "Report";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.documentViewerRibbonController1)).EndInit();
